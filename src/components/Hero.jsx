@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { bgph1, bgph2 } from "../assets";
 import styles from "../style";
+import { layout } from "../style";
 
 const Hero = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
@@ -27,7 +28,7 @@ const Hero = () => {
 
   return (
     <section
-      className="w-screen h-screen relative "
+      className={`${layout.sectionHero}`}
       style={{
         backgroundImage: `url(${backgroundImages[backgroundImageIndex]})`,
         backgroundSize: "cover",
@@ -35,24 +36,27 @@ const Hero = () => {
         ...transitionStyle,
       }}
     >
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-black opacity-50"
-        style={{ zIndex: 0 }}
-      ></div>
-      {/* Your Hero content goes here */}
-      <div className={`${styles.heroContent} ${styles.paddingX}`}>
-        <h1 className="text-4xl md:text-4xl font-bold mb-4 text-primary font-bebas">
-          Bun venit la <span className={`${styles.heroSpan}`}>TODERICA</span>{" "}
-          <span className="text-primary">SOLUTIONS</span>
-        </h1>
-        <div className={`${styles.heroServices} max-w-3xl`}>
-          Servicii de constructie, renovare si proiectare
+      <div className={`${styles.opacity}`} style={{ zIndex: 0 }}></div>
+      {/*  Hero content */}
+      <div className={`${styles.boxWidth} relative`}>
+        <div className={`${styles.heroContent} ${styles.boxWidth}  `}>
+          <div className={`${styles.heroContainer}`}>
+            <h1 className={`${styles.heroHeader}`}>
+              Bun venit la{" "}
+              <span className={`${styles.heroSpan}`}>TODERICA</span>{" "}
+              <span className="text-primary">SOLUTIONS</span>
+            </h1>
+            <div className={`${styles.heroServices}`}>
+              Servicii de constructie, renovare si proiectare
+            </div>
+            <div className={`${styles.heroParagraphContainer}`}>
+              <p className={`${styles.heroParagraph}`}>
+                Calitate și inovație, fundamentul nostru solid.
+              </p>
+            </div>
+          </div>
+          <button className={`${styles.btn}`}>Mai multe ➨</button>
         </div>
-        <p className={`${styles.heroParagraph}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button className={`${styles.btn} `}>Mai multe ➨</button>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 const styles = {
-  boxWidth: "xl:max-w-[1280px] w-full",
+  containerWidth: "xxl:max-w-[1920px] w-full",
+  boxWidth: "lg:max-w-[1280px] w-full",
 
   title: "font-audiowide font-semibold text-[20px] uppercase mr-2",
 
@@ -11,7 +12,7 @@ const styles = {
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
 
-  paddingX: "lg:px-36 sm:px-16 xxs:px-6 ",
+  paddingX: "lg:px-56 md:px-36 sm:px-16 xxs:px-6 ",
   paddingY: "sm:py-16 py-6",
   padding: "sm:px-16 px-6 sm:py-12 py-4",
 
@@ -19,24 +20,45 @@ const styles = {
   marginY: "sm:my-16 my-6",
   maxWidthBottomNav: "max-w-5px",
 
-  colContainer: "flex flex-col p-10 w-[50%] h-full relative",
+  colContainer: "flex flex-col xxs:p-0 md:p-10 xxs:w-[90%]  md:w-[50%] ",
+  cellQuery:
+    "flex xxs:flex-col xxs:items-center xxs:gap-5 700:flex-row xxs:justify-center",
 
-  btn: "bg-primary text-white p-4 px-8 rounded font-[600] hover:bg-white hover:bg-slate-300 hover:text-black text-[18px] font-poppins mt-12",
-  // NAV
-  navLinksTransition: "hover:border-b-2 border-primary ",
-  navContainer: "w-8 h-8 p-0 m-0 items-center flex  justify-center",
+  btn: "bg-primary text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] hover:bg-gradient-to-r from-gradientLime_100 via-primary to-gradientLime_100 hover:text-black xxs:text-[14px] ss:text-[18px] font-poppins mt-12 items-center",
+
+  // NAV ----------------------------------->
+  navContainer: "w-screen flex flex-col",
+  navComponent: "w-full flex flex-row items-center",
+  navQuery:
+    "flex xxs:flex-col xxs:items-center xxs:gap-1 700:flex-row justify-between ",
+  navContentQuery:
+    "xxs:flex-col xxs:gap-0 xs:gap-2 ss:flex-row ss:gap-5 flex text-white items-center",
+  navInfo: "flex flex-row items-center gap-2",
+  navInfoText: "text-base font-normal",
+  navLinks:
+    "relative font-bebas text-[18px] font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute  ",
+  navLinksContaier: "list-none sm:flex  justify-end items-center gap-5 py-5 ",
+  navLinksTransition: "bg-primary w-[1%] h-[1px] asolute rounded-xl   ",
+  navSocialContainer: "flex gap-5 relative",
+  navSocial: "w-8 h-8 p-0 m-0 items-center flex  justify-center",
   navIcon: "text-white w-4 h-4 ",
-  // HERO
+
+  // HERO ----------------------------------->
+  opacity: "absolute top-0 left-0 w-full h-full bg-black opacity-50",
+  heroHeader: "text-4xl md:text-4xl font-bold mb-4 text-primary font-bebas",
   hoverIcon:
     "[&>svg]:hover:text-black hover:bg-white  hover:translate-y-2 transition-transform duration-500 ease-in-out",
   heroContent:
     "absolute top-1/2 left-8 transform -translate-y-1/2 z-10 text-white ",
+  heroContainer: "flex flex-col w-fit mr-10",
   heroServices:
-    "xxs: text-[42px] sm:text-[100px] font-[600] mb-4 font-bebas max-w-4xl",
-  heroParagraph: "text-lg md:text-base lg:text-base mb-6",
-  heroSpan: "text-white border-t-2 border-l-2 pl-2",
-  // STATS
-  statsContainer: "flex flex-row ",
+    "xxs:text-[42px] xs:text-[50px] ss:text-[60px] sm:text-[90px] md:text-[100px] font-[600] mb-4 font-bebas max-w-4xl ",
+  heroParagraphContainer: "flex mr-20 max-w-4xl",
+  heroParagraph: "text-lg md:text-base lg:text-base font-normal  ",
+  heroSpan: "text-white border-t-2 border-l-2 pl-2 ",
+
+  // STATS ----------------------------------->
+  statsContainer: "flex xs:flex-col md:flex-row ",
   statsBar:
     "border-t-2 border-l-2 h-5 w-20 absolute left-4 top-7  border-t-primary border-l-primary",
   statsHeader: "font",
@@ -50,7 +72,9 @@ export const layout = {
   sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
 
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
-  sectionTwoCols: "flex flex-row",
+  sectionTwoCols: "flex xxs:flex-col md:flex-row",
+
+  sectionHero: "w-screen h-screen relative flex justify-center",
 };
 
 export default styles;

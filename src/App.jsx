@@ -16,18 +16,18 @@ import {
 
 const App = () => {
   return (
-    <div className="bg-white w-full overflow-hidden">
+    <div className="bg-white overflow-hidden">
       <div>
-        <div className={`${styles.boxWidth}`}>
+        <div className={` ${styles.flexCenter}`}>
           <Navbar />
         </div>
       </div>
 
-      <div className={`${styles.boxWidth} `}>
+      <div className={`${styles.flexCenter} `}>
         <Hero />
       </div>
 
-      <div className={`bg-white ${styles.paddingX}`}>
+      <div className={`bg-white ${styles.flexCenter} `}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
           <Services />
