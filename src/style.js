@@ -11,6 +11,7 @@ const styles = {
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
+  flexCol: "flex flex-col items-center",
 
   paddingX: "lg:px-56 md:px-36 sm:px-16 xxs:px-6 ",
   paddingY: "sm:py-16 py-6",
@@ -20,11 +21,11 @@ const styles = {
   marginY: "sm:my-16 my-6",
   maxWidthBottomNav: "max-w-5px",
 
-  colContainer: "flex flex-col xxs:p-0 md:p-10 xxs:w-[90%]  md:w-[50%] ",
+  colContainer: "flex flex-col xxs:p-0 md:p-10 xxs:w-[80%]  md:w-[50%] ",
   cellQuery:
     "flex xxs:flex-col xxs:items-center xxs:gap-5 700:flex-row xxs:justify-center",
 
-  btn: "bg-primary text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] hover:bg-gradient-to-r from-gradientLime_100 via-primary to-gradientLime_100 hover:text-black xxs:text-[14px] ss:text-[18px] font-poppins mt-12 items-center",
+  btn: "bg-primary text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] hover:bg-gradient-to-r from-gradientLime_100 via-primary to-gradientLime_100 hover:text-black xxs:text-[16px] ss:text-[18px] font-poppins items-center",
 
   // NAV ----------------------------------->
   navContainer: "w-screen flex flex-col",
@@ -58,10 +59,31 @@ const styles = {
   heroSpan: "text-white border-t-2 border-l-2 pl-2 ",
 
   // STATS ----------------------------------->
+  statsSection: "xxs:items-center md:items-start pt-36",
   statsContainer: "flex xs:flex-col md:flex-row ",
   statsBar:
     "border-t-2 border-l-2 h-5 w-20 absolute left-4 top-7  border-t-primary border-l-primary",
-  statsHeader: "font",
+  statsHeader3:
+    "text-5xl font-bebas text-secondary font-semibold leading-[1.2em]",
+  statsHeader4: "text-lg font-poppins text-primary font-semibold",
+  statsParagraph: "font-[400px]",
+  statsCellContainer: "flex flex-row justify-between py-10",
+  statsCell: "flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5",
+  statsCellParagraph: "text-lg font-poppins text-text font-semibold",
+  statsSpan: "text-5xl font-bebas text-secondary font-semibold leading-[1.2em]",
+  statsImgContainer: "relative flex h-fit",
+  statsAbsoluteImg:
+    "absolute w-auto h-auto xxs:-right-[40px] xxs:-bottom-6 xs:-bottom-20 md:-right-[100px] sm:-right-10 sm:-bottom-24 1200:-right-[100px] 1200:top-40 -bottom-[100px] pr-10",
+  statsImg:
+    "w-auto max-h-[400px] border-white border-[15px] xxs:w-36  xxs:border-4 xs:w-48 xs:-bottom-10 ss:w-60 ss:-bottom-14 sm:w-64  1200:w-46",
+  btnContainer: "flex  w-full pt-10 md:pt-10",
+
+  // SERVICES BANNER ----------------------------------->
+
+  servicesHeader:
+    "left-8 text-white uppercase font-semibold text-5xl font-bebas uppercase  ",
+  servicesParagraph:
+    "text-white font-poppins font-semibold text-base pl-6 pt-2 uppercase",
 };
 
 export const layout = {
@@ -75,6 +97,8 @@ export const layout = {
   sectionTwoCols: "flex xxs:flex-col md:flex-row",
 
   sectionHero: "w-screen h-screen relative flex justify-center",
+  sectionServicesBanner:
+    "relative flex w-screen h-[348px] items-center justify-center",
 };
 
 export default styles;

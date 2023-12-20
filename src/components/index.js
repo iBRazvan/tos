@@ -4,6 +4,7 @@ import CTA from "./CTA";
 import Footer from "./Footer";
 import Projects from "./Projects";
 import Services from "./Services";
+import ServicesBanner from "./ServicesBanner";
 import Stats from "./Stats";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
@@ -16,6 +17,7 @@ export {
   Footer,
   Projects,
   Services,
+  ServicesBanner,
   Stats,
   Team,
   Testimonials,

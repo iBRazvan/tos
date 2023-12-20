@@ -55,7 +55,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <button className={`${styles.btn}`}>Mai multe ➨</button>
+          <button className={`${styles.btn}  mt-12`}>Mai multe ➨</button>
         </div>
       </div>
     </section>

@@ -33,6 +33,7 @@ module.exports = {
 
       530: "530px",
       700: "700px",
+      1200: "1200px",
     },
   },
   plugins: [],

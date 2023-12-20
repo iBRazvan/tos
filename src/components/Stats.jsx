@@ -7,17 +7,15 @@ import { FaUserCheck } from "react-icons/fa";
 
 const Stats = () => {
   return (
-    <section className={`${layout.sectionTwoCols}  `}>
+    <section className={`${layout.sectionTwoCols} ${styles.statsSection} `}>
       <div className={`${styles.boxWidth}${styles.colContainer} `}>
         <h1 className={`${styles.statsBar}`}> </h1>
-        <h3 className=" text-5xl font-bebas text-secondary font-semibold leading-[1.2em]">
+        <h3 className={`${styles.statsHeader3}`}>
           Implicam pasiune si experienta in fiecare aspect al afacerii noastre,
           pentru a livra rezultate de exceptie
         </h3>
-        <h4 className="text-lg font-poppins text-primary font-semibold ">
-          Construim solutii impreuna
-        </h4>
-        <p className="font-[400px]">
+        <h4 className={`${styles.statsHeader4}`}>Construim solutii impreuna</h4>
+        <p className={`${styles.statsParagraph}`}>
           Suntem o echipă dedicată, pasionată de excelență și inovație. Ne-am
           angajat să oferim soluții personalizate și de înaltă calitate,
           adaptate nevoilor fiecărui client. Cu o experiență vastă și o abordare
@@ -29,48 +27,36 @@ const Stats = () => {
           și vei descoperi o experiență profesională excepțională, susținută de
           angajamentul nostru de a livra rezultate remarcabile
         </p>
-        <div
-          className={`${styles.cellQuery}flex flex-row justify-between py-10`}
-        >
-          <div className="flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5">
+        <div className={`${styles.cellQuery} ${styles.statsCellContainer}`}>
+          <div className={`${styles.statsCell}`}>
             <FaClipboardCheck className="text-primary text-5xl" />
-            <div className="flex flex-col items-center">
-              <span className="text-5xl font-bebas text-secondary font-semibold leading-[1.2em]">
-                1725
-              </span>
-              <p className="xxs:text-base ss:text-lg font-poppins text-text font-semibold ">
+            <div className={`${styles.flexCol}`}>
+              <span className={`${styles.statsSpan}`}>1725</span>
+              <p className={`${styles.statsCellParagraph}`}>
                 Proiecte Complete
               </p>
             </div>
           </div>
-          <div className="flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5">
+          <div className={`${styles.statsCell}`}>
             <FaUserCheck className="text-primary text-6xl" />
             <div className="flex flex-col ">
-              <span className="text-5xl font-bebas text-secondary font-semibold leading-[1.2em]">
-                2.500K
-              </span>
-              <p className="text-lg font-poppins text-text font-semibold ">
-                Clienti Fericiti
-              </p>
+              <span className={`${styles.statsSpan}`}>2.500K</span>
+              <p className={`${styles.statsCellParagraph}`}>Clienti Fericiti</p>
             </div>
           </div>
         </div>
       </div>
-      <div className={`${styles.colContainer}  justify-around `}>
-        {/* Images div */}
-        <div className="relative flex h-fit">
+      {/* Images div */}
+      <div className={`${styles.colContainer} `}>
+        <div className={`${styles.statsImgContainer}`}>
           <img src={stats1} alt="poza" className="w-auto h-auto" />
-          <div className="absolute w-auto xxs:-right-[40] md:-right-[100px] -bottom-[100px] pr-10 ">
-            <img
-              src={stats2}
-              alt="poza"
-              className="w-auto max-h-[400px]  -bottom-1/2 border-white border-[15px]"
-            />
+          <div className={`${styles.statsAbsoluteImg}`}>
+            <img src={stats2} alt="poza" className={`${styles.statsImg}`} />
           </div>
         </div>
         {/* Button Div */}
-        <div className="flex items-center w-full">
-          <button className={`${styles.btn}  h-[57px] flex`}>
+        <div className={`${styles.btnContainer}`}>
+          <button className={`${styles.btn}  h-[57px] flex `}>
             Serviciile noastre ➨
           </button>
         </div>

@@ -9,6 +9,7 @@ import {
   Footer,
   Projects,
   Services,
+  ServicesBanner,
   Stats,
   Team,
   Testimonials,
@@ -27,9 +28,14 @@ const App = () => {
         <Hero />
       </div>
 
-      <div className={`bg-white ${styles.flexCenter} `}>
+      <div className={`bg-white ${styles.flexCenter} pb-[9rem] `}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
+        </div>
+      </div>
+      <ServicesBanner />
+      <div className={`bg-white ${styles.flexCenter} `}>
+        <div className={`${styles.boxWidth}`}>
           <Services />
           <Projects />
           <Team />
