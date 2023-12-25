@@ -2,7 +2,8 @@ const styles = {
   containerWidth: "xxl:max-w-[1920px] w-full",
   boxWidth: "lg:max-w-[1280px] w-full",
 
-  title: "font-audiowide font-semibold text-[20px] uppercase mr-2",
+  title:
+    "font-audiowide font-semibold xxs:text-[16px] xs:text-[20px] uppercase mr-2",
 
   heading2:
     "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
@@ -44,6 +45,9 @@ const styles = {
   navSocialContainer: "flex gap-5 relative",
   navSocial: "w-8 h-8 p-0 m-0 items-center flex  justify-center",
   navIcon: "text-white w-4 h-4 ",
+  navHamburgerMenu: "sm:hidden flex flex-1 justify-end items-center",
+  navHamburgerMenuIcon:
+    "xxs:w-[22px] xxs:h-[22px] xs:w-[28px] xs:h-[28px] object-contain",
 
   // HERO ----------------------------------->
   opacity: "absolute top-0 left-0 w-full h-full bg-black opacity-50",

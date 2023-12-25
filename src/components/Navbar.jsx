@@ -60,10 +60,12 @@ const Navbar = () => {
             <img
               src={toslogo}
               alt="tos"
-              className="w-[92px] h-[80px] m-0 p-0 hi"
+              className="xxs:w-[72px] xxs:h-[62px] xs:w-[92px] xs:h-[80px] m-0 p-0"
             />
-            <h1 className={`${styles.title}`}>Toderica</h1>
-            <h1 className={`${styles.title} text-primary`}>Solutions</h1>
+            <div className="flex  xs:flex-row xxs: items-start">
+              <h1 className={`${styles.title}`}>Toderica</h1>
+              <h1 className={`${styles.title} text-primary`}>Solutions</h1>
+            </div>
           </div>
 
           <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -80,25 +82,25 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="sm:hidden flex flex-1 justify-end items-center">
-            {!toggle ? (
+          <div className={`${styles.navHamburgerMenu}`}>
+            {toggle ? (
               <IoMdClose
-                className="w-[28px] h-[28px] object-contain"
+                className={`${styles.navHamburgerMenuIcon}`}
                 onClick={() => setToggle(!toggle)}
               />
             ) : (
               <GiHamburgerMenu
-                className="w-[28px] h-[28px] object-contain"
+                className={`${styles.navHamburgerMenuIcon}`}
                 onClick={() => setToggle(!toggle)}
               />
             )}
 
             <div
               className={`${
-                !toggle
+                toggle
                   ? "translate-x-0 transition-all ease-out duration-1000"
                   : "-translate-x-full transition-all ease-out duration-1000"
-              } p-6 bg-secondary absolute -left-6 top-24 mx-4 my-2 min-w-[260px] h-screen rounded-xl z-20 ju flex flex-wrap flex-col `}
+              } p-6 bg-secondary absolute -left-6 xxs:top-20 xs:top-24 mx-4 my-2 min-w-[260px] h-screen rounded-xl z-20 ju flex flex-wrap flex-col `}
             >
               <ul className="list-none flex items-start flex-1 flex-col">
                 {navLinks.map((nav, index) => (
