@@ -23,7 +23,7 @@ const styles = {
 
   colContainer: "flex flex-col xxs:p-0 md:p-10 xxs:w-[80%]  md:w-[50%] ",
   cellQuery:
-    "flex xxs:flex-col xxs:items-center xxs:gap-5 700:flex-row xxs:justify-center",
+    "flex xxs:flex-col xxs:items-center xxs:gap-5 700:flex-row xxs:justify-center 700:justify-between",
 
   btn: "bg-primary text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] hover:bg-gradient-to-r from-gradientLime_100 via-primary to-gradientLime_100 hover:text-black xxs:text-[16px] ss:text-[18px] font-poppins items-center",
 
@@ -38,7 +38,8 @@ const styles = {
   navInfoText: "text-base font-normal",
   navLinks:
     "relative font-bebas text-[18px] font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute  ",
-  navLinksContaier: "list-none sm:flex  justify-end items-center gap-5 py-5 ",
+  navLinksContaier:
+    "list-none xxs:hidden md:flex  justify-end items-center gap-5 py-5 ",
   navLinksTransition: "bg-primary w-[1%] h-[1px] asolute rounded-xl   ",
   navSocialContainer: "flex gap-5 relative",
   navSocial: "w-8 h-8 p-0 m-0 items-center flex  justify-center",
@@ -65,8 +66,8 @@ const styles = {
     "border-t-2 border-l-2 h-5 w-20 absolute left-4 top-7  border-t-primary border-l-primary",
   statsHeader3:
     "text-5xl font-bebas text-secondary font-semibold leading-[1.2em]",
-  statsHeader4: "text-lg font-poppins text-primary font-semibold",
-  statsParagraph: "font-[400px]",
+  statsHeader4: "text-lg font-poppins text-primary font-semibold mb-4",
+  statsParagraph: "font-[400px] text-text font-poppins",
   statsCellContainer: "flex flex-row justify-between py-10",
   statsCell: "flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5",
   statsCellParagraph: "text-lg font-poppins text-text font-semibold",

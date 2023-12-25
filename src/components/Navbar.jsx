@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../style";
 
 import { navLinks } from "../constants";
 
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
@@ -12,6 +14,9 @@ import { FaLinkedin } from "react-icons/fa";
 import { toslogo } from "../assets";
 
 const Navbar = () => {
+  const [active, setActive] = useState("Home");
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div className={`${styles.navContainer} `}>
       <nav className={` ${styles.navComponent} bg-primary py-4 `}>
@@ -45,7 +50,9 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className={`${styles.navComponent}  bg-secondary text-white`}>
+      <nav
+        className={`${styles.navComponent}  bg-secondary text-white relative`}
+      >
         <div
           className={`${styles.containerWidth} ${styles.paddingX} flex justify-between items-center py-4 `}
         >
@@ -53,19 +60,75 @@ const Navbar = () => {
             <img
               src={toslogo}
               alt="tos"
-              className="w-[92px] h-[80px] m-0 p-0"
+              className="w-[92px] h-[80px] m-0 p-0 hi"
             />
             <h1 className={`${styles.title}`}>Toderica</h1>
             <h1 className={`${styles.title} text-primary`}>Solutions</h1>
           </div>
 
-          <ul className={`${styles.navLinksContaier}`}>
+          <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+            {navLinks.map((nav, index) => (
+              <li
+                key={nav.id}
+                className={`${styles.navLinks}   cursor-pointer ${
+                  active === nav.title ? "text-white" : "text-dimWhite"
+                } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="sm:hidden flex flex-1 justify-end items-center">
+            {!toggle ? (
+              <IoMdClose
+                className="w-[28px] h-[28px] object-contain"
+                onClick={() => setToggle(!toggle)}
+              />
+            ) : (
+              <GiHamburgerMenu
+                className="w-[28px] h-[28px] object-contain"
+                onClick={() => setToggle(!toggle)}
+              />
+            )}
+
+            <div
+              className={`${
+                !toggle
+                  ? "translate-x-0 transition-all ease-out duration-1000"
+                  : "-translate-x-full transition-all ease-out duration-1000"
+              } p-6 bg-secondary absolute -left-6 top-24 mx-4 my-2 min-w-[260px] h-screen rounded-xl z-20 ju flex flex-wrap flex-col `}
+            >
+              <ul className="list-none flex items-start flex-1 flex-col">
+                {navLinks.map((nav, index) => (
+                  <li
+                    key={nav.id}
+                    className={` ${
+                      styles.navLinks
+                    }  font-medium cursor-pointer text-[16px] ${
+                      active === nav.title ? "text-primary" : "text-white"
+                    } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                    onClick={() => setActive(nav.title)}
+                  >
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex">
+                <h1 className={`${styles.title}`}>Toderica</h1>
+                <h1 className={`${styles.title} text-primary`}>Solutions</h1>
+              </div>
+            </div>
+          </div>
+
+          {/* <ul className={`${styles.navLinksContaier}`}>
             {navLinks.map((nav) => (
               <li key={nav.id} className={`${styles.navLinks}`}>
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </nav>
     </div>

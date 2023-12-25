@@ -1,14 +1,14 @@
 import React from "react";
 import styles, { layout } from "../style";
 
-import { services } from "../assets";
+import { servicesBanner } from "../assets";
 
 const ServicesBanner = () => {
   return (
     <section
       className={`${layout.sectionServicesBanner} relative `}
       style={{
-        backgroundImage: `url(${services})`,
+        backgroundImage: `url(${servicesBanner})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
