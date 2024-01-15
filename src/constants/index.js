@@ -1,22 +1,26 @@
-import { s1, s2, s3, s4, s5, s6 } from "../assets";
+import { s1, s2, s3, s4, s5, s6, p1, p2, p3, p4, p5, p6 } from "../assets";
 
 export const navLinks = [
   {
-    id: "acasa",
+    id: "nav-1",
     title: "Acasa",
+    route: "/",
   },
   {
-    id: "despre",
+    id: "nav-2",
     title: "Despre",
+    route: "/about",
   },
   {
-    id: "servicii",
+    id: "nav-3",
     title: "Servicii",
+    route: "/services",
   },
 
   {
-    id: "contact",
+    id: "nav-4",
     title: "contact",
+    route: "/contact",
   },
 ];
 
@@ -65,32 +69,44 @@ export const servicesConstants = [
   },
 ];
 
-// export const feedback = [
-//   {
-//     id: "feedback-1",
-//     content:
-//       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-//     name: "Herman Jensen",
-//     title: "Founder & Leader",
-//     img: people01,
-//   },
-//   {
-//     id: "feedback-2",
-//     content:
-//       "Money makes your life easier. If you're lucky to have it, you're lucky.",
-//     name: "Steve Mark",
-//     title: "Founder & Leader",
-//     img: people02,
-//   },
-//   {
-//     id: "feedback-3",
-//     content:
-//       "It is usually people in the money business, finance, and international trade that are really rich.",
-//     name: "Kenn Gallagher",
-//     title: "Founder & Leader",
-//     img: people03,
-//   },
-// ];
+export const projectsConstants = [
+  {
+    id: "project-1",
+    image: p1,
+    title: "Project #1",
+    content: "Buhusi, Romania",
+  },
+  {
+    id: "project-2",
+    image: p2,
+    title: "Project #2",
+    content: "Timisoara, Romania",
+  },
+  {
+    id: "project-3",
+    image: p3,
+    title: "Project #3",
+    content: "Bucuresti, Romania",
+  },
+  {
+    id: "project-4",
+    image: p4,
+    title: "Project #4",
+    content: "Constanta, Romania",
+  },
+  {
+    id: "project-5",
+    image: p5,
+    title: "Project #5",
+    content: "Onesti, Romania",
+  },
+  {
+    id: "project-6",
+    image: p6,
+    title: "Project #6",
+    content: "Cluj-Napoca, Romania",
+  },
+];
 
 export const stats = [
   {

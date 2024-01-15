@@ -7,12 +7,11 @@ const styles = {
 
   heading2:
     "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-  paragraph:
-    "font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]",
+  paragraph: "text-text text-lg md:text-base lg:text-base font-normal",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
-  flexCol: "flex flex-col items-center",
+  flexCol: "flex flex-col",
 
   paddingX: "lg:px-56 md:px-36 sm:px-16 xxs:px-6 ",
   paddingY: "sm:py-16 py-6",
@@ -22,11 +21,14 @@ const styles = {
   marginY: "sm:my-16 my-6",
   maxWidthBottomNav: "max-w-5px",
 
+  xyFull: "h-full w-full",
+  gridCols: "grid  grid-cols-1 ss:grid-cols-2 md:grid-cols-3",
+
   colContainer: "flex flex-col xxs:p-0 md:p-10 xxs:w-[80%]  md:w-[50%] ",
   cellQuery:
     "flex xxs:flex-col xxs:items-center xxs:gap-5 700:flex-row xxs:justify-center 700:justify-between",
 
-  btn: "bg-primary text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] hover:bg-gradient-to-r from-gradientLime_100 via-primary to-gradientLime_100 hover:text-black xxs:text-[16px] ss:text-[18px] font-poppins items-center",
+  btn: "bg-primary text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] hover:bg-secondary xxs:text-[16px] ss:text-[18px] font-poppins items-center",
 
   // NAV ----------------------------------->
   navContainer: "w-screen flex flex-col",
@@ -59,8 +61,7 @@ const styles = {
   heroContainer: "flex flex-col w-fit mr-10",
   heroServices:
     "xxs:text-[42px] xs:text-[50px] ss:text-[60px] sm:text-[90px] md:text-[100px] font-[600] mb-4 font-bebas max-w-4xl ",
-  heroParagraphContainer: "flex mr-20 max-w-4xl",
-  heroParagraph: "text-lg md:text-base lg:text-base font-normal  ",
+  paragraphContainer: "flex mr-20 max-w-4xl",
   heroSpan: "text-white border-t-2 border-l-2 pl-2 ",
 
   // STATS ----------------------------------->
@@ -71,7 +72,6 @@ const styles = {
   statsHeader3:
     "text-5xl font-bebas text-secondary font-semibold leading-[1.2em]",
   statsHeader4: "text-lg font-poppins text-primary font-semibold mb-4",
-  statsParagraph: "font-[400px] text-text font-poppins",
   statsCellContainer: "flex flex-row justify-between py-10",
   statsCell: "flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5",
   statsCellParagraph: "text-lg font-poppins text-text font-semibold",
@@ -86,9 +86,18 @@ const styles = {
   // SERVICES BANNER ----------------------------------->
 
   servicesHeader:
-    "left-8 text-white uppercase font-semibold text-5xl font-bebas uppercase  ",
+    "left-8 uppercase font-semibold text-5xl font-bebas uppercase  ",
   servicesParagraph:
     "text-white font-poppins font-semibold text-base pl-6 pt-2 uppercase",
+  //SERVICES ----------------------------------->
+  servicesTitle: "text-black font-bebas font-semibold text-4xl mt-2 mb-4 ",
+  servicesContent: "text-text text-lg md:text-base lg:text-base font-normal",
+  serviceImage:
+    "max-w-[348px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] border-b-[3px]  border-primary text-center",
+  //PROJECTS ----------------------------------->
+  projectTitle: "capitalize text-2xl font-normal font-poppins text-white",
+  projectContent: "capitalize text-base font-normal text-primary",
+  projectImage: "max-w-[374px] text-start",
 };
 
 export const layout = {

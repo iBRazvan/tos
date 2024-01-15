@@ -20,7 +20,7 @@ const ServicesBanner = () => {
             {"   "}{" "}
           </p>
 
-          <h1 className={`${styles.servicesHeader} pl-6`}>
+          <h1 className={`${styles.servicesHeader} text-white pl-6`}>
             Serviciile noastre
           </h1>
           <p className={`${styles.servicesParagraph} font-semi`}>

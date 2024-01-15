@@ -49,8 +49,8 @@ const Hero = () => {
             <div className={`${styles.heroServices}`}>
               Servicii de constructie, renovare si proiectare
             </div>
-            <div className={`${styles.heroParagraphContainer}`}>
-              <p className={`${styles.heroParagraph}`}>
+            <div className={`${styles.paragraphContainer}`}>
+              <p className={`${styles.paragraph} text-white`}>
                 Calitate și inovație, fundamentul nostru solid.
               </p>
             </div>

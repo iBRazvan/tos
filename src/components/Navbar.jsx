@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../style";
 
+import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -62,7 +63,7 @@ const Navbar = () => {
               alt="tos"
               className="xxs:w-[72px] xxs:h-[62px] xs:w-[92px] xs:h-[80px] m-0 p-0"
             />
-            <div className="flex  xs:flex-row xxs: items-start">
+            <div className="flex items-start">
               <h1 className={`${styles.title}`}>Toderica</h1>
               <h1 className={`${styles.title} text-primary`}>Solutions</h1>
             </div>
@@ -77,7 +78,7 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <Link to={`${nav.route}`}>{nav.title}</Link>
               </li>
             ))}
           </ul>
@@ -103,21 +104,26 @@ const Navbar = () => {
               } p-6 bg-secondary absolute -left-6 xxs:top-20 xs:top-24 mx-4 my-2 min-w-[260px] h-screen rounded-xl z-20 ju flex flex-wrap flex-col `}
             >
               <ul className="list-none flex items-start flex-1 flex-col">
-                {navLinks.map((nav, index) => (
-                  <li
-                    key={nav.id}
-                    className={` ${
-                      styles.navLinks
-                    }  font-medium cursor-pointer text-[16px] ${
-                      active === nav.title ? "text-primary" : "text-white"
-                    } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                    onClick={() => setActive(nav.title)}
-                  >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
+                {navLinks.map(
+                  (nav, index) => (
+                    console.log(nav.route),
+                    (
+                      <li
+                        key={nav.id}
+                        className={` ${
+                          styles.navLinks
+                        }  font-medium cursor-pointer text-[16px] ${
+                          active === nav.title ? "text-primary" : "text-white"
+                        } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                        onClick={() => setActive(nav.title)}
+                      >
+                        <Link to={`${nav.route}`}>{nav.title}</Link>
+                      </li>
+                    )
+                  )
+                )}
               </ul>
-              <div className="flex">
+              <div className={`flex`}>
                 <h1 className={`${styles.title}`}>Toderica</h1>
                 <h1 className={`${styles.title} text-primary`}>Solutions</h1>
               </div>

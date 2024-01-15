@@ -15,7 +15,7 @@ const Stats = () => {
           pentru a livra rezultate de exceptie
         </h3>
         <h4 className={`${styles.statsHeader4}`}>Construim solutii impreuna</h4>
-        <p className={`${styles.statsParagraph}`}>
+        <p className={`${styles.paragraph}`}>
           Suntem o echipă dedicată, pasionată de excelență și inovație. Ne-am
           angajat să oferim soluții personalizate și de înaltă calitate,
           adaptate nevoilor fiecărui client. Cu o experiență vastă și o abordare

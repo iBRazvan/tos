@@ -1,20 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../style";
 // import styles, { layout } from "../style";
 
-const Card = ({ service: { image, title, content } }) => {
-  console.log(title);
+const Card = ({ service, cardType, project }) => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    cardType === "service"
+      ? (setTitle(service?.title || ""), setContent(service?.content || ""))
+      : (setTitle(project?.title || ""), setContent(project?.content || ""));
+  }, [cardType, service, project]);
+
+  const cardWidths = {
+    service: styles.serviceImage,
+    project: styles.projectImage,
+  };
+  const cardTitles = {
+    service: styles.servicesTitle,
+    project: styles.projectTitle,
+  };
+  const cardContents = {
+    service: styles.servicesContent,
+    project: styles.projectContent,
+  };
+
+  const cardWidth = cardWidths[cardType];
+  const cardTitle = cardTitles[cardType];
+  const cardContent = cardContents[cardType];
+
   return (
-    <section className="w-auto h-full flex flex-col items-center text-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] ">
+    <section className={`${cardWidth} h-full flex flex-col  pb-8 `}>
       {/* img */}
-      <div className="w-full h-full">
-        <img className="w-full h-full mb-4" src={image} />
+      <div className="w-full h-full mb-4">
+        <img
+          className="w-full h-full"
+          src={cardType === "service" ? service.image : project.image}
+          alt={title}
+        />
       </div>
-      <h4 className={`text-black font-bebas font-semibold text-4xl mt-2 mb-4`}>
-        {title}
-      </h4>
+      <h4 className={`${cardTitle}`}>{title}</h4>
       <div>
-        <p className={styles.statsParagraph}>{content}</p>
+        <p className={`${cardContent}`}>{content} </p>
       </div>
     </section>
   );
