@@ -24,7 +24,7 @@ const styles = {
   xyFull: "h-full w-full",
   gridCols: "grid  grid-cols-1 ss:grid-cols-2 md:grid-cols-3",
 
-  colContainer: "flex flex-col xxs:p-0 md:p-10 xxs:w-[80%]  md:w-[50%] ",
+  colContainer: "flex flex-col xxs:px-6 md:p-6 xxs:w-[100%] md:w-[50%] ",
   cellQuery:
     "flex xxs:flex-col xxs:items-center xxs:gap-5 700:flex-row xxs:justify-center 700:justify-between",
 
@@ -88,7 +88,7 @@ const styles = {
   servicesHeader:
     "left-8 uppercase font-semibold text-5xl font-bebas uppercase  ",
   servicesParagraph:
-    "font-poppins font-semibold text-base pl-6 pt-2",
+    "font-poppins font-semibold text-base pt-2",
   //SERVICES ----------------------------------->
   servicesTitle: "text-black font-bebas font-semibold text-4xl mt-2 mb-4 ",
   servicesContent: "xxs:px-6 text-text text-lg md:text-base lg:text-base font-normal",

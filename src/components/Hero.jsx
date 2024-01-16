@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`${layout.sectionHero}`}
+      className={`${layout.sectionHero} `}
       style={{
         backgroundImage: `url(${backgroundImages[backgroundImageIndex]})`,
         backgroundSize: "cover",
