@@ -6,7 +6,7 @@ import { servicesBanner } from "../assets";
 const ServicesBanner = () => {
   return (
     <section
-      className={`${layout.sectionServicesBanner} relative `}
+      className={`${layout.sectionServicesBanner} relative px-6 `}
       style={{
         backgroundImage: `url(${servicesBanner})`,
         backgroundSize: "cover",
@@ -15,12 +15,12 @@ const ServicesBanner = () => {
     >
       <div className={`${styles.opacity} bg-black`} style={{ zIndex: 0 }}></div>
       <div className={`${styles.boxWidth} relative`}>
-        <div className="w-fit px-2 ">
-          <p className="border-t-4 border-l-4 pb-6 w-[30%] border-primary ">
+        <div className="w-fit xxs:px-2 mobile:px-6  ">
+          <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}
           </p>
 
-          <h1 className={`${styles.servicesHeader} text-white pl-6`}>
+          <h1 className={`${styles.servicesHeader} text-white`}>
             Serviciile noastre
           </h1>
           <p className={`${styles.servicesParagraph} text-white font-semi`}>

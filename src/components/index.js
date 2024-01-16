@@ -8,6 +8,7 @@ import ServicesBanner from "./ServicesBanner";
 import Stats from "./Stats";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
+import TestimonialsBanner from "./TestimonialsBanner";
 import Hero from "./Hero";
 
 export {
@@ -22,4 +23,5 @@ export {
   Team,
   Testimonials,
   Hero,
+  TestimonialsBanner,
 };

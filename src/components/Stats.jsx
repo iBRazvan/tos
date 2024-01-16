@@ -7,9 +7,9 @@ import { FaUserCheck } from "react-icons/fa";
 
 const Stats = () => {
   return (
-    <section className={`${layout.sectionTwoCols} ${styles.statsSection} `}>
+    <section className={`${layout.sectionTwoCols} ${styles.statsSection} xxs:px-2 mobile:px-6  `}>
       <div className={`${styles.boxWidth}${styles.colContainer} `}>
-      <p className="border-t-4 border-l-4 -ml-6 pb-6  w-[30%] border-primary">
+      <p className="border-t-4 border-l-4 -ml-6 pb-6  w-[110px] border-primary">
             {"   "}{" "}
           </p>
         <h3 className={`${styles.statsHeader3}`}>

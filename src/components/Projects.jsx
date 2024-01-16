@@ -6,15 +6,15 @@ import Card from "./card/Card";
 const Projects = () => {
   return (
     <section
-      className={`${styles.xyFull} ${styles.flexCol} ${styles.flexCenter} bg-secondary py-20 px-7`}
+      className={`${styles.xyFull} ${styles.flexCol} ${styles.flexCenter} bg-secondary py-20 px-6 `}
     >
-      <div className={`${styles.boxWidth} ${styles.flexCol} mb-20 `}>
+      <div className={`${styles.boxWidth} ${styles.flexCol} mb-20 xxs:px-2 mobile:px-6 `}>
         <div className="w-fit pb-11 ">
-          <p className="border-t-4 border-l-4 pb-6 w-[30%] border-primary ">
+          <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}
           </p>
 
-          <h1 className={`${styles.servicesHeader} text-primary pl-6`}>
+          <h1 className={`${styles.servicesHeader} text-primary`}>
             Proiectele noastre
           </h1>
           <p className={`${styles.servicesParagraph} text-white font-semi`}>

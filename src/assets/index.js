@@ -20,8 +20,23 @@ import tm1 from "./tm1.jpg";
 import tm2 from "./tm2.jpg";
 import tm3 from "./tm3.jpg";
 import tm4 from "./tm4.jpg";
-import testimonial from "./testimonial.jpg"
-
+import testimonial from "./testimonial.jpg";
+import r1 from "./r1.jpg";
+import d22020 from "./d22020.jpg";
+import d32020 from "./d32020.jpg";
+import d12021 from "./d12021.jpg";
+import d12020 from "./d12020.jpg";
+import d22021 from "./d22021.jpg";
+import d32021 from "./d32021.jpg";
+import d42021 from "./d42021.jpg";
+import d12022 from "./d12022.jpg";
+import d22022 from "./d22022.jpg";
+import d32022 from "./d32022.jpg";
+import d42022 from "./d42022.jpg";
+import d12023 from "./d12023.png";
+import d22023 from "./d22023.png";
+import d32023 from "./d32023.png";
+import babg from "./babg.png";
 export {
   toslogo,
   bgph1,
@@ -41,6 +56,25 @@ export {
   p4,
   p5,
   p6,
-  tm1,tm2,tm3,tm4,
-  testimonial
+  tm1,
+  tm2,
+  tm3,
+  tm4,
+  testimonial,
+  r1,
+  d12020,
+  d22020,
+  d32020,
+  d12021,
+  d22021,
+  d32021,
+  d42021,
+  d12022,
+  d22022,
+  d32022,
+  d42022,
+  d12023,
+  d22023,
+  d32023,
+  babg
 };

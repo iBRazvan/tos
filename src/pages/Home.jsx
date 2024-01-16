@@ -13,6 +13,7 @@ import {
   Stats,
   Team,
   Testimonials,
+  TestimonialsBanner,
 } from "../components";
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
         <Team />
         <Banner />
         <Testimonials />
+        <TestimonialsBanner />
         <CTA />
         <Footer />
       </div>
