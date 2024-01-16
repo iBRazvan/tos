@@ -91,13 +91,13 @@ const styles = {
     "font-poppins font-semibold text-base pl-6 pt-2",
   //SERVICES ----------------------------------->
   servicesTitle: "text-black font-bebas font-semibold text-4xl mt-2 mb-4 ",
-  servicesContent: "text-text text-lg md:text-base lg:text-base font-normal",
-  serviceImage:
+  servicesContent: "xxs:px-6 text-text text-lg md:text-base lg:text-base font-normal",
+  serviceWidth:
     "max-w-[348px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] border-b-[3px]  border-primary text-center",
   //PROJECTS ----------------------------------->
   projectTitle: "capitalize text-2xl font-normal font-poppins text-white",
   projectContent: "capitalize text-base font-normal text-primary",
-  projectImage: "max-w-[374px] text-start",
+  projectWidth: "max-w-[374px] text-start",
 };
 
 export const layout = {

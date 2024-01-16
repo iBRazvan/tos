@@ -6,11 +6,11 @@ import Card from "./card/Card";
 const Projects = () => {
   return (
     <section
-      className={`${styles.xyFull} ${styles.flexCol} ${styles.flexCenter} bg-secondary py-20 px-4`}
+      className={`${styles.xyFull} ${styles.flexCol} ${styles.flexCenter} bg-secondary py-20 px-7`}
     >
       <div className={`${styles.boxWidth} ${styles.flexCol} mb-20 `}>
         <div className="w-fit pb-11 ">
-          <p className="border-t-4 border-l-4 pb-6 left w-[30%] border-primary ">
+          <p className="border-t-4 border-l-4 pb-6 w-[30%] border-primary ">
             {"   "}{" "}
           </p>
 

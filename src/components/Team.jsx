@@ -10,7 +10,7 @@ const Team = () => {
     >
       <div className={`${styles.boxWidth} ${styles.flexCol} mb-20 `}>
         <div className="w-fit pb-11 ">
-          <p className="border-t-4 border-l-4 pb-6 left w-[30%] border-primary ">
+          <p className="border-t-4 border-l-4 pb-6 w-[30%] border-primary ">
             {"   "}{" "}
           </p>
 
@@ -31,12 +31,10 @@ const Team = () => {
           </div>
         </div>
           
-      <div className={`${styles.flexCol} px-60 gap-6 items-center text-center`}>
-        <p className={`${styles.paragraph}`}>
+      <div className={`${styles.flexCol} xxs:px-10 sm:px-30 lg:px-60 gap-6 items-center text-center`}>
+        <p className={`${styles.paragraph} font-semibold`}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
-          expedita. Est, quos velit ea enim, aspernatur magnam harum ullam sunt
-          suscipit consequatur assumenda minima quam ut. Temporibus quasi esse
-          dolores?
+          expedita. Est, quos velit ea enim, aspernatur magnam harum ullam .
         </p>
         <button className={`${styles.btn} w-fit h-[57px]`}>
           Hai in echipa noastra ➨

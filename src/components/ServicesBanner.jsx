@@ -15,8 +15,8 @@ const ServicesBanner = () => {
     >
       <div className={`${styles.opacity} bg-black`} style={{ zIndex: 0 }}></div>
       <div className={`${styles.boxWidth} relative`}>
-        <div className="w-fit">
-          <p className="border-t-4 border-l-4 pb-6 left w-[30%] border-primary fonmt">
+        <div className="w-fit px-2 ">
+          <p className="border-t-4 border-l-4 pb-6 w-[30%] border-primary ">
             {"   "}{" "}
           </p>
 
