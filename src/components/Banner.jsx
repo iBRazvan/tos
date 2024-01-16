@@ -3,10 +3,10 @@ import styles, { layout } from "../style";
 
 import { bgph1 } from "../assets";
 
-const ServicesBanner = () => {
+const Banner = () => {
   return (
     <section
-      className={`${layout.sectionServicesBanner} relative `}
+      className={`${layout.sectionServicesBanner} h-fit min-h-[348px] relative `}
       style={{
         backgroundImage: `url(${bgph1})`,
         backgroundSize: "cover",
@@ -14,9 +14,9 @@ const ServicesBanner = () => {
       }}
     >
       <div className={`${styles.opacity} opacity-80 brightness-[90%] shadow-xl bg-primary`} style={{ zIndex: 0 }}></div>
-      <div className={`${styles.boxWidth} relative flex flex-row`}>
-        <div className=" w-1/2">
-          <p className="border-t-4 border-l-4 pb-6 left w-[30%] border-white">
+      <div className={`${styles.boxWidth} xxs:px-2 xxs:py-6 mobile:p-7 relative flex xxs:flex-col sm:flex-row`}>
+        <div className="xxs:w-fit sm:w-1/2">
+          <p className="border-t-4 border-l-4 pb-6 w-[30%] border-white">
             {"   "}{" "}
           </p>
 
@@ -27,7 +27,7 @@ const ServicesBanner = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis provident beatae quis sed tempora voluptates doloribus, libero voluptatum officia.
           </p>
         </div>
-        <div className="flex w-1/2 pl-40 pt-10">
+        <div className=" flex xxs:w-full xxs:justify-center sm:w-1/2 md:pl-40 pt-10">
         <button className={` hover:bg-text text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] bg-secondary xxs:text-[16px] ss:text-[18px] font-poppins items-center w-fit h-[57px]`}>
           Contacteaza-ne ➨
         </button>
@@ -37,4 +37,4 @@ const ServicesBanner = () => {
   );
 };
 
-export default ServicesBanner;
+export default Banner;

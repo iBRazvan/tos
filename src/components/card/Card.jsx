@@ -13,8 +13,8 @@ const Card = ({ service, cardType, project }) => {
   }, [cardType, service, project]);
 
   const cardWidths = {
-    service: styles.serviceImage,
-    project: styles.projectImage,
+    service: styles.serviceWidth,
+    project: styles.projectWidth,
    
   };
   const cardTitles = {
@@ -33,7 +33,7 @@ const Card = ({ service, cardType, project }) => {
   const cardContent = cardContents[cardType];
 
   return (
-    <section className={`${cardWidth} h-full flex flex-col  pb-8 `}>
+    <section className={`${cardWidth} h-full flex flex-col pb-8 `}>
       {/* img */}
       <div className="w-full h-full mb-4">
         <img

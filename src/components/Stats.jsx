@@ -9,7 +9,9 @@ const Stats = () => {
   return (
     <section className={`${layout.sectionTwoCols} ${styles.statsSection} `}>
       <div className={`${styles.boxWidth}${styles.colContainer} `}>
-        <h1 className={`${styles.statsBar}`}> </h1>
+      <p className="border-t-4 border-l-4 -ml-6 pb-6  w-[30%] border-primary">
+            {"   "}{" "}
+          </p>
         <h3 className={`${styles.statsHeader3}`}>
           Implicam pasiune si experienta in fiecare aspect al afacerii noastre,
           pentru a livra rezultate de exceptie
@@ -30,7 +32,7 @@ const Stats = () => {
         <div className={`${styles.cellQuery} ${styles.statsCellContainer}`}>
           <div className={`${styles.statsCell}`}>
             <FaClipboardCheck className="text-primary text-5xl" />
-            <div className={`${styles.flexCol}`}>
+            <div className="flex flex-col text-center">
               <span className={`${styles.statsSpan}`}>1725</span>
               <p className={`${styles.statsCellParagraph}`}>
                 Proiecte Complete
@@ -39,7 +41,7 @@ const Stats = () => {
           </div>
           <div className={`${styles.statsCell}`}>
             <FaUserCheck className="text-primary text-6xl" />
-            <div className="flex flex-col ">
+            <div className="flex flex-col text-center">
               <span className={`${styles.statsSpan}`}>2.500K</span>
               <p className={`${styles.statsCellParagraph}`}>Clienti Fericiti</p>
             </div>
