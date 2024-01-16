@@ -36,7 +36,7 @@ const Hero = () => {
         ...transitionStyle,
       }}
     >
-      <div className={`${styles.opacity}`} style={{ zIndex: 0 }}></div>
+      <div className={`${styles.opacity} bg-black`} style={{ zIndex: 0 }}></div>
       {/*  Hero content */}
       <div className={`${styles.boxWidth} relative`}>
         <div className={`${styles.heroContent} ${styles.boxWidth}  `}>

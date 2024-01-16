@@ -16,6 +16,11 @@ import p3 from "./p3.jpg";
 import p4 from "./p4.jpg";
 import p5 from "./p5.jpg";
 import p6 from "./p6.jpg";
+import tm1 from "./tm1.jpg";
+import tm2 from "./tm2.jpg";
+import tm3 from "./tm3.jpg";
+import tm4 from "./tm4.jpg";
+import testimonial from "./testimonial.jpg"
 
 export {
   toslogo,
@@ -36,4 +41,6 @@ export {
   p4,
   p5,
   p6,
+  tm1,tm2,tm3,tm4,
+  testimonial
 };

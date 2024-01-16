@@ -1,4 +1,4 @@
-import { s1, s2, s3, s4, s5, s6, p1, p2, p3, p4, p5, p6 } from "../assets";
+import { s1, s2, s3, s4, s5, s6, p1, p2, p3, p4, p5, p6, tm1, tm2, tm3, tm4 } from "../assets";
 
 export const navLinks = [
   {
@@ -108,86 +108,30 @@ export const projectsConstants = [
   },
 ];
 
-export const stats = [
+export const teamConstants = [
   {
-    id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    id: "teammember-1",
+    image: tm1,
+    title: "Andreea Ionel",
+    content: "Inginer",
   },
   {
-    id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    id: "teammember-2",
+    image: tm2,
+    title: "Valentin Ifrim",
+    content: "Arhitect",
   },
   {
-    id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
-  },
-];
-
-export const footerLinks = [
-  {
-    title: "Useful Links",
-    links: [
-      {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
-      },
-      {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
-      },
-      {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
-      },
-    ],
+    id: "teammember-3",
+    image: tm3,
+    title: "George Antonovici",
+    content: "Inginer",
   },
   {
-    title: "Community",
-    links: [
-      {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
-      },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
-    ],
+    id: "teammember-4",
+    image: tm4,
+    title: "Cristina Mihailescu",
+    content: "Proiectant",
   },
-  {
-    title: "Partner",
-    links: [
-      {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
-      },
-      {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
-      },
-    ],
-  },
+ 
 ];

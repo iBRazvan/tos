@@ -15,14 +15,17 @@ const Card = ({ service, cardType, project }) => {
   const cardWidths = {
     service: styles.serviceImage,
     project: styles.projectImage,
+   
   };
   const cardTitles = {
     service: styles.servicesTitle,
     project: styles.projectTitle,
+   
   };
   const cardContents = {
     service: styles.servicesContent,
     project: styles.projectContent,
+   
   };
 
   const cardWidth = cardWidths[cardType];
@@ -39,9 +42,18 @@ const Card = ({ service, cardType, project }) => {
           alt={title}
         />
       </div>
-      <h4 className={`${cardTitle}`}>{title}</h4>
-      <div>
-        <p className={`${cardContent}`}>{content} </p>
+      <div className="flex flex-row">
+        <div className="flex justify-end items-end">
+         
+        {cardType !== "service" && <p className=" text border-b-[1px] h-[18%] border-r-[1px] w-[40px] mb-[6px] border-primary ">
+            {"   "}{" "}
+        </p> }
+         
+        </div>
+      <div className={` ${cardType === "project" && "ml-5"}`}>
+        <h4 className={`${cardTitle} ${cardType === "team" && "text-primary"}`}>{title}</h4>
+        <p className={`${cardContent} b`}>{content} </p>
+      </div>
       </div>
     </section>
   );
