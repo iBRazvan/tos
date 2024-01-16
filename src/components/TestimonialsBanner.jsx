@@ -2,7 +2,6 @@ import React from "react";
 import styles, { layout } from "../style";
 
 import { babg } from "../assets";
-import AwardsCarousel from "./awardsCarousel/AwardsCarousel";
 import SlickCarousel from "./awardsCarousel/SlickCarousel";
 
 const TestimonialsBanner = () => {

@@ -28,7 +28,7 @@ const SlickCarousel = () => {
       lazyLoad:true,
       centerPadding: "0px",
       slidesToShow: 3,
-      speed: 500,
+      speed: 700,
       beforeChange: (current, next) => setImageIndex(next)
     };
 
