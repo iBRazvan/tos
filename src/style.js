@@ -52,7 +52,7 @@ const styles = {
     "xxs:w-[22px] xxs:h-[22px] xs:w-[28px] xs:h-[28px] object-contain",
 
   // HERO ----------------------------------->
-  opacity: "absolute top-0 left-0 w-full h-full bg-black opacity-50",
+  opacity: "absolute top-0 left-0 w-full h-full opacity-50",
   heroHeader: "text-4xl md:text-4xl font-bold mb-4 text-primary font-bebas",
   hoverIcon:
     "[&>svg]:hover:text-black hover:bg-white  hover:translate-y-2 transition-transform duration-500 ease-in-out",
@@ -88,7 +88,7 @@ const styles = {
   servicesHeader:
     "left-8 uppercase font-semibold text-5xl font-bebas uppercase  ",
   servicesParagraph:
-    "text-white font-poppins font-semibold text-base pl-6 pt-2 uppercase",
+    "font-poppins font-semibold text-base pl-6 pt-2",
   //SERVICES ----------------------------------->
   servicesTitle: "text-black font-bebas font-semibold text-4xl mt-2 mb-4 ",
   servicesContent: "text-text text-lg md:text-base lg:text-base font-normal",

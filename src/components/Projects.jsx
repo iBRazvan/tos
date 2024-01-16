@@ -10,14 +10,14 @@ const Projects = () => {
     >
       <div className={`${styles.boxWidth} ${styles.flexCol} mb-20 `}>
         <div className="w-fit pb-11 ">
-          <p className="border-t-4 border-l-4 pb-6 left w-[30%] border-primary fonmt">
+          <p className="border-t-4 border-l-4 pb-6 left w-[30%] border-primary ">
             {"   "}{" "}
           </p>
 
           <h1 className={`${styles.servicesHeader} text-primary pl-6`}>
             Proiectele noastre
           </h1>
-          <p className={`${styles.servicesParagraph} font-semi`}>
+          <p className={`${styles.servicesParagraph} text-white font-semi`}>
             Proiecte ce depășesc așteptările de fiecare dată.
           </p>
         </div>
