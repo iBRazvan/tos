@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -20,14 +20,38 @@ import {
 
 const SlickCarousel = () => {
   const [imageIndex, setImageIndex] = useState(0);
+  const [slides, setSlides] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      const xxsBreakpoint = 250;
+      const ssBreakpoint = 620;
+
+      // Set slides based on screen resolution
+      setSlides(screenWidth >= xxsBreakpoint && screenWidth < ssBreakpoint ? 1 : screenWidth >= ssBreakpoint ? 3 : 3);
+    };
+
+    // Initial setup on mount
+    handleResize();
+
+    // Attach event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
 
     const settings = {
       className: "center",
       centerMode: true,
       infinite: true,
       lazyLoad:true,
-      centerPadding: "0px",
-      slidesToShow: 3,
+      centerPadding: "10px",
+      slidesToShow: slides,
       speed: 700,
       beforeChange: (current, next) => setImageIndex(next)
     };
@@ -91,11 +115,11 @@ const SlickCarousel = () => {
       },
     ];
     return (
-      <div>
-        <Slider {...settings} className="w-full h-full">
+      <div className="w-full">
+        <Slider {...settings} className={`w-full h-full `}>
           {images.map(({key, content}, index) => (
+          console.log(slides),
             <div key={key} className={` ${index === imageIndex ? "slide activeSlide" : "slide"}`}>
-              {console.log(index,imageIndex)}
               <img src={content} alt={content} />
             </div>
           ))}
