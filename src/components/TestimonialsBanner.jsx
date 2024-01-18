@@ -7,7 +7,7 @@ import SlickCarousel from "./awardsCarousel/SlickCarousel";
 const TestimonialsBanner = () => {
   return (
     <section
-      className={`${layout.sectionServicesBanner} min-h-[348px] relative xxs:px-2 mobile:px-10 shadow-black shadow-inner `}
+      className={`${layout.sectionServicesBanner} min-h-[348px] relative px-10 shadow-black shadow-inner `}
       style={{
         backgroundImage: `url(${babg})`,
         backgroundSize: "cover",

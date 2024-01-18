@@ -106,7 +106,7 @@ const Navbar = () => {
               <ul className="list-none flex items-start flex-1 flex-col">
                 {navLinks.map(
                   (nav, index) => (
-                    console.log(nav.route),
+                    
                     (
                       <li
                         key={nav.id}

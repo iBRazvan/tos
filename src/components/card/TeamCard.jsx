@@ -1,7 +1,7 @@
 import React from "react";
 
 const TeamCard = ({ team }) => {
-  console.log(team);
+ 
   return (
     <section className={`max-w-[374px] text-start h-full flex flex-col pb-8 `}>
       {/* img */}
