@@ -3,7 +3,7 @@ import styles, { layout } from "../style";
 import { servicesConstants } from "../constants";
 import Card from "./card/Card";
 
-const Services = () => {
+const ServicesComponent = () => {
   return (
     <section
       className={`${styles.boxWidth} ${styles.flexCenter} ${styles.flexCol} mb-20 `}
@@ -33,4 +33,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesComponent;

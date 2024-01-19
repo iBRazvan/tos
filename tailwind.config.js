@@ -2,7 +2,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: ["./src/**/*.html", "./src/**/*.jsx", "./src/**/*.js"],
   mode: "jit",
   theme: {
     extend: {
@@ -19,6 +19,16 @@ module.exports = {
         audiowide: ["Audiowide", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
+      classNames: [
+        "responsive",
+        "hover",
+        "focus",
+        "active",
+        "group-hover",
+        "group",
+        "selected"
+      ],
+      backgroundColor: ['group-hover'],
     },
     screens: {
       xxs: "250px",

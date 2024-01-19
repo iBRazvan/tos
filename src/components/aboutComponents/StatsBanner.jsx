@@ -56,10 +56,10 @@ const StatsBanner = () => {
               <span
                 className={`text-5xl font-bebas font-semibold leading-[1.2em] text-secondary`}
               >
-                2.500K
+                +100
               </span>
               <p className={`text-lg font-roboto font-semibold text-secondary`}>
-                Clienti Fericiti
+                Proiecte in desfasurare
               </p>
             </div>
           </div>
@@ -69,10 +69,10 @@ const StatsBanner = () => {
               <span
                 className={`text-5xl font-bebas font-semibold leading-[1.2em] text-secondary`}
               >
-                2.500K
+                +500
               </span>
               <p className={`text-lg font-roboto font-semibold text-secondary`}>
-                Clienti Fericiti
+                Aprecieri
               </p>
             </div>
           </div>

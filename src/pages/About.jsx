@@ -1,22 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import Banner from "../components/Banner";
-import styles, { layout } from "../style";
-import { bgph2 } from "../assets";
-
-
-import { r1, testimonial } from "../assets";
-import { ImQuotesLeft } from "react-icons/im";
 import AboutTestimonials from "../components/aboutComponents/AboutTestimonials";
 import StatsBanner from "../components/aboutComponents/StatsBanner";
+import { Footer, Team } from "../components";
+import { bannerConstants } from "../constants";
 
 const About = () => {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const aboutConstants = bannerConstants.find((item) => item.id === 'about');
+    setData(aboutConstants);
+  }, []); 
+
+  console.log("about", data);
+
   return (
     <div className="flex flex-col items-center">
-      <Banner/>
+      <Banner aboutConstants={data}/>
       <AboutTestimonials/>
       <StatsBanner/>
-
+      <Team/>
+      <Footer/>
     </div>
   );
 };

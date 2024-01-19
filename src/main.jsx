@@ -6,14 +6,13 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
-  Outlet,
-  Link,
+
 } from "react-router-dom";
-import { Home, About, Contact } from "./pages";
+import { Home, About, Contact, ServicesDetail } from "./pages";
 import Services from "./pages/Services";
 import App from "./App";
 import "./index.css";
-import { Projects } from "./components";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,8 +20,8 @@ const router = createBrowserRouter(
       <Route index path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/servicesdetail" element={<ServicesDetail />} />
       <Route path="/contact" element={<Contact />} />
-    
     </Route>
   )
 );

@@ -1,20 +1,66 @@
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .slide img {
-    width: 22rem;
-    margin: 0 auto;
+  width: 22rem;
+  margin: 0 auto;
 }
 
-.slide { 
-    transform: scale(0.2);
-    transition: transform 300ms;
-    opacity: 0.5;
+.slide {
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
 }
 
 .activeSlide {
-    transform:  scale(1);
-    opacity: 1;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Modified Dropdown Styles */
+.dropdown {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  background-color: #fff;
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 12;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.dropdown-mobile {
+  position: absolute;
+  top: 0;
+  left: 150%;
+  background-color: #fff;
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 12;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.show-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown Item Styles */
+.dropdown-item {
+  padding: 10px;
+  color: #000;
+  /* Add any additional styling you need */
+}
+
+.selected {
+  color: #acc820 !important;
+  /* Set the text color for the selected item */
 }

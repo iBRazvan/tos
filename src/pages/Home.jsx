@@ -3,11 +3,10 @@ import styles from "../style";
 
 import {
   Hero,
-  Banner,
   CTA,
   Footer,
   Projects,
-  Services,
+  ServicesComponent,
   ServicesBanner,
   Stats,
   Team,
@@ -33,7 +32,7 @@ const Home = () => {
       </div>
       <ServicesBanner />
       <div className={`bg-white ${styles.flexCenter} ${styles.flexCol} `}>
-        <Services />
+        <ServicesComponent />
         <Projects/>
         <Team />
         <HomeBanner />

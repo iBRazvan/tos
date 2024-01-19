@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import CTA from "./CTA";
 import Footer from "./Footer";
 import Projects from "./Projects";
-import Services from "./Services";
+import ServicesComponent from "./ServicesComponent";
 import ServicesBanner from "./ServicesBanner";
 import Stats from "./Stats";
 import Team from "./Team";
@@ -17,7 +17,7 @@ export {
   CTA,
   Footer,
   Projects,
-  Services,
+  ServicesComponent,
   ServicesBanner,
   Stats,
   Team,
