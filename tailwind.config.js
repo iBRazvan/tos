@@ -16,8 +16,8 @@ module.exports = {
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
         audiowide: ["Audiowide", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
     screens: {

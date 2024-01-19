@@ -1,4 +1,26 @@
-import { s1, s2, s3, s4, s5, s6, p1, p2, p3, p4, p5, p6, tm1, tm2, tm3, tm4 } from "../assets";
+import {
+  s1,
+  s2,
+  s3,
+  s4,
+  s5,
+  s6,
+  p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6,
+  tm1,
+  tm2,
+  tm3,
+  tm4,
+} from "../assets";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa";
 
 export const navLinks = [
   {
@@ -133,5 +155,63 @@ export const teamConstants = [
     title: "Cristina Mihailescu",
     content: "Proiectant",
   },
- 
 ];
+
+export const footerConstants = [
+  {
+    id: "footercol-1",
+    title: "Birou in Onesti",
+    content: [
+      {
+        icon: FaPhone,
+        text: "+40712345678",
+      },
+      {
+        icon: IoIosMail,
+        text: "toderica.solutions@gmail.com",
+       
+
+      },
+      {
+        icon: FaLocationDot,
+        text: "Str.Industriilor, Nr.1C",
+        to: "https://maps.app.goo.gl/suCugwAP2TNVWVYH9"
+      },
+      {
+        icon: FaClock,
+        text: "Luni - Vineri: 08.00 - 16.00",
+      },
+    ],
+  },
+  {
+    id: "footerccol-2",
+    title: "Link-uri rapide",
+    content: [
+      { icon: FaLongArrowAltRight, text: "Despre noi", to:"/about",target:"about" },
+      { icon: FaLongArrowAltRight, text: "Servicii", to:"/services", target:"services"},
+      { icon: FaLongArrowAltRight, text: "Echipa noastra", target:"team" },
+      { icon: FaLongArrowAltRight, text: "Proiecte", target:"projects" },
+      { icon: FaLongArrowAltRight, text: "Contacteaza-ne", to:"/contact", target:"contact" },
+    ],
+  },
+  {
+    id: "footerccol-3",
+    title: "Serviciile noastre",
+    icon: "FaArrowRight" ,
+    content: [
+      { icon: FaLongArrowAltRight, text: "Proiectare" },
+      { icon: FaLongArrowAltRight, text: "Constructii" },
+      { icon: FaLongArrowAltRight, text: "Renovare" },
+    ],
+    typesOfConstruction: [
+      "Instalatii sanitare",
+      "Acoperis",
+      "Pardoseala",
+      "Electrice",
+    ],
+  },
+];
+
+export const testimonialsConstants = {
+  
+}

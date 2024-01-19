@@ -1,12 +1,14 @@
 import React from "react";
-import styles, { layout } from "../style";
+import styles from "../style";
 import { projectsConstants } from "../constants";
+
 import Card from "./card/Card";
 
-const Projects = () => {
+const Projects = (ref) => {
+
   return (
-    <section
-      className={`${styles.xyFull} ${styles.flexCol} ${styles.flexCenter} bg-secondary py-20 px-6 `}
+    <section id="projects"
+    className={`${styles.xyFull} ${styles.flexCol} ${styles.flexCenter} bg-secondary py-20 px-6 `}
     >
       <div className={`${styles.boxWidth} ${styles.flexCol} mb-20 xxs:px-2 mobile:px-6 `}>
         <div className="w-fit pb-11 ">

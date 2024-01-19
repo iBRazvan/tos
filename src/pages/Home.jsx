@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../style";
 
 import {
-  Navbar,
   Hero,
   Banner,
   CTA,
@@ -15,8 +14,12 @@ import {
   Testimonials,
   TestimonialsBanner,
 } from "../components";
+import HomeBanner from "../components/HomeBanner";
 
 const Home = () => {
+
+
+
   return (
     <div className="bg-white overflow-hidden">
       <div className={`${styles.flexCenter} `}>
@@ -31,13 +34,13 @@ const Home = () => {
       <ServicesBanner />
       <div className={`bg-white ${styles.flexCenter} ${styles.flexCol} `}>
         <Services />
-        <Projects />
+        <Projects/>
         <Team />
-        <Banner />
+        <HomeBanner />
         <Testimonials />
         <TestimonialsBanner />
         <CTA />
-        <Footer />
+        <Footer/>
       </div>
     </div>
   );

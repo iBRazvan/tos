@@ -20,7 +20,7 @@ import {
 
 const SlickCarousel = () => {
   const [imageIndex, setImageIndex] = useState(0);
-  const [slides, setSlides] = useState(0);
+  const [slides, setSlides] = useState(3);
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,7 +50,7 @@ const SlickCarousel = () => {
       centerMode: true,
       infinite: true,
       lazyLoad:true,
-      centerPadding: "10px",
+      centerPadding: "2px",
       slidesToShow: slides,
       speed: 700,
       beforeChange: (current, next) => setImageIndex(next)
@@ -118,7 +118,6 @@ const SlickCarousel = () => {
       <div className="w-full">
         <Slider {...settings} className={`w-full h-full `}>
           {images.map(({key, content}, index) => (
-          console.log(slides),
             <div key={key} className={` ${index === imageIndex ? "slide activeSlide" : "slide"}`}>
               <img src={content} alt={content} />
             </div>
