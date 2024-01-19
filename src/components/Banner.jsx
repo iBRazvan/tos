@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles, { layout } from "../style";
-
+import { bannerConstants } from "../constants";
 import { bgph2 } from "../assets";
 
-const Banner = () => {
+const Banner = ({
+  aboutConstants,
+  servicesConstants,
+  servicesDetailConstants,
+  contactConstants,
+}) => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    setData(
+      aboutConstants
+        ? aboutConstants
+        : servicesConstants
+        ? servicesConstants
+        : servicesDetailConstants
+        ? servicesDetailConstants
+        : contactConstants
+    );
+  }, [
+    aboutConstants,
+    servicesConstants,
+    servicesDetailConstants,
+    contactConstants,
+  ]);
+
   return (
     <section
       className={`${layout.sectionServicesBanner} h-fit min-h-[280px] relative xxs:px-2 mobile:px-6  `}
@@ -26,13 +50,36 @@ const Banner = () => {
           </p>
 
           <h1 className={`${styles.servicesHeader} text-white pl-6`}>
-            Despre <span className="text-primary"> noi</span>
+            {data?.title.split(" ").map((word, index, array) => (
+              <span
+                key={index}
+                className={
+                  index === 0
+                    ? "text-white"
+                    : index === array.length - 1
+                    ? "text-primary"
+                    : "text-white"
+                }
+              >
+                {word} {index < array.length - 1 && " "}
+              </span>
+            ))}
           </h1>
           <p
             className={`${styles.servicesParagraph} pl-6 text text-white font-[500]`}
           >
-            Acasa/
-            <span className="font-[600] text-primary">Despre</span>
+            {data?.path.split(" ").map((word, index, array) => (
+              <span
+                key={index}
+                className={index === 0 ? "text-white" : "text-primary"}
+              >
+                {word}{" "}
+                {index === 0 && array.length > 1 && (
+                  <span className="text-white">/</span>
+                )}
+                {index < array.length - 1 && " "}
+              </span>
+            ))}
           </p>
         </div>
       </div>

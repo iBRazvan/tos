@@ -36,12 +36,22 @@ export const navLinks = [
   {
     id: "nav-3",
     title: "Servicii",
-    route: "/services",
+    subLinks: [
+      {
+        id: "nav-3.1",
+        title: "Servicii",
+        route: "/services",
+      },
+      {
+        id: "nav-3.2",
+        title: "Servicii detaliate",
+        route: "/servicesdetail",
+      },
+    ],
   },
-
   {
-    id: "nav-4",
-    title: "contact",
+    id: "nav-5",
+    title: "Contact",
     route: "/contact",
   },
 ];
@@ -169,13 +179,11 @@ export const footerConstants = [
       {
         icon: IoIosMail,
         text: "toderica.solutions@gmail.com",
-       
-
       },
       {
         icon: FaLocationDot,
         text: "Str.Industriilor, Nr.1C",
-        to: "https://maps.app.goo.gl/suCugwAP2TNVWVYH9"
+        to: "https://maps.app.goo.gl/suCugwAP2TNVWVYH9",
       },
       {
         icon: FaClock,
@@ -187,17 +195,32 @@ export const footerConstants = [
     id: "footerccol-2",
     title: "Link-uri rapide",
     content: [
-      { icon: FaLongArrowAltRight, text: "Despre noi", to:"/about",target:"about" },
-      { icon: FaLongArrowAltRight, text: "Servicii", to:"/services", target:"services"},
-      { icon: FaLongArrowAltRight, text: "Echipa noastra", target:"team" },
-      { icon: FaLongArrowAltRight, text: "Proiecte", target:"projects" },
-      { icon: FaLongArrowAltRight, text: "Contacteaza-ne", to:"/contact", target:"contact" },
+      {
+        icon: FaLongArrowAltRight,
+        text: "Despre noi",
+        to: "/about",
+        target: "about",
+      },
+      {
+        icon: FaLongArrowAltRight,
+        text: "Servicii",
+        to: "/services",
+        target: "services",
+      },
+      { icon: FaLongArrowAltRight, text: "Echipa noastra", target: "team" },
+      { icon: FaLongArrowAltRight, text: "Proiecte", target: "projects" },
+      {
+        icon: FaLongArrowAltRight,
+        text: "Contacteaza-ne",
+        to: "/contact",
+        target: "contact",
+      },
     ],
   },
   {
     id: "footerccol-3",
     title: "Serviciile noastre",
-    icon: "FaArrowRight" ,
+    icon: "FaArrowRight",
     content: [
       { icon: FaLongArrowAltRight, text: "Proiectare" },
       { icon: FaLongArrowAltRight, text: "Constructii" },
@@ -212,6 +235,8 @@ export const footerConstants = [
   },
 ];
 
-export const testimonialsConstants = {
-  
-}
+export const bannerConstants = [
+  { title: "Despre noi", path: "Acasa Despre", id: "about" },
+  { title: "Serviciile noastre", path: "Acasa Servicii", id: "services" },
+  { title: "Servicii detaliate", path: "Acasa Servicii detaliate", id: "servicesdetalied" },
+];

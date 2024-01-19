@@ -65,7 +65,6 @@ const Footer = () => {
                     {<content.icon className="text-primary" />}
 
                     <p className="text-white text-base font-roboto">
-                      {console.log(content.target, "targets")}
                       <Link to={content.to} >{content.text}</Link>
                     </p>
                     
