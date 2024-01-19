@@ -1,11 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import Banner from "../components/Banner";
+import styles, { layout } from "../style";
+import { bgph2 } from "../assets";
+
+
+import { r1, testimonial } from "../assets";
+import { ImQuotesLeft } from "react-icons/im";
+import AboutTestimonials from "../components/aboutComponents/AboutTestimonials";
+import StatsBanner from "../components/aboutComponents/StatsBanner";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center py-20 gap--20">
-      <p> ABOUT P</p>
-      <Link to={"/services"}>Clickkk</Link>
+    <div className="flex flex-col items-center">
+      <Banner/>
+      <AboutTestimonials/>
+      <StatsBanner/>
+
     </div>
   );
 };

@@ -15,8 +15,8 @@ const TeamCard = ({ team }) => {
           </p>
         </div>
         <div className={` ml-5`}>
-          <h4 className="text-primary font-poppins text-xl">{team.title}</h4>
-          <p className="text-text font-poppins text-sm">{team.content} </p>
+          <h4 className="text-primary font-roboto text-xl">{team.title}</h4>
+          <p className="text-text font-roboto text-sm">{team.content} </p>
         </div>
       </div>
     </section>

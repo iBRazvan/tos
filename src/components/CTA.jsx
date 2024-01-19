@@ -3,16 +3,17 @@ import FormCTA from "./formCTA'/FormCTA";
 import styles, { layout } from "../style";
 
 import { cta } from "../assets";
+import { FaSquarePhone } from "react-icons/fa6";
 
 const CTA = () => {
   return (
     <section className={`${styles.boxWidth} xxs:px-2 mobile:px-6`}>
       <div
-        className={`${layout.sectionTwoCols} ${styles.statsSection} sm:flex-row pt-20 gap-10 `}
+        className={`${layout.sectionTwoCols} ${styles.statsSection} sm:flex-row pt-20 xxs:gap-4 md:gap-10 `}
       >
         {/* Images div */}
         <div
-          className={`flex flex-col  xxs:w-[100%] sm:w-[35%] md:w-[50%] items-center m-4 relative mb-16 `}
+          className={`flex flex-col  xxs:w-full sm:w-[45%] md:w-1/2 items-center m-4 relative mb-16 `}
         >
           <div
             className={`${styles.statsImgContainer} max-w-[346px] max-h-[661px] `}
@@ -26,12 +27,15 @@ const CTA = () => {
               className={`absolute w-full h-32 bottom-0 bg-black`}
               style={{ background: "rgba(0, 0, 0, 0.5)" }}
             >
-            
-              <div className="flex w-full h-full ">
-                <div className=" w-2/6 text-primary ">ICON</div>
-                <div className="flex flex-col w-2/3 text-primary">
-                  <h4 className=" text-white">Consultare gratuita:</h4>
-                  <h2>+40712345678</h2>
+              <div className="flex w-full h-full gap-2 ">
+                <div className=" w-[25%] text-primary ">
+                  <div className="w-full h-full flex justify-center items-center">
+                    <FaSquarePhone className="xxs:w-14 xxs:h-14 xs:w-16 xs:h-16" />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-start w-[75%] text-primary">
+                  <h4 className=" xxs:text-xl xs:text-2xl font-bebas font-medium text-white">Consultare gratuita:</h4>
+                  <h2 className=" xxs:text-5xl xxs:text-[36px] mobile:text-5xl mobile:text-[44px] xs:text-5xl font-bebas font-semibold text-primary">+40712345678</h2>
                 </div>
               </div>
             </div>
@@ -39,7 +43,7 @@ const CTA = () => {
         </div>
 
         {/* Form DIV */}
-        <div className={`flex flex-col xxs:px-6 xxs:w-[100%] sm:w-[50%] `}>
+        <div className={`flex flex-col xxs:px-6 xxs:w-full sm:w-[55%] md:w-1/2 `}>
           <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}
           </p>
@@ -49,7 +53,7 @@ const CTA = () => {
             Solicita o oferta gratuita
           </h3>
           <h4
-            className={`text-lg font-poppins text-primary font-semibold mb-4`}
+            className={`text-lg font-roboto text-primary font-semibold mb-4`}
           ></h4>
 
           <div className={`${styles.statsCellContainer} flex xxs:flex-col `}>

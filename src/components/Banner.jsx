@@ -1,20 +1,20 @@
 import React from "react";
 import styles, { layout } from "../style";
 
-import { bgph1 } from "../assets";
+import { bgph2 } from "../assets";
 
 const Banner = () => {
   return (
     <section
-      className={`${layout.sectionServicesBanner} h-fit min-h-[348px] relative xxs:px-2 mobile:px-6  `}
+      className={`${layout.sectionServicesBanner} h-fit min-h-[280px] relative xxs:px-2 mobile:px-6  `}
       style={{
-        backgroundImage: `url(${bgph1})`,
+        backgroundImage: `url(${bgph2})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       <div
-        className={`${styles.opacity} opacity-80 brightness-[90%] shadow-xl bg-primary`}
+        className={`${styles.opacity} opacity-50 brightness-[90%] shadow-xl bg-black`}
         style={{ zIndex: 0 }}
       ></div>
       <div
@@ -24,24 +24,16 @@ const Banner = () => {
           <p className="border-t-4 border-l-4 pb-6 w-[110px] border-white">
             {"   "}{" "}
           </p>
-          
-            <h1 className={`${styles.servicesHeader} text-white pl-6`}>
-              Implicam pasiune si experienta in fiecare aspect al afacerii
-              noastre, pentru a livra rezultate de exceptie
-            </h1>
-            <p className={`${styles.servicesParagraph} text-white font-semi`}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Veritatis provident beatae quis sed tempora voluptates doloribus,
-              libero voluptatum officia.
-            </p>
-          
-        </div>
-        <div className=" flex xxs:w-full xxs:justify-center sm:w-1/2 md:pl-40 pt-10">
-          <button
-            className={` hover:bg-text text-white xxs:py-3 xxs:px-6 ss:py-4 ss:px-8 rounded font-[600] bg-secondary xxs:text-[16px] ss:text-[18px] font-poppins items-center w-fit h-[57px]`}
+
+          <h1 className={`${styles.servicesHeader} text-white pl-6`}>
+            Despre <span className="text-primary"> noi</span>
+          </h1>
+          <p
+            className={`${styles.servicesParagraph} pl-6 text text-white font-[500]`}
           >
-            Contacteaza-ne ➨
-          </button>
+            Acasa/
+            <span className="font-[600] text-primary">Despre</span>
+          </p>
         </div>
       </div>
     </section>

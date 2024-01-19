@@ -7,7 +7,7 @@ import { ImQuotesLeft } from "react-icons/im";
 const Testimonials = () => {
   return (
     <section className={`${styles.boxWidth} xxs:px-2 mobile:px-6`}>
-      <div className={`${layout.sectionTwoCols} ${styles.statsSection} pt-20 `}>
+      <div className={`${layout.sectionTwoCols} xxs:items-center md:items-start pt-20 `}>
         <div className={`${styles.colContainer} `}>
           <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}

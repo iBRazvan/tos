@@ -20,8 +20,8 @@ const FormCTA = () => {
             <TextField label="Email" type="email" />
             <TextField label="Subiect" type="subiect" />
             <TextField label="Mesaj (optional)" type="mesaj" />
-            <div className="">
-                <button className={`${styles.btn} mt-6 w-64`}>Trimite</button>
+            <div>
+                <button className={`${styles.btn} mt-6 w-full`}>Trimite</button>
             </div>
           </Stack>
         </form>

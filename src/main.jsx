@@ -13,6 +13,7 @@ import { Home, About, Contact } from "./pages";
 import Services from "./pages/Services";
 import App from "./App";
 import "./index.css";
+import { Projects } from "./components";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
+    
     </Route>
   )
 );

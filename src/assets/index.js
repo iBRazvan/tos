@@ -38,6 +38,9 @@ import d22023 from "./d22023.png";
 import d32023 from "./d32023.png";
 import babg from "./babg.png";
 import cta from "./cta.jpg"
+import footer from "./footer.jpg"
+import statsB from "./statsB.jpg"
+
 export {
   toslogo,
   bgph1,
@@ -78,5 +81,7 @@ export {
   d22023,
   d32023,
   babg,
-  cta
+  cta,
+  footer,
+  statsB
 };
