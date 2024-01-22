@@ -28,7 +28,7 @@ const Footer = () => {
       ></div>
       <div className={`${styles.boxWidth} relative`}>
         <div className=" w-full h-full xxs:px-2 mobile:px-6">
-          <div className="grid xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-20 gap-10 ">
+          <div className="grid xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4  xxs:p-0 mobile:p-2 xs:p-20 gap-10 ">
             {/* 1 Col */}
             <div className="flex flex-col gap-4 justify-start">
               <img

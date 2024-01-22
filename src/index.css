@@ -18,7 +18,6 @@
   opacity: 1;
 }
 
-/* Modified Dropdown Styles */
 .dropdown {
   position: absolute;
   top: 200%;
@@ -53,14 +52,20 @@
   transform: translateY(0);
 }
 
-/* Dropdown Item Styles */
 .dropdown-item {
   padding: 10px;
   color: #000;
-  /* Add any additional styling you need */
 }
 
 .selected {
   color: #acc820 !important;
-  /* Set the text color for the selected item */
+}
+
+.service-item {
+  transition: background-color 0.3s ease; 
+}
+
+.service-item.selectedItem {
+  background-color: #acc820;
+  color: #ffffff; 
 }

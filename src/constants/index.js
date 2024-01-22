@@ -238,5 +238,18 @@ export const footerConstants = [
 export const bannerConstants = [
   { title: "Despre noi", path: "Acasa Despre", id: "about" },
   { title: "Serviciile noastre", path: "Acasa Servicii", id: "services" },
-  { title: "Servicii detaliate", path: "Acasa Servicii detaliate", id: "servicesdetalied" },
+  {
+    title: "Servicii detaliate",
+    path: "Acasa Servicii detaliate",
+    id: "servicesdetalied",
+  },
+];
+
+export const serviceDetailItems = [
+  { id: "constructii", title: "Servicii de Construcții" },
+  { id: "sanitare", title: "Servicii de Instalații Sanitare" },
+  { id: "acoperis", title: "Servicii de Acoperiș" },
+  { id: "renovare", title: "Servicii de Renovare" },
+  { id: "electrice", title: "Servicii Electrice" },
+  { id: "proiectare", title: "Servicii de Proiectare" },
 ];

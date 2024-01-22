@@ -13,6 +13,7 @@ module.exports = {
         white: "#ffffff",
         gradientLime_100: "#9bb41d",
         gradientLime_200: "#8aa01a",
+        grayFruit : "#FAFAFA"
       },
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
