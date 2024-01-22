@@ -37,9 +37,16 @@ import d12023 from "./d12023.png";
 import d22023 from "./d22023.png";
 import d32023 from "./d32023.png";
 import babg from "./babg.png";
-import cta from "./cta.jpg"
-import footer from "./footer.jpg"
-import statsB from "./statsB.jpg"
+import cta from "./cta.jpg";
+import footer from "./footer.jpg";
+import statsB from "./statsB.jpg";
+import constructii from "./constructii.jpg";
+import acoperis from "./acoperis.jpg";
+import electrice from "./electrice.jpg";
+import proiectare from "./proiectare.jpg";
+import contact from "./renovare.jpg"
+import renovare from "./renovare2.jpg";
+import sanitare from "./sanitare.jpg";
 
 export {
   toslogo,
@@ -83,5 +90,12 @@ export {
   babg,
   cta,
   footer,
-  statsB
+  statsB,
+  constructii,
+  acoperis,
+  electrice,
+  proiectare,
+  renovare,
+  sanitare,
+  contact
 };

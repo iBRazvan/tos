@@ -8,20 +8,19 @@ import {
   RouterProvider,
 
 } from "react-router-dom";
-import { Home, About, Contact, ServicesDetail } from "./pages";
-import Services from "./pages/Services";
 import App from "./App";
+import { HomePage, AboutPage, ContactPage, ServicesDetailPage,ServicesPage } from "./pages";
 import "./index.css";
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/servicesdetail" element={<ServicesDetail />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route index path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/services" element={<ServicesPage />} />
+      <Route path="/servicesdetail" element={<ServicesDetailPage />} />
+      <Route path="/contact" element={<ContactPage />} />
     </Route>
   )
 );
