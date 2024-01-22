@@ -1,31 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Banner, Footer } from "../components";
 import { bannerConstants } from "../constants";
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { serviceDetailItems } from "../constants";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 import ServiceDetails from "../components/ServiceDetails";
+import ServiceItem from "../components/servicesComponents/ServiceItem";
+import Brochure from "../components/servicesComponents/Brochure";
+
 import styles from "../style";
-
-const ServiceItem = ({ id, title, selected, onClick }) => (
-  <div
-    className={`w-[100%] flex py-4 px-8 justify-center items-center service-item ${
-      selected ? "selectedItem" : "bg-grayFruit text-secondary"
-    }`}
-    onClick={() => onClick(id)}
-  >
-    <div
-      className={`flex w-[90%] justify-center text-center`}
-    >
-      <div className="flex justify-center">
-        <h2 className="text-lg font-roboto font-semibold">{title}</h2>
-      </div>
-    </div>
-    <div className="flex w-[10%] justify-center">
-      <FaLongArrowAltRight />
-    </div>
-  </div>
-);
-
+import { contact } from "../assets";
 
 const ServicesDetailPage = () => {
   const [data, setData] = useState();
@@ -43,11 +27,13 @@ const ServicesDetailPage = () => {
   };
 
   return (
-    <div className={` flex flex-col items-center`}>
+    <div className={`flex flex-col items-center`}>
       <Banner servicesDetailConstants={data} />
 
-      <div className={`flex flex-row py-20 px-4 ${styles.boxWidth}`}>
-        <div className="w-1/3 p-4">
+      <div
+        className={`flex xxs:flex-col sm:flex-row py-20 xxs:p-1 xs:p-4 ${styles.boxWidth}`}
+      >
+        <div className="xxs:w-full sm:w-1/3 p-4 xxs:py-10">
           <div className="flex flex-col gap-2">
             {serviceDetailItems.map((serviceItem) => (
               <ServiceItem
@@ -58,6 +44,35 @@ const ServicesDetailPage = () => {
                 onClick={handleServiceClick}
               />
             ))}
+            <div>
+              <Brochure />
+            </div>
+            <div
+              className={`w-[100%] flex py-4 mt-10 px-4 justify-center items-center bg-grayFruit text-secondary"
+      }`}
+            >
+              <div className={`flex w-[90%] justify-center text-start `}>
+                <div className="flex flex-col justify-center items-center">
+                  <img src={contact} />
+                  <h4
+                    className={`text-4xl mt-4 font-bebas text-secondary font-semibold leading-[1.2em] pb-6`}
+                  >
+                    Cere oferta
+                  </h4>
+
+                  <div className="flex flex-col">
+                    <p className="text-text text-roboto text-base mb-6">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                    <div>
+                      <button className={`${styles.btn } w-fit flex flex-row items-start justify-start`} >
+                        Contactează-ne 
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <ServiceDetails selectedService={selectedServiceID} />

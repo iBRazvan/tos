@@ -44,6 +44,7 @@ import constructii from "./constructii.jpg";
 import acoperis from "./acoperis.jpg";
 import electrice from "./electrice.jpg";
 import proiectare from "./proiectare.jpg";
+import contact from "./renovare.jpg"
 import renovare from "./renovare2.jpg";
 import sanitare from "./sanitare.jpg";
 
@@ -96,4 +97,5 @@ export {
   proiectare,
   renovare,
   sanitare,
+  contact
 };

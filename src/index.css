@@ -62,10 +62,14 @@
 }
 
 .service-item {
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .service-item.selectedItem {
   background-color: #acc820;
-  color: #ffffff; 
+  color: #ffffff;
+}
+
+.transition-max-height {
+  transition: max-height 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }
