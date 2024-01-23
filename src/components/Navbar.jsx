@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -18,7 +18,7 @@ const Navbar = () => {
     localStorage.getItem("activeNavLink") || "Acasa"
   );
   const [dropdownActive, setDropdownActive] = useState(
-    localStorage.getItem("activeDropdownLink")
+    localStorage.getItem("activeDropdownLink") || "Acasa"
   );
   const [showDropdown, setShowDropdown] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -28,7 +28,8 @@ const Navbar = () => {
     setActive(nav.title);
     nav.title === "Servicii"
       ? setShowDropdown(!showDropdown)
-      : setShowDropdown(false);
+      : setShowDropdown(false),
+      nav.title !== "Servicii" && setToggle(false);
 
     localStorage.setItem("activeNavLink", nav.title);
   };
@@ -47,18 +48,30 @@ const Navbar = () => {
             className={`dropdown-item ${
               dropdownActive === subLink.id ? "selected" : "text-white"
             } `}
+            to={subLink.route}
             onClick={() => {
               setDropdownActive(subLink.id);
               setShowDropdown(false);
+              dropdownActive && setToggle(false);
 
               localStorage.setItem("activeDropdownLink", dropdownActive);
             }}
           >
-            <Link to={subLink.route}>{subLink.title}</Link>
+            <Link className="w-max" to={subLink.route}>{subLink.title}</Link>
           </div>
         ))}
     </div>
   );
+
+  useEffect(() => {
+    (location.pathname === "/" || location.pathname === "") &&
+      (setActive("Acasa"),
+      setDropdownActive("Acasa"),
+      setShowDropdown(false),
+      setToggle(false),
+      localStorage.removeItem("activeNavLink"),
+      localStorage.removeItem("activeDropdownLink"));
+  }, [location.pathname]);
 
   return (
     <div className={`w-screen flex flex-col`}>
@@ -117,10 +130,18 @@ const Navbar = () => {
               className="xxs:w-[72px] xxs:h-[62px] xs:w-[92px] xs:h-[80px] m-0 p-0"
             />
             <div className="flex items-start">
-              <Link to="/" className={`${styles.title}`}>
+              <Link
+                to="/"
+                onClick={() => (setActive("Acasa"), setDropdownActive("Acasa"))}
+                className={`${styles.title}`}
+              >
                 Toderica
               </Link>
-              <Link to="/" className={`${styles.title} text-primary`}>
+              <Link
+                to="/"
+                onClick={() => (setActive("Acasa"), setDropdownActive("Acasa"))}
+                className={`${styles.title} text-primary`}
+              >
                 Solutions
               </Link>
             </div>
@@ -171,9 +192,7 @@ const Navbar = () => {
                 {navLinks.map((nav, index) => (
                   <li
                     key={nav.id}
-                    className={`${
-                      styles.navLinks
-                    }  font-medium cursor-pointer text-[16px] ${
+                    className={`relative font-bebas font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute cursor-pointer text-[16px] ${
                       active === nav.title ? "text-primary" : "text-white"
                     } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={(e) => handleNavLinkClick(e, nav)}

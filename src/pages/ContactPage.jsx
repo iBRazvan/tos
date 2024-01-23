@@ -33,10 +33,10 @@ const ContactPage = () => {
       <Banner contactConstants={data} />
       {/* Contact content */}
       <section
-        className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row py-20 xxs:p-1 xs:p-4`}
+        className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row xxs:py-10 sm:py-20 xxs:px-8 sm:px-12`}
       >
         {/* Left side section */}
-        <div className="xxs:w-full sm:w-1/3 xxs:p-1 sm:p-4 xxs:py-10">
+        <div className="xxs:w-full sm:w-1/3 xxs:p-2 sm:p-4 xxs:py-10">
           <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}
           </p>
