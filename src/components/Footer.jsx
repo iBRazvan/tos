@@ -59,7 +59,7 @@ const Footer = () => {
                 </h2>
 
                 {colInfo.content.map((content, i) => (
-                  <div key={i} className={`${content.icon.name !== "FaLongArrowAltRight" && "xxs:flex-row mobile:flex-row xxs:items-start mobile:items-center" }} flex flex-row items-center gap-2`}>
+                  <div key={i} className={`flex flex-row items-center gap-2`}>
                     {<content.icon className="text-primary w-6 h-6" />}
 
                     {console.log("Content",content, "image", content.icon.name)}
