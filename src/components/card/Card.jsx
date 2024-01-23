@@ -45,14 +45,14 @@ const Card = ({ service, cardType, project }) => {
       <div className="flex flex-row">
         <div className="flex justify-end items-end">
          
-        {cardType !== "service" && <p className=" text border-b-[1px] h-[18%] border-r-[1px] w-[40px] mb-[6px] border-primary ">
+        {cardType !== "service" && <p className="border-b-[1px] h-[18%] border-r-[1px] w-[40px] mb-[6px] border-primary ">
             {"   "}{" "}
         </p> }
          
         </div>
       <div className={` ${cardType === "project" && "ml-5"}`}>
-        <h4 className={`${cardTitle} ${cardType === "team" && "text-primary"}`}>{title}</h4>
-        <p className={`${cardContent} b`}>{content} </p>
+        <h4 className={`${cardTitle} ${cardType === "team" ? "text-primary" : "text-black"}`}>{title}</h4>
+        <p className={`${cardContent} font-roboto`}>{content} </p>
       </div>
       </div>
     </section>

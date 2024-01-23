@@ -14,8 +14,6 @@ const AboutPage = () => {
     setData(aboutConstants);
   }, []); 
 
-  console.log("about", data);
-
   return (
     <div className="flex flex-col items-center">
       <Banner aboutConstants={data}/>

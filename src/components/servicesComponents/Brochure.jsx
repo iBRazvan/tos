@@ -13,7 +13,7 @@ const Brochure = () => (
         >
           Descarca:
         </h4>
-        <div className="w-full flex xxs:flex-col sm:flex-row xxs:items-center sm:items-start pb-6">
+        <div className="w-full flex xxs:flex-col sm:flex-row items-start pb-6">
           <div className=" mr-2 xxs:mb-4 sm:mb-0 ">
             <BsFileEarmarkPdfFill className="text-primary w-9 h-9" />
           </div>
@@ -24,7 +24,7 @@ const Brochure = () => (
             </p>
           </div>
         </div>
-        <div className="w-full flex xxs:flex-col sm:flex-row xxs:items-center sm:items-start pb-6">
+        <div className="w-full flex xxs:flex-col sm:flex-row items-start pb-6">
           <div className=" mr-2 xxs:mb-4 sm:mb-0 ">
             <BsFileEarmarkPdfFill className="text-primary w-9 h-9" />
           </div>

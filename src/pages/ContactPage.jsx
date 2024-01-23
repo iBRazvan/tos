@@ -33,10 +33,10 @@ const ContactPage = () => {
       <Banner contactConstants={data} />
       {/* Contact content */}
       <section
-        className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row py-20 xxs:p-1 xs:p-4`}
+        className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row xxs:py-10 sm:py-20 xxs:px-8 sm:px-12`}
       >
         {/* Left side section */}
-        <div className="xxs:w-full sm:w-1/3 xxs:p-1 sm:p-4 xxs:py-10">
+        <div className="xxs:w-full sm:w-1/3 xxs:p-2 sm:p-4 xxs:py-10">
           <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}
           </p>
@@ -45,7 +45,9 @@ const ContactPage = () => {
           >
             Luati legatura cu noi
           </h3>
-          <h4 className={`text-lg font-roboto text-primary font-semibold mb-10`}>
+          <h4
+            className={`text-lg font-roboto text-primary font-semibold mb-10`}
+          >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </h4>
 
@@ -66,14 +68,20 @@ const ContactPage = () => {
 
           <div className="flex flex-col my-12">
             <h4 className=" text-2xl font-bebas">Urmareste-ne</h4>
-            <div className={`${styles.navSocialContainer} items-start pt-4`}>
-              <div className={`${styles.navSocial} ${styles.hoverIcon} `}>
+            <div className={`flex flex-row gap-5 items-start pt-4`}>
+              <div
+                className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
+              >
                 <FaFacebook className={`w-6 h-6 text-primary`} />
               </div>
-              <div className={`${styles.navSocial} ${styles.hoverIcon} `}>
+              <div
+                className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon} `}
+              >
                 <IoLogoWhatsapp className={`w-6 h-6 text-primary`} />
               </div>
-              <div className={`${styles.navSocial} ${styles.hoverIcon} `}>
+              <div
+                className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon} `}
+              >
                 <FaLinkedin className={`w-6 h-6 text-primary`} />
               </div>
             </div>
@@ -82,7 +90,7 @@ const ContactPage = () => {
 
         {/* Right side content section */}
         <div className="flex flex-col xxs:w-full sm:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
-        <FormCTA/>
+          <FormCTA />
         </div>
       </section>
       <Footer />

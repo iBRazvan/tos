@@ -13,7 +13,7 @@ import { footerConstants } from "../constants";
 const Footer = () => {
   return (
     <section
-      className={`${layout.sectionServicesBanner} h-full relative xxs:px-2 xs:px-6 `}
+      className={`relative flex w-screen items-center justify-center h-full xxs:px-2 xs:px-6 py-10 `}
       style={{
         backgroundImage: `url(${footer})`,
         backgroundSize: "cover",
@@ -26,7 +26,7 @@ const Footer = () => {
       ></div>
       <div className={`${styles.boxWidth} relative`}>
         <div className=" w-full h-full xxs:px-2 mobile:px-6">
-          <div className="grid xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4  xxs:p-0 mobile:p-2 xs:p-6 gap-10 ">
+          <div className="grid xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4  xxs:p-0 mobile:p-2 xs:p-6 gap-10">
             {/* 1 Col */}
             <div className="flex flex-col gap-4 justify-start">
               <img
@@ -38,14 +38,14 @@ const Footer = () => {
                 Implicam pasiune si experienta in fiecare aspect al afacerii
                 noastre, pentru a livra rezultate de exceptie.
               </p>
-              <div className={`${styles.navSocialContainer} items-start`}>
-                <div className={`${styles.navSocial} ${styles.hoverIcon} `}>
+              <div className={`flex gap-5 relative} items-start`}>
+                <div className={`-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}>
                   <FaFacebook className={`w-6 h-6 text-primary`} />
                 </div>
-                <div className={`${styles.navSocial} ${styles.hoverIcon} `}>
+                <div className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}>
                   <IoLogoWhatsapp className={`w-6 h-6 text-primary`} />
                 </div>
-                <div className={`${styles.navSocial} ${styles.hoverIcon} `}>
+                <div className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}>
                   <FaLinkedin className={`w-6 h-6 text-primary`} />
                 </div>
               </div>
@@ -61,8 +61,6 @@ const Footer = () => {
                 {colInfo.content.map((content, i) => (
                   <div key={i} className={`flex flex-row items-center gap-2`}>
                     {<content.icon className="text-primary w-6 h-6" />}
-
-                    {console.log("Content",content, "image", content.icon.name)}
                     <p className="text-white text-base font-roboto">
                       <Link to={content.to}>{content.text}</Link>
                     </p>

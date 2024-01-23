@@ -5,20 +5,15 @@ import { layout } from "../style";
 
 const Hero = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
-
-  // Define your background images
   const backgroundImages = [bgph1, bgph2];
 
   useEffect(() => {
-    // Function to change the background image
     const changeBackgroundImage = () => {
       setBackgroundImageIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
     };
 
-    // Set interval to change background image every 5 seconds (adjust as needed)
     const intervalId = setInterval(changeBackgroundImage, 10000);
 
-    // Clear interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
 
@@ -28,7 +23,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`${layout.sectionHero} `}
+      className={`w-screen h-screen relative flex justify-center`}
       style={{
         backgroundImage: `url(${backgroundImages[backgroundImageIndex]})`,
         backgroundSize: "cover",
@@ -39,18 +34,28 @@ const Hero = () => {
       <div className={`${styles.opacity} bg-black`} style={{ zIndex: 0 }}></div>
       {/*  Hero content */}
       <div className={`${styles.boxWidth} relative`}>
-        <div className={`${styles.heroContent} ${styles.boxWidth}  `}>
-          <div className={`${styles.heroContainer}`}>
-            <h1 className={`${styles.heroHeader}`}>
+        <div
+          className={`absolute top-1/2 left-8 transform -translate-y-1/2 z-10 text-white`}
+        >
+          <div className={`flex flex-col w-fit mr-10`}>
+            <h1
+              className={`text-4xl md:text-4xl font-bold mb-4 text-primary font-bebas`}
+            >
               Bun venit la{" "}
-              <span className={`${styles.heroSpan}`}>TODERICA</span>{" "}
+              <span className={`text-white border-t-2 border-l-2 pl-2`}>
+                TODERICA
+              </span>{" "}
               <span className="text-primary">SOLUTIONS</span>
             </h1>
-            <div className={`${styles.heroServices}`}>
+            <div
+              className={`xxs:text-[42px] xs:text-[50px] ss:text-[60px] sm:text-[90px] md:text-[100px] font-[600] mb-4 font-bebas max-w-4xl`}
+            >
               Servicii de constructie, renovare si proiectare
             </div>
-            <div className={`${styles.paragraphContainer}`}>
-              <p className={`${styles.paragraph} text-white`}>
+            <div className={`flex mr-20 max-w-4xl`}>
+              <p
+                className={`${styles.paragraph} text-base font-normal font-roboto text-white`}
+              >
                 Calitate și inovație, fundamentul nostru solid.
               </p>
             </div>
