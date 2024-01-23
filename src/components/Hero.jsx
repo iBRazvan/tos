@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+
+import { Link } from "react-router-dom";
 import { bgph1, bgph2 } from "../assets";
 import styles from "../style";
-import { layout } from "../style";
+
 
 const Hero = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
@@ -60,7 +62,9 @@ const Hero = () => {
               </p>
             </div>
           </div>
+          <Link to="/about">
           <button className={`${styles.btn}  mt-12`}>Mai multe ➨</button>
+          </Link>
         </div>
       </div>
     </section>

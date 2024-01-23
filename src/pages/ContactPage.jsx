@@ -10,6 +10,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import styles from "../style";
+import Redirect from "../components/redirect/Redirect";
 
 const ContactPage = () => {
   const [data, setData] = useState();
@@ -30,20 +31,21 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col items-center">
+      <Redirect/>
       <Banner contactConstants={data} />
       {/* Contact content */}
       <section
         className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row xxs:py-10 sm:py-20 xxs:px-8 sm:px-12`}
       >
         {/* Left side section */}
-        <div className="xxs:w-full sm:w-1/3 xxs:p-2 sm:p-4 xxs:py-10">
+        <div className="xxs:w-full md:w-1/3 xxs:p-2 sm:p-4 xxs:py-10">
           <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
             {"   "}{" "}
           </p>
           <h3
             className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em] mb-4`}
           >
-            Luati legatura cu noi
+            Contacteaza-ne
           </h3>
           <h4
             className={`text-lg font-roboto text-primary font-semibold mb-10`}
@@ -89,8 +91,11 @@ const ContactPage = () => {
         </div>
 
         {/* Right side content section */}
-        <div className="flex flex-col xxs:w-full sm:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
+        <div className="flex flex-col xxs:w-full md:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
+          <div className=" max-w-[75%]">
           <FormCTA />
+
+          </div>
         </div>
       </section>
       <Footer />

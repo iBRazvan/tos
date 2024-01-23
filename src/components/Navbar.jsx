@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -12,8 +12,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { navLinks } from "../constants";
 import { toslogo } from "../assets";
 import styles from "../style";
+import { get } from "react-scroll/modules/mixins/scroller";
 
 const Navbar = () => {
+  const [initialized, setInitialized] = useState(false);
   const [active, setActive] = useState(
     localStorage.getItem("activeNavLink") || "Acasa"
   );
@@ -22,6 +24,35 @@ const Navbar = () => {
   );
   const [showDropdown, setShowDropdown] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      const getRoute =
+        navLinks.find((link) => link.route === location.pathname) ||
+        (navLinks.find((link) => link.id === "nav-3")?.subLinks || []).find(
+          (sub) => sub.route === location.pathname
+        );
+
+      location.pathname.startsWith(getRoute.route) || location.pathname === ""
+        ? (setActive(getRoute.title),
+          setDropdownActive(getRoute.title),
+          setShowDropdown(false),
+          setToggle(false))
+        : null;
+    };
+
+    // Listen for route changes
+    handleRouteChange();
+
+    // Initial route check
+    if (!initialized) {
+      handleRouteChange();
+      setInitialized(true);
+    }
+
+   
+  }, [location, navLinks, initialized]);
 
   const handleNavLinkClick = (e, nav) => {
     e.preventDefault();
@@ -57,21 +88,13 @@ const Navbar = () => {
               localStorage.setItem("activeDropdownLink", dropdownActive);
             }}
           >
-            <Link className="w-max" to={subLink.route}>{subLink.title}</Link>
+            <Link className="w-max" to={subLink.route}>
+              {subLink.title}
+            </Link>
           </div>
         ))}
     </div>
   );
-
-  useEffect(() => {
-    (location.pathname === "/" || location.pathname === "") &&
-      (setActive("Acasa"),
-      setDropdownActive("Acasa"),
-      setShowDropdown(false),
-      setToggle(false),
-      localStorage.removeItem("activeNavLink"),
-      localStorage.removeItem("activeDropdownLink"));
-  }, [location.pathname]);
 
   return (
     <div className={`w-screen flex flex-col`}>
@@ -98,14 +121,26 @@ const Navbar = () => {
           </div>
           <div className={`flex gap-5 relative`}>
             <div
-              className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
+              className={`w-8 h-8 p-0 m-0 items-center flex justify-center ${styles.hoverIcon}`}
             >
-              <FaFacebook className={`text-white w-4 h-4`} />
+              <a
+                href="https://www.facebook.com/pardosealaconfortabila/?locale=ro_RO"
+                target="_blank"
+                className={`[&>svg]:hover:text-black w-full h-full flex justify-center items-center`}
+              >
+                <FaFacebook className={`text-white w-4 h-4`} />
+              </a>
             </div>
             <div
               className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
             >
-              <IoLogoWhatsapp className={`text-white w-4 h-4`} />
+              <a
+                href="https://wa.me/407"
+                target="_blank"
+                className={`[&>svg]:hover:text-black w-full h-full flex justify-center items-center`}
+              >
+                <IoLogoWhatsapp className={`text-white w-4 h-4`} />
+              </a>
             </div>
             <div
               className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}

@@ -3,6 +3,7 @@ import { serviceDetailedPage } from "../constants";
 import { FaCheck } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
+import Redirect from "./redirect/Redirect";
 
 const ServiceDetails = ({ selectedService }) => {
   const [expandedItem, setExpandedItem] = useState([]);
@@ -23,7 +24,7 @@ const ServiceDetails = ({ selectedService }) => {
     <div className="flex xxs:w-full sm:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
       <div className={`flex flex-col xxs:px-6 md:p-6 w-full `}>
         <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
-          {"   "}{" "}
+          {"   "} <Redirect path="servicesdetail" />
         </p>
         <h3
           className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}

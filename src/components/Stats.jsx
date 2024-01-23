@@ -4,6 +4,7 @@ import styles, { layout } from "../style";
 import { stats1, stats2 } from "../assets";
 import { FaClipboardCheck } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Stats = () => {
   return (
@@ -86,9 +87,11 @@ const Stats = () => {
         </div>
         {/* Button Div */}
         <div className={`flex  w-full pt-10 md:pt-10`}>
+          <Link to="/servicesdetail">
           <button className={`${styles.btn}  h-[57px] flex `}>
             Serviciile noastre ➨
           </button>
+          </Link>
         </div>
       </div>
     </section>

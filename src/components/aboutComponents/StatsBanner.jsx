@@ -42,7 +42,7 @@ const StatsBanner = () => {
               <span
                 className={`text-5xl font-bebas font-semibold leading-[1.2em] text-secondary`}
               >
-                2.500K
+                +2.000
               </span>
               <p className={`text-lg font-roboto font-semibold text-secondary`}>
                 Clienti Fericiti
@@ -69,7 +69,7 @@ const StatsBanner = () => {
               <span
                 className={`text-5xl font-bebas font-semibold leading-[1.2em] text-secondary`}
               >
-                +500
+                +2.500
               </span>
               <p className={`text-lg font-roboto font-semibold text-secondary`}>
                 Aprecieri
