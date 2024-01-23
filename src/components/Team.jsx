@@ -2,6 +2,7 @@ import React from "react";
 import styles, { layout } from "../style";
 import { teamConstants } from "../constants";
 import TeamCard from "./card/TeamCard";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   return (
@@ -45,9 +46,11 @@ const Team = () => {
             Aspernatur, expedita. Est, quos velit ea enim, aspernatur magnam
             harum ullam .
           </p>
-          <button className={`${styles.btn} w-fit h-[57px]`}>
-            Hai in echipa noastra ➨
-          </button>
+          <Link to="/contact">
+            <button className={`${styles.btn}  h-[57px] flex `}>
+              Hai in echipa noastra
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -10,6 +10,7 @@ import Brochure from "../components/servicesComponents/Brochure";
 
 import styles from "../style";
 import { contact } from "../assets";
+import { Link } from "react-router-dom";
 
 const ServicesDetailPage = () => {
   const [data, setData] = useState();
@@ -64,11 +65,13 @@ const ServicesDetailPage = () => {
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     </p>
                     <div>
-                      <button
-                        className={`${styles.btn} w-fit flex flex-row items-start justify-start`}
-                      >
-                        Contactează-ne
-                      </button>
+                      <Link to="/contact">
+                        <button
+                          className={`${styles.btn} w-fit flex flex-row items-start justify-start`}
+                        >
+                          Contactează-ne
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

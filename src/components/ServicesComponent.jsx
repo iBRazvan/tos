@@ -2,6 +2,7 @@ import React from "react";
 import styles, { layout } from "../style";
 import { servicesConstants } from "../constants";
 import Card from "./card/Card";
+import { Link } from "react-router-dom";
 
 const ServicesComponent = () => {
   return (
@@ -18,16 +19,20 @@ const ServicesComponent = () => {
         </div>
       </div>
 
-      <div className={`${styles.flexCol} xxs:px-10 sm:px-30 lg:px-60 px-60 gap-6 items-center text-center`}>
+      <div
+        className={`${styles.flexCol} xxs:px-10 sm:px-30 lg:px-60 px-60 gap-6 items-center text-center`}
+      >
         <p className={`${styles.paragraph} font-semibold`}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
           expedita. Est, quos velit ea enim, aspernatur magnam harum ullam sunt
           suscipit consequatur assumenda minima quam ut. Temporibus quasi esse
           dolores?
         </p>
-        <button className={`${styles.btn} w-fit h-[57px]`}>
-          Descarca Serviciile Noastre
-        </button>
+        <Link to="/servicesdetail">
+          <button className={`${styles.btn}  h-[57px] flex `}>
+            Descarca serviciile noastre
+          </button>
+        </Link>
       </div>
     </section>
   );
