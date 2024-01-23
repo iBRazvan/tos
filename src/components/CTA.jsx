@@ -54,7 +54,7 @@ const CTA = () => {
           </h3>
           <h4
             className={`text-lg font-roboto text-primary font-semibold mb-4`}
-          ></h4>
+          >Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h4>
 
           <div className={`${styles.statsCellContainer} flex xxs:flex-col `}>
             <FormCTA />
