@@ -249,6 +249,7 @@ export const bannerConstants = [
     path: "Acasa Servicii detaliate",
     id: "servicesdetalied",
   },
+  {title: "Contacteaza-ne", path: "Acasa Contact", id: "contact" }
 ];
 
 export const serviceDetailItems = [

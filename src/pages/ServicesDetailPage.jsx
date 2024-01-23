@@ -48,8 +48,7 @@ const ServicesDetailPage = () => {
               <Brochure />
             </div>
             <div
-              className={`w-[100%] flex py-4 mt-10 px-4 justify-center items-center bg-grayFruit text-secondary"
-      }`}
+              className={`w-[100%] flex py-4 mt-10 px-4 justify-center items-center bg-grayFruit text-secondary"}`}
             >
               <div className={`flex w-[90%] justify-center text-start `}>
                 <div className="flex flex-col justify-center items-center">
@@ -65,8 +64,10 @@ const ServicesDetailPage = () => {
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     </p>
                     <div>
-                      <button className={`${styles.btn } w-fit flex flex-row items-start justify-start`} >
-                        Contactează-ne 
+                      <button
+                        className={`${styles.btn} w-fit flex flex-row items-start justify-start`}
+                      >
+                        Contactează-ne
                       </button>
                     </div>
                   </div>
