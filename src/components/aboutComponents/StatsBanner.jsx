@@ -9,7 +9,7 @@ const StatsBanner = () => {
 
   return (
     <section
-      className={`${layout.sectionServicesBanner} h-fit min-h-[280px] relative xxs:px-2 mobile:px-6  `}
+      className={`relative flex w-screen items-center justify-center h-fit min-h-[280px] xxs:px-2 mobile:px-6`}
       style={{
         backgroundImage: `url(${statsB})`,
         backgroundSize: "cover",
@@ -21,8 +21,8 @@ const StatsBanner = () => {
         style={{ zIndex: 0 }}
       ></div>
       <div className={`${styles.boxWidth} relative `}>
-        <div className="grid xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-20 gap-10 ">
-          <div className={`${styles.statsCell}`}>
+        <div className="grid xxs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-20 gap-10">
+          <div className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}>
             <FaClipboardCheck className="text-secondary text-5xl" />
             <div className="flex flex-col text-center">
               <span
@@ -36,7 +36,7 @@ const StatsBanner = () => {
             </div>
           </div>
 
-          <div className={`${styles.statsCell}`}>
+          <div className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}>
             <FaUserCheck className="text-secondary text-6xl" />
             <div className="flex flex-col text-center">
               <span
@@ -50,7 +50,7 @@ const StatsBanner = () => {
             </div>
           </div>
 
-          <div className={`${styles.statsCell}`}>
+          <div className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}>
             <AiFillProject className="text-secondary text-6xl" />
             <div className="flex flex-col text-center">
               <span
@@ -63,7 +63,7 @@ const StatsBanner = () => {
               </p>
             </div>
           </div>
-          <div className={`${styles.statsCell}`}>
+          <div className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}>
             <FaPeopleGroup className="text-secondary text-6xl" />
             <div className="flex flex-col text-center">
               <span

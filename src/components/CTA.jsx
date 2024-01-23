@@ -16,7 +16,7 @@ const CTA = () => {
           className={`flex flex-col  xxs:w-full sm:w-[45%] md:w-1/2 items-center m-4 relative mb-16 `}
         >
           <div
-            className={`${styles.statsImgContainer} max-w-[346px] max-h-[661px] `}
+            className={`relative flex h-fittainer} max-w-[346px] max-h-[661px] `}
           >
             <img
               src={cta}
@@ -56,7 +56,7 @@ const CTA = () => {
             className={`text-lg font-roboto text-primary font-semibold mb-4`}
           >Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h4>
 
-          <div className={`${styles.statsCellContainer} flex xxs:flex-col `}>
+          <div className={`flex flex-row justify-between py-10 xxs:flex-col `}>
             <FormCTA />
           </div>
         </div>

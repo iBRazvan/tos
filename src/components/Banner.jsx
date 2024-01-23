@@ -30,7 +30,7 @@ const Banner = ({
 
   return (
     <section
-      className={`${layout.sectionServicesBanner} h-fit min-h-[280px] relative xxs:px-2 mobile:px-6  `}
+      className={`relative flex w-screen items-center justify-center h-fit min-h-[280px] xxs:px-2 mobile:px-6`}
       style={{
         backgroundImage: `url(${bgph2})`,
         backgroundSize: "cover",
@@ -49,7 +49,7 @@ const Banner = ({
             {"   "}{" "}
           </p>
 
-          <h1 className={`${styles.servicesHeader} text-white pl-6`}>
+          <h1 className={`left-8 font-semibold text-5xl font-bebas uppercase text-white pl-6`}>
             {data?.title.split(" ").map((word, index, array) => (
               <span
                 key={index}
@@ -66,7 +66,7 @@ const Banner = ({
             ))}
           </h1>
           <p
-            className={`${styles.servicesParagraph} pl-6 text text-white font-[500]`}
+            className={`font-roboto text-base pt-2 pl-6 text text-white font-[500]`}
           >
             {data?.path.split(" ").map((word, index, array) => (
               <span
