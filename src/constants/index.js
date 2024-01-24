@@ -66,45 +66,45 @@ export const servicesConstants = [
   {
     id: "service-1",
     image: s1,
-    title: "Constructii",
+    title: "Construcții",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
-  },
-  {
+    "Oferim servicii profesionale de construcții, realizate cu calitate și în termen convenabil.",
+    },
+    {
     id: "service-2",
     image: s2,
     title: "Renovare",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
-  },
-  {
+    "Transformăm spațiile în locuințe moderne și confortabile prin servicii de renovare de înaltă calitate.",
+    },
+    {
     id: "service-3",
     image: s3,
-    title: "Sanitare",
+    title: "Instalații Sanitare",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
+    "Asigurăm instalarea și întreținerea sistemelor sanitare, garantând funcționalitate și igienă impecabilă.",
+    },
+    {
     id: "service-4",
     image: s4,
-    title: "Electrice",
+    title: "Instalații Electrice",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
+    "Executăm instalații electrice sigure și eficiente, respectând standardele de calitate și siguranță.",
+    },
+    {
     id: "service-5",
     image: s5,
-    title: "Pardoseala",
+    title: "Pardoseală",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
+    "Optați pentru soluții de pardoseală estetice și durabile, adaptate nevoilor și preferințelor dvs.",
+    },
+    {
     id: "service-6",
     image: s6,
-    title: "Acoperis",
+    title: "Acoperiș",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
+    "Asigurăm servicii profesionale pentru construcția și întreținerea acoperișurilor, garantând durabilitate și siguranță.",
+    }
 ];
 
 export const projectsConstants = [

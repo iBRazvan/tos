@@ -42,9 +42,11 @@ const Team = () => {
           className={`${styles.flexCol} xxs:px-10 sm:px-30 lg:px-60 gap-6 items-center text-center`}
         >
           <p className={`${styles.paragraph} font-semibold`}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Aspernatur, expedita. Est, quos velit ea enim, aspernatur magnam
-            harum ullam .
+            Suntem mândri să avem în echipă ingineri, proiectanți și arhitecți
+            cu pasiune pentru excelență. Cu abilități complementare, acești
+            profesioniști lucrează armonios pentru a aduce inovație și calitate
+            în fiecare proiect. Echipa noastră este motorul transformării
+            visurilor în realitate, prin competență și dedicare.
           </p>
           <Link to="/contact">
             <button className={`${styles.btn}  h-[57px] flex `}>

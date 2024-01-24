@@ -47,6 +47,7 @@ import proiectare from "./proiectare.jpg";
 import contact from "./renovare.jpg"
 import renovare from "./renovare2.jpg";
 import sanitare from "./sanitare.jpg";
+import avatarT from './avatarT.jpg'
 
 export {
   toslogo,
@@ -97,5 +98,6 @@ export {
   proiectare,
   renovare,
   sanitare,
-  contact
+  contact,
+  avatarT
 };

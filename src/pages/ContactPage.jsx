@@ -31,7 +31,7 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <Redirect/>
+      <Redirect />
       <Banner contactConstants={data} />
       {/* Contact content */}
       <section
@@ -93,8 +93,7 @@ const ContactPage = () => {
         {/* Right side content section */}
         <div className="flex flex-col xxs:w-full md:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
           <div className=" max-w-[75%]">
-          <FormCTA />
-
+            <FormCTA />
           </div>
         </div>
       </section>

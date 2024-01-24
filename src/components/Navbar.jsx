@@ -42,16 +42,12 @@ const Navbar = () => {
         : null;
     };
 
-    // Listen for route changes
     handleRouteChange();
 
-    // Initial route check
     if (!initialized) {
       handleRouteChange();
       setInitialized(true);
     }
-
-   
   }, [location, navLinks, initialized]);
 
   const handleNavLinkClick = (e, nav) => {

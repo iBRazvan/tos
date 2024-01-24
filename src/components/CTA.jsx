@@ -54,7 +54,7 @@ const CTA = () => {
           </h3>
           <h4
             className={`text-lg font-roboto text-primary font-semibold mb-4`}
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          >Obține o ofertă gratuită personalizată acum! Contactează-ne și descoperă soluțiile noastre adaptate nevoilor tale.</h4>
 
           <div className={`flex flex-row justify-between py-10 xxs:flex-col `}>
             <FormCTA />

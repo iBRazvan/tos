@@ -1,7 +1,8 @@
 import React from "react";
 import styles, { layout } from "../style";
+import Rating from "@mui/material/Rating";
 
-import { r1, testimonial } from "../assets";
+import { avatarT, testimonial } from "../assets";
 import { ImQuotesLeft } from "react-icons/im";
 
 const Testimonials = () => {
@@ -24,27 +25,35 @@ const Testimonials = () => {
           >
             Ce spun clientii despre noi?
           </h4>
-          <div className="pt-2 ">
-            <ImQuotesLeft className="w-8 h-8 text-primary" />
-          </div>
-          <div
-            className={`${styles.cellQuery} flex flex-row justify-between py-10`}
-          >
-            <p className={`${styles.paragraph} font-semibold`}>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-              illum totam id quas aperiam saepe molestiae! Pariatur ratione hic,
-              consequatur inventore dolor quibusdam unde, ducimus, recusandae
-              nemo illo consectetur earum."
-            </p>
-          </div>
-          <div className="flex flex-row items-center">
-            <div className="flex rounded-full w-20 h-20 border-2 border-primary">
-              <img src={r1} className="border-primary rounded-full" />
+          <div className="flex flex-row items-center pt-6">
+            <div className="flex  max-w-20 max-h-20 ">
+              <img
+                src={avatarT}
+                className="border-primary border-2 rounded-full scale-110 "
+              />
             </div>
 
             <div className="pl-6">
-              <h2 className="font-bebas text-primary text-2xl">Cristian</h2>{" "}
-              <p className="font-poppins text-text font-normal">Client</p>
+              <h2 className="font-bebas text-primary text-2xl">Costin</h2>{" "}
+              <p className="font-roboto text-text font-medium">Client</p>
+              <Rating value="5" className="pt-2" />
+            </div>
+          </div>
+          <div className={` flex flex-col items-start   justify-between py-4`}>
+            <div className="pt-2">
+              <ImQuotesLeft className="w-8 h-8 text-primary" />
+            </div>
+            <div className="py-4">
+              <p className={`${styles.paragraph} font-semibold`}>
+                "Experiența mea cu această companie a fost excepțională! Echipa
+                lor de profesioniști, de la ingineri și proiectanți la
+                arhitecți, a depășit cu mult așteptările mele. Au adus o
+                combinație perfectă de expertiză tehnică și creativitate în
+                proiectul meu de construcție și renovare. Lucrările au fost
+                finalizate în termen, iar rezultatul final a fost peste
+                așteptările mele. Recomand cu încredere serviciile lor pentru
+                cei care caută calitate, profesionalism și o echipă dedicată."
+              </p>
             </div>
           </div>
         </div>
@@ -52,7 +61,7 @@ const Testimonials = () => {
         <div
           className={`flex flex-col  xxs:w-[100%] md:w-[50%] px items-center`}
         >
-          <div className={`relative flex h-fit`}>
+          <div className={`relative flex h-fit mt-20`}>
             <img src={testimonial} alt="poza" className="w-auto h-auto" />
           </div>
         </div>
