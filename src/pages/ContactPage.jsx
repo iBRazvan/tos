@@ -50,7 +50,7 @@ const ContactPage = () => {
           <h4
             className={`text-lg font-roboto text-primary font-semibold mb-10`}
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Obține o ofertă gratuită personalizată acum! Contactează-ne și descoperă soluțiile noastre adaptate nevoilor tale.
           </h4>
 
           <div className="flex flex-col gap-4">

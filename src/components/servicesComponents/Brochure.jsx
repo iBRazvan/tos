@@ -20,7 +20,9 @@ const Brochure = () => (
           <div className="flex flex-col">
             <h5 className=" text-2xl font-bebas ">Brosura CV</h5>
             <p className=" text-base text-text font-roboto">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Descarcă acum broșura noastră CV pentru a descoperi gama noastră
+              completă de servicii și realizări remarcabile în domeniul
+              construcțiilor.
             </p>
           </div>
         </div>
@@ -31,7 +33,8 @@ const Brochure = () => (
           <div className="flex flex-col">
             <h5 className=" text-2xl font-bebas ">Portofoliu cu proiecte</h5>
             <p className=" text-base text-text font-roboto">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explorați realizările noastre - descărcați portofoliul cu proiecte
+              de excepție!
             </p>
           </div>
         </div>
