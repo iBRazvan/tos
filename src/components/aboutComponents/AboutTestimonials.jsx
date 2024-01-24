@@ -21,7 +21,8 @@ const AboutTestimonials = () => {
             10 ani experienta in servicii de constructie
           </h3>
           <h4 className={`text-lg font-roboto text-primary font-semibold mb-4`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            O lungă călătorie în lumea construcțiilor - împreună transformăm
+            idei în realitate!
           </h4>
           <div
             className={`${styles.cellQuery} flex flex-row justify-between py-10`}
@@ -30,13 +31,15 @@ const AboutTestimonials = () => {
               <h4
                 className={`text-text text-lg md:text-base lg:text-base font roboto font-semibold`}
               >
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.""
+                "De la concept la construcție, aducem idei la viață. Suntem o
+                echipă de excelență, definind standardele în construcții. O
+                poveste de succes în fiecare proiect."
               </h4>
               <p className={`${styles.paragraph} font-normal`}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-                illum totam id quas aperiam saepe molestiae! Pariatur ratione
-                hic, consequatur inventore dolor quibusdam unde, ducimus,
-                recusandae nemo illo consectetur earum.
+                Cu o abordare integrată și atenție la detalii, transformăm
+                visele clienților în proiecte durabile și estetice. Experiența
+                noastră vastă și angajamentul pentru excelență ne plasează în
+                fruntea industriei construcțiilor.
               </p>
             </div>
           </div>

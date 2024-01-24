@@ -23,7 +23,7 @@ const Team = () => {
           <p
             className={`font-roboto font-semibold text-base pt-2 text-primary font-semi`}
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+           Specialiști în construcții, artiști ai designului - Echipa noastră aduce proiectele la viață cu pasiune și experiență.
           </p>
         </div>
         <div

@@ -36,7 +36,7 @@ const Testimonials = () => {
             <div className="pl-6">
               <h2 className="font-bebas text-primary text-2xl">Costin</h2>{" "}
               <p className="font-roboto text-text font-medium">Client</p>
-              <Rating value="5" className="pt-2" />
+              <Rating name="read-only" value="5" className="pt-2" />
             </div>
           </div>
           <div className={` flex flex-col items-start   justify-between py-4`}>
