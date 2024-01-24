@@ -95,7 +95,7 @@ const Navbar = () => {
   return (
     <div className={`w-screen flex flex-col`}>
       {/* Top Navigation */}
-      <nav className={`w-full flex flex-row items-center bg-primary py-4`}>
+      <nav className={`w-full flex flex-row justify-center items-center bg-primary py-4`}>
         <div
           className={`${styles.containerWidth} ${styles.maxWidthBottomNav} ${styles.paddingX} flex xxs:flex-col xxs:items-center xxs:gap-1 700:flex-row justify-between`}
         >
@@ -152,7 +152,7 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <nav
-        className={`w-full flex flex-row items-center bg-secondary text-white relative`}
+        className={`w-full flex flex-row items-center justify-center bg-secondary text-white relative`}
       >
         <div
           className={`${styles.containerWidth} ${styles.paddingX} flex justify-between items-center py-4`}

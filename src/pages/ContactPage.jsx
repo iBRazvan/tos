@@ -80,7 +80,7 @@ const ContactPage = () => {
                   target="_blank"
                   className={`[&>svg]:hover:text-black w-full h-full flex justify-center items-center`}
                 >
-                  <FaFacebook className={`text-white w-4 h-4`} />
+                  <FaFacebook className={`text-primary w-6 h-6`} />
                 </a>
               </div>
               <div
@@ -91,7 +91,7 @@ const ContactPage = () => {
                   target="_blank"
                   className={`[&>svg]:hover:text-black w-full h-full flex justify-center items-center`}
                 >
-                  <IoLogoWhatsapp className={`text-white w-4 h-4`} />
+                  <IoLogoWhatsapp className={`text-primary w-6 h-6`} />
                 </a>
               </div>
               <div
@@ -110,6 +110,21 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+      {/* MAP */}
+      <div className="flex justify-center max-w-[1280px] px-12 pb-12">
+        <iframe
+          title="Office Location"
+          width="1280px"
+          height="450"
+          frameborder="0"
+          style={{ border: 0 }}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.8942524227405!2d26.803385!3d46.25233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b506f7f7855555%3A0xb430d6775c6155eb!2sToderica%20Solutions!5e0!3m2!1sro!2sro!4v1706103034834!5m2!1sro!2sro"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          className="test"
+        ></iframe>
+      </div>
       <Footer />
     </div>
   );
