@@ -39,13 +39,19 @@ const Footer = () => {
                 noastre, pentru a livra rezultate de exceptie.
               </p>
               <div className={`flex gap-5 relative} items-start`}>
-                <div className={`-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}>
+                <div
+                  className={`-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
+                >
                   <FaFacebook className={`w-6 h-6 text-primary`} />
                 </div>
-                <div className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}>
+                <div
+                  className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
+                >
                   <IoLogoWhatsapp className={`w-6 h-6 text-primary`} />
                 </div>
-                <div className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}>
+                <div
+                  className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
+                >
                   <FaLinkedin className={`w-6 h-6 text-primary`} />
                 </div>
               </div>
@@ -61,9 +67,15 @@ const Footer = () => {
                 {colInfo.content.map((content, i) => (
                   <div key={i} className={`flex flex-row items-center gap-2`}>
                     {<content.icon className="text-primary w-6 h-6" />}
-                    <p className="text-white text-base font-roboto">
-                      <Link to={content.to}>{content.text}</Link>
-                    </p>
+                    {content.text === "toderica.solutions@gmail.com" ? (
+                      <a href="mailto:your-email@example.com" className="text-white text-base font-roboto">
+                        {content.text}
+                      </a>
+                    ) : (
+                      <p className="text-white text-base font-roboto">
+                        <Link to={content.to}>{content.text}</Link>
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
