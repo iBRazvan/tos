@@ -32,13 +32,7 @@ const HomeBanner = () => {
             Implicam pasiune si experienta in fiecare aspect al afacerii
             noastre, pentru a livra rezultate de exceptie
           </h1>
-          <p
-            className={`font-roboto font-semibold text-base pt-2 text-white font-semi`}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-            provident beatae quis sed tempora voluptates doloribus, libero
-            voluptatum officia.
-          </p>
+    
         </div>
         <div className="flex xxs:w-full xxs:justify-center sm:w-1/2 md:pl-40 pt-10">
           

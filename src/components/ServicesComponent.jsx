@@ -23,10 +23,16 @@ const ServicesComponent = () => {
         className={`${styles.flexCol} xxs:px-10 sm:px-30 lg:px-60 px-60 gap-6 items-center text-center`}
       >
         <p className={`${styles.paragraph} font-semibold`}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
-          expedita. Est, quos velit ea enim, aspernatur magnam harum ullam sunt
-          suscipit consequatur assumenda minima quam ut. Temporibus quasi esse
-          dolores?
+          Prin abordarea noastră proactivă și dedicată, oferim servicii complete
+          pentru toate nevoile dumneavoastra de construcție și renovare. De la
+          instalarea și întreținerea sistemelor sanitare și electrice, la
+          soluții complete pentru pardoseli, acoperișuri, și renovare, suntem
+          alegerea ideală pentru transformarea visurilor dumneavoastra în
+          realitate. În plus, vă oferim expertiză în prelucrarea și fasonarea
+          sticlei, aducând un plus de rafinament și funcționalitate proiectului
+          dumneavoastra Alegeți calitatea, alegeți profesionalismul, alegeți
+          serviciile noastre pentru a vă asigura că fiecare aspect al
+          proiectului dumneavoastra este gestionat cu atenție și experiență.
         </p>
         <Link to="/servicesdetail">
           <button className={`${styles.btn}  h-[57px] flex `}>
