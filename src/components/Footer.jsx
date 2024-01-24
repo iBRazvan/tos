@@ -13,7 +13,7 @@ import { footerConstants } from "../constants";
 const Footer = () => {
   return (
     <section
-      className={`relative flex w-screen items-center justify-center h-full xxs:px-2 xs:px-6 py-10 `}
+      className={`relative shadow-[0px_-5px_30px_10px_#00000024] flex w-screen items-center justify-center h-full xxs:px-2 xs:px-6 py-10 `}
       style={{
         backgroundImage: `url(${footer})`,
         backgroundSize: "cover",
@@ -21,7 +21,7 @@ const Footer = () => {
       }}
     >
       <div
-        className={`${styles.opacity} opacity-80 bg-black`}
+        className={`${styles.opacity} opacity-80 bg-black `}
         style={{ zIndex: 0 }}
       ></div>
       <div className={`${styles.boxWidth} relative`}>

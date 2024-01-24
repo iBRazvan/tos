@@ -29,6 +29,12 @@ module.exports = {
         "group",
         "selected"
       ],
+
+      boxShadow: {
+        'yShadow': '0_3px_10px_rgb(0,0,0,0.2)',
+        'test': '[5px_5px_0px_0px_rgba(109,40,217)]',
+      },
+
       backgroundColor: ['group-hover'],
     },
     screens: {
