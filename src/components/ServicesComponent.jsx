@@ -35,7 +35,7 @@ const ServicesComponent = () => {
           proiectului dumneavoastra este gestionat cu atenție și experiență.
         </p>
         <Link to="/servicesdetail">
-          <button className={`${styles.btn}  h-[57px] flex `}>
+          <button className={`${styles.btn}  h-[57px] flex mt-6`}>
             Descarca serviciile noastre
           </button>
         </Link>

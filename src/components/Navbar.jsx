@@ -110,9 +110,12 @@ const Navbar = () => {
             </div>
             <div className={`flex flex-row items-center gap-2`}>
               <MdEmail className={`text-white w-4 h-4`} />
-              <p className={`flex flex-row items-center gap-2`}>
-                Email: todericasolutions@gmail.com
-              </p>
+              <a
+                href="mailto:your-email@example.com"
+                className="text-white text-base font-roboto"
+              >
+                toderica.solutions@gmail.com
+              </a>
             </div>
           </div>
           <div className={`flex gap-5 relative`}>
