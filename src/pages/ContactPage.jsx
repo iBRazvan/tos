@@ -50,7 +50,8 @@ const ContactPage = () => {
           <h4
             className={`text-lg font-roboto text-primary font-semibold mb-10`}
           >
-            Obține o ofertă gratuită personalizată acum! Contactează-ne și descoperă soluțiile noastre adaptate nevoilor tale.
+            Obține o ofertă gratuită personalizată acum! Contactează-ne și
+            descoperă soluțiile noastre adaptate nevoilor tale.
           </h4>
 
           <div className="flex flex-col gap-4">
@@ -74,12 +75,24 @@ const ContactPage = () => {
               <div
                 className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
               >
-                <FaFacebook className={`w-6 h-6 text-primary`} />
+                <a
+                  href="https://www.facebook.com/pardosealaconfortabila/?locale=ro_RO"
+                  target="_blank"
+                  className={`[&>svg]:hover:text-black w-full h-full flex justify-center items-center`}
+                >
+                  <FaFacebook className={`text-white w-4 h-4`} />
+                </a>
               </div>
               <div
                 className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon} `}
               >
-                <IoLogoWhatsapp className={`w-6 h-6 text-primary`} />
+                <a
+                  href="https://wa.me/407"
+                  target="_blank"
+                  className={`[&>svg]:hover:text-black w-full h-full flex justify-center items-center`}
+                >
+                  <IoLogoWhatsapp className={`text-white w-4 h-4`} />
+                </a>
               </div>
               <div
                 className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon} `}
