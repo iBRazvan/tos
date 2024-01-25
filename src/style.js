@@ -32,7 +32,7 @@ const styles = {
   // HERO ----------------------------------->
   opacity: "absolute top-0 left-0 w-full h-full opacity-50",
   hoverIcon:
-    "[&>svg]:hover:text-black hover:bg-white  hover:translate-y-2 transition-transform duration-500 ease-in-out",
+    "[&_svg]:hover:text-black hover:bg-white  hover:translate-y-2 transition-transform duration-500 ease-in-out",
 
   // SERVICES CONST 
   servicesTitle: "text-black font-bebas font-semibold text-4xl mt-2 mb-4 ",
