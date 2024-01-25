@@ -1,23 +1,56 @@
 import React, { useState, useEffect } from "react";
-
+import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import { bgph1, bgph2 } from "../assets";
 import styles from "../style";
 
-
 const Hero = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
   const backgroundImages = [bgph1, bgph2];
+
+  const scrollControls = useAnimation();
 
   useEffect(() => {
     const changeBackgroundImage = () => {
       setBackgroundImageIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
     };
 
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     const intervalId = setInterval(changeBackgroundImage, 10000);
 
-    return () => clearInterval(intervalId);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      clearInterval(intervalId);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  useEffect(() => {
+    // Define the threshold for triggering the animation
+    const threshold = 50;
+
+    // Update opacity based on scroll position
+    const updateOpacity = () => {
+      if (scrollY > threshold) {
+        scrollControls.start({ opacity: 1 });
+      } else {
+        scrollControls.start({ opacity: 0 });
+      }
+    };
+
+    // Listen for scroll events
+    window.addEventListener("scroll", updateOpacity);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", updateOpacity);
+    };
+  }, [scrollControls, scrollY]);
 
   const transitionStyle = {
     transition: "background-image 2s ease-in-out",
@@ -36,8 +69,9 @@ const Hero = () => {
       <div className={`${styles.opacity} bg-black`} style={{ zIndex: 0 }}></div>
       {/*  Hero content */}
       <div className={`${styles.boxWidth} relative`}>
-        <div
+        <motion.div
           className={`absolute top-1/2 left-8 transform -translate-y-1/2 z-10 text-white`}
+          animate={scrollControls}
         >
           <div className={`flex flex-col w-fit mr-10`}>
             <h1
@@ -63,9 +97,9 @@ const Hero = () => {
             </div>
           </div>
           <Link to="/about">
-          <button className={`${styles.btn}  mt-12`}>Mai multe ➨</button>
+            <button className={`${styles.btn}  mt-12`}>Mai multe ➨</button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
