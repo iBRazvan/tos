@@ -12,16 +12,14 @@ import { FaLinkedin } from "react-icons/fa";
 import { navLinks } from "../constants";
 import { toslogo } from "../assets";
 import styles from "../style";
-import { get } from "react-scroll/modules/mixins/scroller";
+import { get } from "jquery";
 
 const Navbar = () => {
   const [initialized, setInitialized] = useState(false);
-  const [active, setActive] = useState(
-    localStorage.getItem("activeNavLink") || "Acasa"
+  const [activeLink, setActiveLink] = useState(
+    localStorage.getItem("activatedNavLink") || "Acasa"
   );
-  const [dropdownActive, setDropdownActive] = useState(
-    localStorage.getItem("activeDropdownLink") || "Acasa"
-  );
+  const [activeSublink, setActiveSublink] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
@@ -31,14 +29,16 @@ const Navbar = () => {
       const getRoute =
         navLinks.find((link) => link.route === location.pathname) ||
         (navLinks.find((link) => link.id === "nav-3")?.subLinks || []).find(
-          (sub) => sub.route === location.pathname
+          (link) => link.route === location.pathname
         );
 
-      location.pathname.startsWith(getRoute.route) || location.pathname === ""
-        ? (setActive(getRoute.title),
-          setDropdownActive(getRoute.title),
+      (getRoute && location.pathname.startsWith(getRoute.route)) ||
+      location.pathname === ""
+        ? (setActiveLink(getRoute.title),
+          setActiveSublink(getRoute.id),
           setShowDropdown(false),
-          setToggle(false))
+          setToggle(false),
+          localStorage.setItem("activeDropdownSublink", getRoute.id))
         : null;
     };
 
@@ -52,13 +52,11 @@ const Navbar = () => {
 
   const handleNavLinkClick = (e, nav) => {
     e.preventDefault();
-    setActive(nav.title);
-    nav.title === "Servicii"
-      ? setShowDropdown(!showDropdown)
-      : setShowDropdown(false),
-      nav.title !== "Servicii" && setToggle(false);
+    setActiveLink(nav.title);
+    setShowDropdown(nav.title === "Servicii" && !showDropdown);
+    setToggle(false);
 
-    localStorage.setItem("activeNavLink", nav.title);
+    localStorage.setItem("activatedNavLink", nav.title);
   };
 
   const renderDropDown = () => (
@@ -69,22 +67,16 @@ const Navbar = () => {
     >
       {navLinks
         .find((nav) => nav.id === "nav-3")
-        ?.subLinks.map((subLink) => (
-          <div
-            key={subLink.id}
-            className={`dropdown-item ${
-              dropdownActive === subLink.id ? "selected" : "text-white"
-            } `}
-            to={subLink.route}
-            onClick={() => {
-              setDropdownActive(subLink.id);
-              setShowDropdown(false);
-              dropdownActive && setToggle(false);
 
-              localStorage.setItem("activeDropdownLink", dropdownActive);
-            }}
-          >
-            <Link className="w-max" to={subLink.route}>
+        ?.subLinks.map((subLink) => (
+          <div key={subLink.id}>
+            <Link
+              className={`dropdown-item  ${
+                activeSublink === subLink.id ? "selected" : "text-white"
+              } `}
+              onClick={() => setShowDropdown(false) && setShowDropdown(false)}
+              to={subLink.route}
+            >
               {subLink.title}
             </Link>
           </div>
@@ -95,7 +87,9 @@ const Navbar = () => {
   return (
     <div className={`w-screen flex flex-col`}>
       {/* Top Navigation */}
-      <nav className={`w-full flex flex-row justify-center items-center bg-primary py-4`}>
+      <nav
+        className={`w-full flex flex-row justify-center items-center bg-primary py-4`}
+      >
         <div
           className={`${styles.containerWidth} ${styles.maxWidthBottomNav} ${styles.paddingX} flex xxs:flex-col xxs:items-center xxs:gap-1 700:flex-row justify-between`}
         >
@@ -166,14 +160,14 @@ const Navbar = () => {
             <div className="flex items-start">
               <Link
                 to="/"
-                onClick={() => (setActive("Acasa"), setDropdownActive("Acasa"))}
+                onClick={() => setActiveLink("Acasa")}
                 className={`${styles.title}`}
               >
                 Toderica
               </Link>
               <Link
                 to="/"
-                onClick={() => (setActive("Acasa"), setDropdownActive("Acasa"))}
+                onClick={() => setActiveLink("Acasa")}
                 className={`${styles.title} text-primary`}
               >
                 Solutions
@@ -187,7 +181,7 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`relative font-bebas text-[18px] font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute group cursor-pointer ${
-                  active === nav.title ? "text-primary" : "text-white"
+                  activeLink === nav.title ? "text-primary" : "text-white"
                 } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                 onClick={(e) => handleNavLinkClick(e, nav)}
               >
@@ -227,7 +221,7 @@ const Navbar = () => {
                   <li
                     key={nav.id}
                     className={`relative font-bebas font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute cursor-pointer text-[16px] ${
-                      active === nav.title ? "text-primary" : "text-white"
+                      activeLink === nav.title ? "text-primary" : "text-white"
                     } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={(e) => handleNavLinkClick(e, nav)}
                   >
@@ -235,7 +229,9 @@ const Navbar = () => {
                       <Link
                         to={nav.route}
                         className={`${
-                          active === nav.title ? "text-primary" : "text-white"
+                          activeLink === nav.title
+                            ? "text-primary"
+                            : "text-white"
                         }`}
                       >
                         {nav.title}

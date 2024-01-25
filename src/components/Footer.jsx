@@ -40,14 +40,21 @@ const Footer = () => {
               </p>
               <div className={`flex gap-5 relative} items-start`}>
                 <div
-                  className={`-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
+                  className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
                 >
-                  <FaFacebook className={`w-6 h-6 text-primary`} />
+                  <a
+                    href="https://www.facebook.com/pardosealaconfortabila/?locale=ro_RO"
+                    target="_blank"
+                  >
+                    <FaFacebook className={`w-6 h-6 text-primary`} />
+                  </a>
                 </div>
                 <div
                   className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
                 >
-                  <IoLogoWhatsapp className={`w-6 h-6 text-primary`} />
+                  <a href="https://wa.me/407" target="_blank">
+                    <IoLogoWhatsapp className={`w-6 h-6 text-primary`} />
+                  </a>
                 </div>
                 <div
                   className={`w-8 h-8 p-0 m-0 items-center flex  justify-center ${styles.hoverIcon}`}
@@ -68,7 +75,10 @@ const Footer = () => {
                   <div key={i} className={`flex flex-row items-center gap-2`}>
                     {<content.icon className="text-primary w-6 h-6" />}
                     {content.text === "toderica.solutions@gmail.com" ? (
-                      <a href="mailto:your-email@example.com" className="text-white text-base font-roboto">
+                      <a
+                        href="mailto:todericasolutions@gmail.com"
+                        className="text-white text-base font-roboto"
+                      >
                         {content.text}
                       </a>
                     ) : (
