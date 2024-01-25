@@ -6,7 +6,6 @@ import styles from "../style";
 
 const Hero = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
   const backgroundImages = [bgph1, bgph2];
 
   const scrollControls = useAnimation();
@@ -16,41 +15,14 @@ const Hero = () => {
       setBackgroundImageIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
     };
 
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
     const intervalId = setInterval(changeBackgroundImage, 10000);
-
-    window.addEventListener("scroll", handleScroll);
 
     return () => {
       clearInterval(intervalId);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    // Define the threshold for triggering the animation
-    const threshold = 50;
-
-    // Update opacity based on scroll position
-    const updateOpacity = () => {
-      if (scrollY > threshold) {
-        scrollControls.start({ opacity: 1 });
-      } else {
-        scrollControls.start({ opacity: 0 });
-      }
-    };
-
-    // Listen for scroll events
-    window.addEventListener("scroll", updateOpacity);
-
-    // Clean up the event listener
-    return () => {
-      window.removeEventListener("scroll", updateOpacity);
-    };
-  }, [scrollControls, scrollY]);
+  
 
   const transitionStyle = {
     transition: "background-image 2s ease-in-out",
