@@ -78,8 +78,7 @@ import {
   ps37,
   ps38,
   ps39,
-  psv1,
-  psv2,
+
 } from "../assets/ps";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
@@ -476,8 +475,7 @@ export const serviceDetailedPage = [
       ps37,
       ps38,
       ps39,
-      psv1,
-      psv2,
+   
     ],
     overview:
       "Specialiștii noștri în servicii de acoperiș aduc experiența și abilitățile necesare pentru a oferi soluții durabile și estetice. De la instalarea acoperișului și reparații, până la întreținere și servicii de impermeabilizare, ne ocupăm de toate aspectele legate de acoperișul clădirii tale.",
