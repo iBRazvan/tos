@@ -1,6 +1,6 @@
 import React from "react";
 import styles, { layout } from "../style";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import { stats1, stats2 } from "../assets";
 import { FaClipboardCheck } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
@@ -8,17 +8,15 @@ import { Link } from "react-router-dom";
 
 const Stats = () => {
 
-  const { scrollYProgress } = useViewportScroll()
-const scale = useTransform(scrollYProgress, [0, 1], [0.7, 2]);
+
+
   return (
     <section
       className={`${layout.sectionTwoCols} ${styles.statsSection} xxs:px-2 mobile:px-6`}
     >
-      <motion.div style={{scale}} className={`${styles.boxWidth}${styles.colContainer} `}>
+      <motion.div  className={`${styles.boxWidth}${styles.colContainer} `}>
       <motion.div
-      style={{
-        scaleY: scrollYProgress
-      }}
+
     />
         <p className="border-t-4 border-l-4 -ml-6 pb-6  w-[110px] border-primary">
           {"   "}{" "}
@@ -81,7 +79,7 @@ const scale = useTransform(scrollYProgress, [0, 1], [0.7, 2]);
       </motion.div>
       {/* Images div */}
       <motion.div
-    style={{ scale }} className={`${styles.colContainer} `}>
+    className={`${styles.colContainer} `}>
         <div className={`relative flex h-fit`}>
           <img src={stats1} alt="poza" className="w-auto h-auto" />
           <div
