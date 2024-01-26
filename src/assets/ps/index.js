@@ -37,8 +37,7 @@ import ps36 from "./ps36.jpg";
 import ps37 from "./ps37.jpg";
 import ps38 from "./ps38.jpg";
 import ps39 from "./ps39.jpg";
-import psv1 from "./psv1.mp4"
-import psv2 from "./psv2.mp4"
+
 
 export {
   ps1,
@@ -80,6 +79,5 @@ export {
   ps37,
   ps38,
   ps39,
-  psv1,
-  psv2
+ 
 };
