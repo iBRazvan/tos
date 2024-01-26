@@ -7,6 +7,18 @@
   margin: 0 auto;
 }
 
+.sideServices img{
+  width: auto;
+  max-height: 90vh;
+  margin: 0 auto;
+}
+
+.sideServices{
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
 .slide {
   transform: scale(0.2);
   transition: transform 300ms;
@@ -17,6 +29,7 @@
   transform: scale(1);
   opacity: 1;
 }
+
 
 .dropdown {
   position: absolute;
