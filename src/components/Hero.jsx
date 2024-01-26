@@ -22,8 +22,6 @@ const Hero = () => {
     };
   }, []);
 
-  
-
   const transitionStyle = {
     transition: "background-image 2s ease-in-out",
   };

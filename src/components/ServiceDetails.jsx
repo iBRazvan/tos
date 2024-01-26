@@ -4,6 +4,8 @@ import { FaCheck } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 import Redirect from "./redirect/Redirect";
+import ServicesCarousel from "../components/servicesCarousel/servicesCarousel"
+import styles from "../style";
 
 const ServiceDetails = ({ selectedService }) => {
   const [expandedItem, setExpandedItem] = useState([]);
@@ -20,8 +22,10 @@ const ServiceDetails = ({ selectedService }) => {
     );
   };
 
+  console.log(selectedServiceConstants.image)
+
   return (
-    <div className="flex xxs:w-full sm:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
+    <div className="flex xxs:w-full h-fit sm:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
       <div className={`flex flex-col xxs:px-6 md:p-6 w-full `}>
         <p className="border-t-4 border-l-4 pb-6 -ml-6 w-[110px] border-primary ">
           {"   "} <Redirect path="servicesdetail" />
@@ -35,9 +39,11 @@ const ServiceDetails = ({ selectedService }) => {
           {selectedServiceConstants.subtitle}
         </h4>
 
-        <div className={`flex flex-col py-2`}>
-          <img src={selectedServiceConstants.image} />
-        </div>
+          <div
+            className={`${styles.boxWidth} xxs:py-6 py-2 relative h-min flex justify-center flex-col`}
+          >
+            <ServicesCarousel imagesProps={selectedServiceConstants} />
+          </div>
 
         {/* Prezentare generala */}
         <div className="flex flex-col py-6">

@@ -22,6 +22,65 @@ import {
   electrice,
   proiectare,
 } from "../assets";
+import {
+  is,
+  is1,
+  is2,
+  is3,
+  is4,
+  is5,
+  is6,
+  is7,
+  is8,
+  is9,
+  is10,
+  is11,
+  is12,
+  is13,
+} from "../assets/is";
+import {
+  ps1,
+  ps2,
+  ps3,
+  ps4,
+  ps5,
+  ps6,
+  ps7,
+  ps8,
+  ps9,
+  ps10,
+  ps11,
+  ps12,
+  ps13,
+  ps14,
+  ps15,
+  ps16,
+  ps17,
+  ps18,
+  ps19,
+  ps20,
+  ps21,
+  ps22,
+  ps23,
+  ps24,
+  ps25,
+  ps26,
+  ps27,
+  ps28,
+  ps29,
+  ps30,
+  ps31,
+  ps32,
+  ps33,
+  ps34,
+  ps35,
+  ps36,
+  ps37,
+  ps38,
+  ps39,
+  psv1,
+  psv2,
+} from "../assets/ps";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
@@ -68,43 +127,43 @@ export const servicesConstants = [
     image: s1,
     title: "Construcții",
     content:
-    "Oferim servicii profesionale de construcții, realizate cu calitate și în termen convenabil.",
-    },
-    {
+      "Oferim servicii profesionale de construcții, realizate cu calitate și în termen convenabil.",
+  },
+  {
     id: "service-2",
     image: s2,
     title: "Renovare",
     content:
-    "Transformăm spațiile în locuințe moderne și confortabile prin servicii de renovare de înaltă calitate.",
-    },
-    {
+      "Transformăm spațiile în locuințe moderne și confortabile prin servicii de renovare de înaltă calitate.",
+  },
+  {
     id: "service-3",
     image: s3,
     title: "Instalații Sanitare",
     content:
-    "Asigurăm instalarea și întreținerea sistemelor sanitare, garantând funcționalitate și igienă impecabilă.",
-    },
-    {
+      "Asigurăm instalarea și întreținerea sistemelor sanitare, garantând funcționalitate și igienă impecabilă.",
+  },
+  {
     id: "service-4",
     image: s4,
     title: "Instalații Electrice",
     content:
-    "Executăm instalații electrice sigure și eficiente, respectând standardele de calitate și siguranță.",
-    },
-    {
+      "Executăm instalații electrice sigure și eficiente, respectând standardele de calitate și siguranță.",
+  },
+  {
     id: "service-5",
     image: s5,
     title: "Pardoseală",
     content:
-    "Optați pentru soluții de pardoseală estetice și durabile, adaptate nevoilor și preferințelor dvs.",
-    },
-    {
+      "Optați pentru soluții de pardoseală estetice și durabile, adaptate nevoilor și preferințelor dvs.",
+  },
+  {
     id: "service-6",
     image: s6,
     title: "Acoperiș",
     content:
-    "Asigurăm servicii profesionale pentru construcția și întreținerea acoperișurilor, garantând durabilitate și siguranță.",
-    }
+      "Asigurăm servicii profesionale pentru construcția și întreținerea acoperișurilor, garantând durabilitate și siguranță.",
+  },
 ];
 
 export const projectsConstants = [
@@ -253,12 +312,16 @@ export const bannerConstants = [
 ];
 
 export const serviceDetailItems = [
-  { id: "constructii", title: "Servicii de Construcții" },
-  { id: "sanitare", title: "Servicii de Instalații Sanitare" },
-  { id: "acoperis", title: "Servicii de Acoperiș" },
-  { id: "renovare", title: "Servicii de Renovare" },
-  { id: "electrice", title: "Servicii Electrice" },
-  { id: "proiectare", title: "Servicii de Proiectare" },
+  { id: "constructii", title: "Servicii de construcții" },
+  {
+    id: "sanitare_si_termice",
+    title: "Servicii de instalații sanitare si termice",
+  },
+  { id: "acoperis", title: "Servicii de acoperiș" },
+  { id: "fasonare", title: "Servicii de prelucrare a sticlei" },
+  { id: "renovare", title: "Servicii de renovare" },
+  { id: "electrice", title: "Servicii electrice" },
+  { id: "proiectare", title: "Servicii de proiectare" },
 ];
 
 export const serviceDetailedPage = [
@@ -266,7 +329,7 @@ export const serviceDetailedPage = [
     id: "constructii",
     title: "Construcții",
     subtitle: "Soluții complete pentru proiectele tale de construcții",
-    image: constructii,
+    image: [constructii, sanitare, acoperis],
     overview:
       "Oferim soluții complete pentru proiectele tale de construcții, asigurându-ne că fiecare detaliu este gestionat cu precizie. De la consultanță tehnică în faza de proiectare și coordonare logistică a șantierului, până la monitorizarea calității lucrărilor și implementarea măsurilor de sănătate și securitate în muncă, garantăm conformitatea cu cele mai înalte norme de construcții.",
     included: [
@@ -311,15 +374,30 @@ export const serviceDetailedPage = [
     ],
   },
   {
-    id: "sanitare",
-    title: "Servicii de Instalații Sanitare",
-    subtitle: "Soluții complete pentru instalațiile tale sanitare",
-    image: sanitare,
+    id: "sanitare_si_termice",
+    title: "Servicii de Instalații Sanitare și Termice",
+    subtitle: "Soluții complete pentru instalațiile tale sanitare și termice",
+    image: [
+      is,
+      is1,
+      is2,
+      is3,
+      is4,
+      is5,
+      is6,
+      is7,
+      is8,
+      is9,
+      is10,
+      is11,
+      is12,
+      is13,
+    ],
     overview:
-      "Echipa noastră de specialiști în instalații sanitare oferă soluții personalizate pentru a satisface nevoile proiectelor tale. De la proiectare și implementare, până la mentenanță și service, ne asigurăm că toate instalațiile sanitare funcționează optim și îndeplinesc cele mai exigente standarde de calitate.",
+      "Echipa noastră de specialiști în instalații sanitare și termice oferă soluții personalizate pentru a satisface nevoile proiectelor tale. De la proiectare și implementare, până la mentenanță și service, ne asigurăm că toate instalațiile sanitare și termice funcționează optim și îndeplinesc cele mai exigente standarde de calitate.",
     included: [
-      "Consultanță în proiectarea instalațiilor sanitare",
-      "Montarea și întreținerea echipamentelor sanitare",
+      "Consultanță în proiectarea instalațiilor sanitare și termice",
+      "Montarea și întreținerea echipamentelor sanitare și termice",
       "Verificarea și repararea instalațiilor existente",
       "Instalarea sistemelor de canalizare și evacuare",
       "Asigurarea conformității cu normele sanitare",
@@ -329,17 +407,17 @@ export const serviceDetailedPage = [
       {
         title: "Proiectare Eficientă",
         description:
-          "Proiectăm sisteme de instalații sanitare eficiente, ținând cont de economisirea resurselor și protejarea mediului înconjurător.",
+          "Proiectăm sisteme de instalații sanitare și termice eficiente, ținând cont de economisirea resurselor și protejarea mediului înconjurător.",
       },
       {
         title: "Tehnologii Avansate",
         description:
-          "Implementăm tehnologii avansate în domeniul instalațiilor sanitare pentru a asigura funcționarea optimă a sistemelor.",
+          "Implementăm tehnologii avansate în domeniul instalațiilor sanitare și termice pentru a asigura funcționarea optimă a sistemelor.",
       },
       {
         title: "Integrare Durabilă",
         description:
-          "Avem în vedere aspecte de durabilitate în proiectarea și implementarea instalațiilor sanitare, contribuind la un viitor mai sustenabil.",
+          "Avem în vedere aspecte de durabilitate în proiectarea și implementarea instalațiilor sanitare și termice, contribuind la un viitor mai sustenabil.",
       },
       {
         title: "Soluții Personalizate",
@@ -349,15 +427,102 @@ export const serviceDetailedPage = [
       {
         title: "Testare Riguroasă",
         description:
-          "Realizăm teste riguroase pentru a asigura funcționarea corectă și eficientă a sistemelor de instalații sanitare.",
+          "Realizăm teste riguroase pentru a asigura funcționarea corectă și eficientă a sistemelor de instalații sanitare și termice.",
       },
     ],
   },
+
+  {
+    id: "fasonare",
+    title: "Servicii de prelucrare a sticlei",
+    subtitle: "Soluții complete pentru acoperișul casei tale",
+    image: [
+      ps1,
+      ps2,
+      ps3,
+      ps4,
+      ps5,
+      ps6,
+      ps7,
+      ps8,
+      ps9,
+      ps10,
+      ps11,
+      ps12,
+      ps13,
+      ps14,
+      ps15,
+      ps16,
+      ps17,
+      ps18,
+      ps19,
+      ps20,
+      ps21,
+      ps22,
+      ps23,
+      ps24,
+      ps25,
+      ps26,
+      ps27,
+      ps28,
+      ps29,
+      ps30,
+      ps31,
+      ps32,
+      ps33,
+      ps34,
+      ps35,
+      ps36,
+      ps37,
+      ps38,
+      ps39,
+      psv1,
+      psv2,
+    ],
+    overview:
+      "Specialiștii noștri în servicii de acoperiș aduc experiența și abilitățile necesare pentru a oferi soluții durabile și estetice. De la instalarea acoperișului și reparații, până la întreținere și servicii de impermeabilizare, ne ocupăm de toate aspectele legate de acoperișul clădirii tale.",
+    included: [
+      "Montarea și repararea acoperișurilor",
+      "Tratarea și protejarea materialului de acoperiș",
+      "Consiliere în alegerea materialelor potrivite",
+      "Verificarea și curățarea șanturilor de scurgere",
+      "Asigurarea impermeabilității acoperișului",
+      "Izolarea termică a acoperișului",
+    ],
+    constructionManagement: [
+      {
+        title: "Expertiză în Acoperișuri",
+        description:
+          "Avem o echipă cu expertiză în lucrări la acoperișuri, oferind soluții durabile și eficiente.",
+      },
+      {
+        title: "Materiale de Calitate",
+        description:
+          "Folosim materiale de cea mai înaltă calitate pentru a asigura rezistență și durabilitate acoperișului dumneavoastră.",
+      },
+      {
+        title: "Eficiență Energetică",
+        description:
+          "Integrăm soluții de eficiență energetică în proiect, contribuind la economisirea de resurse și la un mediu mai curat.",
+      },
+      {
+        title: "Mentenanță Preventivă",
+        description:
+          "Oferim servicii de mentenanță preventivă pentru a prelungi durata de viață a acoperișului și a evita problemele majore.",
+      },
+      {
+        title: "Proiectare Personalizată",
+        description:
+          "Proiectăm acoperișuri personalizate, adaptate nevoilor specifice ale proiectului dumneavoastră.",
+      },
+    ],
+  },
+
   {
     id: "acoperis",
     title: "Servicii de Acoperiș",
     subtitle: "Soluții complete pentru acoperișul casei tale",
-    image: acoperis,
+    image: [constructii, sanitare, acoperis],
     overview:
       "Specialiștii noștri în servicii de acoperiș aduc experiența și abilitățile necesare pentru a oferi soluții durabile și estetice. De la instalarea acoperișului și reparații, până la întreținere și servicii de impermeabilizare, ne ocupăm de toate aspectele legate de acoperișul clădirii tale.",
     included: [
@@ -400,7 +565,7 @@ export const serviceDetailedPage = [
     id: "renovare",
     title: "Servicii de Renovare",
     subtitle: "Transformă casa ta cu serviciile noastre de renovare",
-    image: renovare,
+    image: [constructii, sanitare, acoperis],
     overview:
       "Indiferent dacă vrei să aduci un suflu nou unei locuințe vechi sau să redefinești spațiul unui birou, serviciile noastre de renovare acoperă toate aspectele procesului. De la proiectare și demolare, până la finisaje și decorare, suntem partenerul tău în transformarea spațiilor.",
     included: [
@@ -443,7 +608,7 @@ export const serviceDetailedPage = [
     id: "electrice",
     title: "Servicii Electrice",
     subtitle: "Soluții complete pentru instalațiile electrice",
-    image: electrice,
+    image: [constructii, sanitare, acoperis],
     overview:
       "Echipa noastră de electricieni oferă servicii complete pentru proiectele tale electrice. De la proiectare și instalație, până la mentenanță și upgrade-uri, garantăm soluții sigure și eficiente pentru toate necesitățile tale electrice.",
     included: [
@@ -485,7 +650,7 @@ export const serviceDetailedPage = [
   {
     id: "proiectare",
     title: "Servicii de Proiectare",
-    image: proiectare,
+    image: [constructii, sanitare, acoperis],
     subtitle: "Dezvoltă proiectul tău cu serviciile noastre de proiectare",
     overview:
       "Indiferent de tipul proiectului tău, echipa noastră de specialiști în proiectare aduce creativitate și experiență în fiecare detaliu. Oferim servicii de proiectare arhitecturală, design interior și consultanță pentru a transforma ideile tale în realitate, cu atenție la estetică și funcționalitate.",
