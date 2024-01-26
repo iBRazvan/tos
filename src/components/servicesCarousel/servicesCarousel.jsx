@@ -13,12 +13,12 @@ const ServicesCarousel = ({ imagesProps }) => {
   const settings = {
     className: "single",
     infinite: true,
-    lazyLoad: true,
     centerPadding: "1px",
     speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    autoplay: true,
 
     beforeChange: (current, next) => setImageIndex(next),
   };
@@ -35,7 +35,7 @@ const ServicesCarousel = ({ imagesProps }) => {
           >
             {image ===
             "/src/assets/ps/psv1.mp4" || image === "/src/assets/ps/psv2.mp4" ? (
-              <video width="750" style={{ maxHeight: "90vh"}} autoPlay="true" muted="true">
+              <video width="750" style={{ maxHeight: "80vh"}} autoPlay={true} muted={true}>
                 <source src={image} type="video/mp4" />
               </video>
             ) : (
