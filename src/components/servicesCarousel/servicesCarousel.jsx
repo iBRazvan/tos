@@ -33,10 +33,8 @@ const ServicesCarousel = ({ imagesProps }) => {
               index === imageIndex ? "sideServices activeSlide" : "sideServices"
             }`}
           >
-            {console.log(image)}
             {image ===
             "/src/assets/ps/psv1.mp4" || image === "/src/assets/ps/psv2.mp4" ? (
-              console.log(image, "img"),
               <video width="750" style={{ maxHeight: "90vh"}} autoPlay="true" muted="true">
                 <source src={image} type="video/mp4" />
               </video>
