@@ -22,8 +22,6 @@ const ServiceDetails = ({ selectedService }) => {
     );
   };
 
-  console.log(selectedServiceConstants.image)
-
   return (
     <div className="flex xxs:w-full h-fit sm:w-[67%] xxs:p-1 xs:p-4 xxs:pb-10">
       <div className={`flex flex-col xxs:px-6 md:p-6 w-full `}>

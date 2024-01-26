@@ -62,9 +62,9 @@ const ServicesDetailPage = () => {
 
                   <div className="flex flex-col">
                     <p className="text-text text-roboto text-base mb-6">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Obține o ofertă gratuită personalizată acum!
                     </p>
-                    <div>
+                    <div className="flex items-center justify-center">
                       <Link to="/contact">
                         <button
                           className={`${styles.btn} w-fit flex flex-row items-start justify-start`}
