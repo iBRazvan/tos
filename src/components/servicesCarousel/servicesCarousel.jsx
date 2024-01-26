@@ -25,7 +25,7 @@ const ServicesCarousel = ({ imagesProps }) => {
 
   return (
     <div>
-      <Slider {...settings} >
+      <Slider {...settings}>
         {images.map((image, index) => (
           <div
             key={uuidv4}
@@ -33,14 +33,7 @@ const ServicesCarousel = ({ imagesProps }) => {
               index === imageIndex ? "sideServices activeSlide" : "sideServices"
             }`}
           >
-            {image ===
-            "/src/assets/ps/psv1.mp4" || image === "/src/assets/ps/psv2.mp4" ? (
-              <video width="750" style={{ maxHeight: "80vh"}} autoPlay={true} muted={true}>
-                <source src={image} type="video/mp4" />
-              </video>
-            ) : (
-              <img src={image} alt={image} />
-            )}
+            <img src={image} alt={image} />
           </div>
         ))}
       </Slider>
