@@ -18,7 +18,7 @@ const AboutTestimonials = () => {
           <h3
             className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
           >
-            10 ani experienta in servicii de constructie
+            10 ani experienta in servicii de constructii
           </h3>
           <h4 className={`text-lg font-roboto text-primary font-semibold mb-4`}>
             O lungă călătorie în lumea construcțiilor - împreună transformăm

@@ -22,22 +22,11 @@ import {
   electrice,
   proiectare,
 } from "../assets";
+
 import {
-  is,
-  is1,
-  is2,
-  is3,
-  is4,
-  is5,
-  is6,
-  is7,
-  is8,
-  is9,
-  is10,
-  is11,
-  is12,
-  is13,
-} from "../assets/is";
+  is1,is2,is3,is4,is5
+} from "../assets/is"
+
 import {
   ps1,
   ps2,
@@ -55,29 +44,7 @@ import {
   ps14,
   ps15,
   ps16,
-  ps17,
-  ps18,
-  ps19,
-  ps20,
-  ps21,
-  ps22,
-  ps23,
-  ps24,
-  ps25,
-  ps26,
-  ps27,
-  ps28,
-  ps29,
-  ps30,
-  ps31,
-  ps32,
-  ps33,
-  ps34,
-  ps35,
-  ps36,
-  ps37,
-  ps38,
-  ps39,
+  
 
 } from "../assets/ps";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -238,7 +205,7 @@ export const footerConstants = [
     content: [
       {
         icon: FaPhone,
-        text: "+40712345678",
+        text: "+40786522415",
       },
       {
         icon: IoIosMail,
@@ -328,7 +295,7 @@ export const serviceDetailedPage = [
     id: "constructii",
     title: "Construcții",
     subtitle: "Soluții complete pentru proiectele tale de construcții",
-    image: [constructii, sanitare, acoperis],
+    image: [constructii ],
     overview:
       "Oferim soluții complete pentru proiectele tale de construcții, asigurându-ne că fiecare detaliu este gestionat cu precizie. De la consultanță tehnică în faza de proiectare și coordonare logistică a șantierului, până la monitorizarea calității lucrărilor și implementarea măsurilor de sănătate și securitate în muncă, garantăm conformitatea cu cele mai înalte norme de construcții.",
     included: [
@@ -376,22 +343,7 @@ export const serviceDetailedPage = [
     id: "sanitare_si_termice",
     title: "Servicii de Instalații Sanitare și Termice",
     subtitle: "Soluții complete pentru instalațiile tale sanitare și termice",
-    image: [
-      is,
-      is1,
-      is2,
-      is3,
-      is4,
-      is5,
-      is6,
-      is7,
-      is8,
-      is9,
-      is10,
-      is11,
-      is12,
-      is13,
-    ],
+    image: [is1,is2,is3,is4,is5,sanitare],
     overview:
       "Echipa noastră de specialiști în instalații sanitare și termice oferă soluții personalizate pentru a satisface nevoile proiectelor tale. De la proiectare și implementare, până la mentenanță și service, ne asigurăm că toate instalațiile sanitare și termice funcționează optim și îndeplinesc cele mai exigente standarde de calitate.",
     included: [
@@ -452,30 +404,6 @@ export const serviceDetailedPage = [
       ps14,
       ps15,
       ps16,
-      ps17,
-      ps18,
-      ps19,
-      ps20,
-      ps21,
-      ps22,
-      ps23,
-      ps24,
-      ps25,
-      ps26,
-      ps27,
-      ps28,
-      ps29,
-      ps30,
-      ps31,
-      ps32,
-      ps33,
-      ps34,
-      ps35,
-      ps36,
-      ps37,
-      ps38,
-      ps39,
-   
     ],
     overview:
       "Specialiștii noștri în servicii de acoperiș aduc experiența și abilitățile necesare pentru a oferi soluții durabile și estetice. De la instalarea acoperișului și reparații, până la întreținere și servicii de impermeabilizare, ne ocupăm de toate aspectele legate de acoperișul clădirii tale.",
@@ -520,7 +448,7 @@ export const serviceDetailedPage = [
     id: "acoperis",
     title: "Servicii de Acoperiș",
     subtitle: "Soluții complete pentru acoperișul casei tale",
-    image: [constructii, sanitare, acoperis],
+    image: [acoperis],
     overview:
       "Specialiștii noștri în servicii de acoperiș aduc experiența și abilitățile necesare pentru a oferi soluții durabile și estetice. De la instalarea acoperișului și reparații, până la întreținere și servicii de impermeabilizare, ne ocupăm de toate aspectele legate de acoperișul clădirii tale.",
     included: [
@@ -561,11 +489,11 @@ export const serviceDetailedPage = [
   },
   {
     id: "renovare",
-    title: "Servicii de Renovare",
-    subtitle: "Transformă casa ta cu serviciile noastre de renovare",
-    image: [constructii, sanitare, acoperis],
+    title: "Serviciu de Renovare",
+    subtitle: "Transformă casa ta cu serviciul noastre de renovare",
+    image: [renovare],
     overview:
-      "Indiferent dacă vrei să aduci un suflu nou unei locuințe vechi sau să redefinești spațiul unui birou, serviciile noastre de renovare acoperă toate aspectele procesului. De la proiectare și demolare, până la finisaje și decorare, suntem partenerul tău în transformarea spațiilor.",
+      "Indiferent dacă vrei să aduci un suflu nou unei locuințe vechi sau să redefinești spațiul unui birou, serviciul noastre de renovare acoperă toate aspectele procesului. De la proiectare și demolare, până la finisaje și decorare, suntem partenerul tău în transformarea spațiilor.",
     included: [
       "Renovarea spațiilor interioare și exterioare",
       "Refacerea instalațiilor electrice și sanitare",
@@ -606,7 +534,7 @@ export const serviceDetailedPage = [
     id: "electrice",
     title: "Servicii Electrice",
     subtitle: "Soluții complete pentru instalațiile electrice",
-    image: [constructii, sanitare, acoperis],
+    image: [electrice],
     overview:
       "Echipa noastră de electricieni oferă servicii complete pentru proiectele tale electrice. De la proiectare și instalație, până la mentenanță și upgrade-uri, garantăm soluții sigure și eficiente pentru toate necesitățile tale electrice.",
     included: [
@@ -648,7 +576,7 @@ export const serviceDetailedPage = [
   {
     id: "proiectare",
     title: "Servicii de Proiectare",
-    image: [constructii, sanitare, acoperis],
+    image: [proiectare],
     subtitle: "Dezvoltă proiectul tău cu serviciile noastre de proiectare",
     overview:
       "Indiferent de tipul proiectului tău, echipa noastră de specialiști în proiectare aduce creativitate și experiență în fiecare detaliu. Oferim servicii de proiectare arhitecturală, design interior și consultanță pentru a transforma ideile tale în realitate, cu atenție la estetică și funcționalitate.",
