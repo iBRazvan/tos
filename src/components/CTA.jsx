@@ -35,7 +35,7 @@ const CTA = () => {
                 </div>
                 <div className="flex flex-col justify-center items-start w-[75%] text-primary">
                   <h4 className=" xxs:text-xl xs:text-2xl font-bebas font-medium text-white">Consultare gratuita:</h4>
-                  <h2 className=" xxs:text-5xl xxs:text-[36px] mobile:text-5xl mobile:text-[44px] xs:text-5xl font-bebas font-semibold text-primary">+40712345678</h2>
+                  <h2 className=" xxs:text-5xl xxs:text-[36px] mobile:text-5xl mobile:text-[44px] xs:text-5xl font-bebas font-semibold text-primary">+40786522415</h2>
                 </div>
               </div>
             </div>

@@ -155,9 +155,11 @@ const Navbar = () => {
             <img
               src={toslogo}
               alt="tos"
-              className="xxs:w-[72px] xxs:h-[62px] xs:w-[92px] xs:h-[80px] m-0 p-0"
+              className="xxs:w-[82px] xxs:h-[auto] xs:w-[120px]  xs:h-[auto] m-0 p-0"
             />
-            <div className="flex items-start">
+            <div className="flex flex-col ">
+
+            <div className="flex xxs:ml-1 md:ml-4 items-start ">
               <Link
                 to="/"
                 onClick={() => setActiveLink("Acasa")}
@@ -172,6 +174,23 @@ const Navbar = () => {
               >
                 Solutions
               </Link>
+            </div>
+            <div className="flex items-end justify-end">
+              <Link
+                to="/"
+                onClick={() => setActiveLink("Acasa")}
+                className={`font-roboto font-semibold xxs:text-[10px] xs:text-[12px] uppercase mr-2 text-white`}
+              >
+              Noi avem
+              </Link>
+              <Link
+                to="/"
+                onClick={() => setActiveLink("Acasa")}
+                className={`font-roboto font-semibold xxs:text-[10px] xs:text-[12px] uppercase mr-2 text-primary`}
+              >
+              solutia!
+              </Link>
+            </div>
             </div>
           </div>
 

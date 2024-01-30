@@ -7,17 +7,12 @@ import { FaUserCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Stats = () => {
-
-
-
   return (
     <section
       className={`${layout.sectionTwoCols} ${styles.statsSection} xxs:px-2 mobile:px-6`}
     >
-      <motion.div  className={`${styles.boxWidth}${styles.colContainer} `}>
-      <motion.div
-
-    />
+      <motion.div className={`${styles.boxWidth}${styles.colContainer} `}>
+        <motion.div />
         <p className="border-t-4 border-l-4 -ml-6 pb-6  w-[110px] border-primary">
           {"   "}{" "}
         </p>
@@ -78,8 +73,7 @@ const Stats = () => {
         </div>
       </motion.div>
       {/* Images div */}
-      <motion.div
-    className={`${styles.colContainer} `}>
+      <motion.div className={`${styles.colContainer} `}>
         <div className={`relative flex h-fit`}>
           <img src={stats1} alt="poza" className="w-auto h-auto" />
           <div
@@ -95,9 +89,9 @@ const Stats = () => {
         {/* Button Div */}
         <div className={`flex  w-full pt-10 md:pt-10`}>
           <Link to="/servicesdetail">
-          <button className={`${styles.btn}  h-[57px] flex `}>
-            Serviciile noastre ➨
-          </button>
+            <button className={`${styles.btn}  h-[57px] flex `}>
+              Serviciile noastre ➨
+            </button>
           </Link>
         </div>
       </motion.div>

@@ -1,4 +1,4 @@
-import toslogo from "./toslogo.png";
+import toslogo from "./toslogo.jpg";
 import bgph1 from "./bgph1.jpg";
 import bgph2 from "./bgph2.jpg";
 import stats1 from "./stats1.jpg";
@@ -99,5 +99,5 @@ export {
   renovare,
   sanitare,
   contact,
-  avatarT
+  avatarT,
 };

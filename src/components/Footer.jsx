@@ -32,7 +32,7 @@ const Footer = () => {
               <img
                 src={toslogo}
                 alt="tos"
-                className="xxs:w-[70%] xxs:h-full xs:w-[45%] items-center xs:h-[100%] m-0 p-0"
+                className="xxs:w-[60%] xs:w-[70%] h-full items-center  m-0 p-0"
               />
               <p className="text-start text-base font-roboto font-normal text-white">
                 Implicam pasiune si experienta in fiecare aspect al afacerii

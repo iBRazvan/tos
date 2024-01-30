@@ -14,29 +14,7 @@ import ps13 from "./ps13.jpg";
 import ps14 from "./ps14.jpg";
 import ps15 from "./ps15.jpg";
 import ps16 from "./ps16.jpg";
-import ps17 from "./ps17.jpg";
-import ps18 from "./ps18.jpg";
-import ps19 from "./ps19.jpg";
-import ps20 from "./ps20.jpg";
-import ps21 from "./ps21.jpg";
-import ps22 from "./ps22.jpg";
-import ps23 from "./ps23.jpg";
-import ps24 from "./ps24.jpg";
-import ps25 from "./ps25.jpg";
-import ps26 from "./ps26.jpg";
-import ps27 from "./ps27.jpg";
-import ps28 from "./ps28.jpg";
-import ps29 from "./ps29.jpg";
-import ps30 from "./ps30.jpg";
-import ps31 from "./ps31.jpg";
-import ps32 from "./ps32.jpg";
-import ps33 from "./ps33.jpg";
-import ps34 from "./ps34.jpg";
-import ps35 from "./ps35.jpg";
-import ps36 from "./ps36.jpg";
-import ps37 from "./ps37.jpg";
-import ps38 from "./ps38.jpg";
-import ps39 from "./ps39.jpg";
+
 
 
 export {
@@ -56,28 +34,6 @@ export {
   ps14,
   ps15,
   ps16,
-  ps17,
-  ps18,
-  ps19,
-  ps20,
-  ps21,
-  ps22,
-  ps23,
-  ps24,
-  ps25,
-  ps26,
-  ps27,
-  ps28,
-  ps29,
-  ps30,
-  ps31,
-  ps32,
-  ps33,
-  ps34,
-  ps35,
-  ps36,
-  ps37,
-  ps38,
-  ps39,
+
  
 };
