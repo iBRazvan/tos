@@ -99,7 +99,7 @@ const Navbar = () => {
             <div className={`flex flex-row items-center gap-2`}>
               <IoCall className={`text-white w-4 h-4`} />
               <span className={`flex flex-row items-center gap-2`}>
-                Suna la: 0712345678
+                Suna la: +40786522415
               </span>
             </div>
             <div className={`flex flex-row items-center gap-2`}>
@@ -179,14 +179,14 @@ const Navbar = () => {
               <Link
                 to="/"
                 onClick={() => setActiveLink("Acasa")}
-                className={`font-roboto font-semibold xxs:text-[10px] xs:text-[12px] uppercase mr-2 text-white`}
+                className={`font-bebas font-normal xxs:text-[12px] xs:text-[16px] uppercase mr-1 text-white`}
               >
-              Noi avem
+              Noi avem 
               </Link>
               <Link
                 to="/"
                 onClick={() => setActiveLink("Acasa")}
-                className={`font-roboto font-semibold xxs:text-[10px] xs:text-[12px] uppercase mr-2 text-primary`}
+                className={`font-bebas font-normal xxs:text-[12px] xs:text-[16px] uppercase mr-2 text-primary`}
               >
               solutia!
               </Link>
