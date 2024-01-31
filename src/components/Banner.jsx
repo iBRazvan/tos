@@ -9,7 +9,7 @@ const Banner = ({
   servicesDetailConstants,
   contactConstants,
 }) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
 
   useEffect(() => {
     setData(
