@@ -11,10 +11,16 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import styles from "../style";
 import Redirect from "../components/redirect/Redirect";
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 const ContactPage = () => {
   const [data, setData] = useState();
-  const [contactLeftSideConstants, setContactLeftSideConstants] = useState([]);
+  const [contactLeftSideConstants, setContactLeftSideConstants] = useState("");
+  const [alignment, setAlignment] = useState("centru");
+
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
 
   useEffect(() => {
     const contactConstants = bannerConstants.find(
@@ -22,17 +28,17 @@ const ContactPage = () => {
     );
     setData(contactConstants);
 
-    const leftSideConstants = footerConstants.find(
-      (item) => item.id === "footercol-1"
-    );
+    const leftSideConstants = footerConstants
+      .filter((item) => item.id === "footercol-1" || item.id === "footercol-2")
+      .slice(0, 2);
 
-    setContactLeftSideConstants(leftSideConstants.content);
+    setContactLeftSideConstants(leftSideConstants);
   }, []);
 
   return (
     <div className="flex flex-col items-center">
       <Redirect />
-      <Banner contactConstants={data} />
+      {/* <Banner contactConstants={data} /> */}
       {/* Contact content */}
       <section
         className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row xxs:py-10 sm:py-20 xxs:px-8 sm:px-12`}
@@ -56,15 +62,24 @@ const ContactPage = () => {
 
           <div className="flex flex-col gap-4">
             {/* Contact info's */}
+            {console.log(contactLeftSideConstants)}
             {contactLeftSideConstants &&
               contactLeftSideConstants.map((item) => (
-                <div key={uuidv4()} className="flex flex-col">
-                  <div className="flex flex-row items-center gap-2">
-                    {<item.icon className="text-primary w-6 h-6" />}
-                    <p className="text-text text-base font-roboto">
-                      <Link to={item.to}>{item.text}</Link>
-                    </p>
-                  </div>
+                <div className="flex flex-col mb-4">
+                  <h2 className="text-secondary text-2xl font-bebas mb-4">
+                    {item.title}
+                  </h2>
+                  {item.content.map((content) => (
+                    <div key={uuidv4()} className="flex flex-col mb-3">
+                      <div className="flex flex-row items-center">
+                        {<content.icon className="text-primary w-6 h-6" />}
+                        {console.log(content, "icon")}
+                        <p className="text-text text-base font-roboto">
+                          <Link to={content.to}>{content.text}</Link>
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ))}
           </div>
@@ -111,18 +126,30 @@ const ContactPage = () => {
         </div>
       </section>
       {/* MAP */}
-      <div className="flex justify-center w-full px-12 pb-12">
-        <iframe
-          title="Office Location"
-          width="1280"
-          height="450"
-          style={{ border: 2 }}
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.8942524227405!2d26.803385!3d46.25233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b506f7f7855555%3A0xb430d6775c6155eb!2sToderica%20Solutions!5e0!3m2!1sro!2sro!4v1706103034834!5m2!1sro!2sro"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen={true}
-          className="test"
-        ></iframe>
+      <div>
+        <ToggleButtonGroup
+          color="primary.main"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+          aria-label="Platform"
+        >
+          <ToggleButton value="centru">Centru Social</ToggleButton>
+          <ToggleButton value="punct">Punct de lucru</ToggleButton>
+        </ToggleButtonGroup>
+        <div className="flex justify-center w-full px-12 pb-12">
+          <iframe
+            title="Office Location"
+            width="1280"
+            height="450"
+            style={{ border: 2 }}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.8942524227405!2d26.803385!3d46.25233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b506f7f7855555%3A0xb430d6775c6155eb!2sToderica%20Solutions!5e0!3m2!1sro!2sro!4v1706103034834!5m2!1sro!2sro"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen={true}
+            className="test"
+          ></iframe>
+        </div>
       </div>
       <Footer />
     </div>

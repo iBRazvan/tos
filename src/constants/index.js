@@ -201,7 +201,30 @@ export const teamConstants = [
 export const footerConstants = [
   {
     id: "footercol-1",
-    title: "Birou in Onesti",
+    title: "Centru social",
+    content: [
+      {
+        icon: FaPhone,
+        text: "+40786522415",
+      },
+      {
+        icon: IoIosMail,
+        text: "toderica.solutions@gmail.com",
+      },
+      {
+        icon: FaLocationDot,
+        text: "Str.Siriului, Nr.22-26",
+        to: "https://maps.app.goo.gl/NcDhijCGCiGRmgW58",
+      },
+      {
+        icon: FaClock,
+        text: "Luni - Vineri: 08.00 - 16.00",
+      },
+    ],
+  },
+  {
+    id: "footercol-2",
+    title: "Punct de lucru",
     content: [
       {
         icon: FaPhone,
@@ -223,7 +246,7 @@ export const footerConstants = [
     ],
   },
   {
-    id: "footerccol-2",
+    id: "footerccol-3",
     title: "Link-uri rapide",
     content: [
       {
@@ -248,22 +271,7 @@ export const footerConstants = [
       },
     ],
   },
-  {
-    id: "footerccol-3",
-    title: "Serviciile noastre",
-    icon: "FaArrowRight",
-    content: [
-      { icon: FaLongArrowAltRight, text: "Proiectare" },
-      { icon: FaLongArrowAltRight, text: "Constructii" },
-      { icon: FaLongArrowAltRight, text: "Renovare" },
-    ],
-    typesOfConstruction: [
-      "Instalatii sanitare",
-      "Acoperis",
-      "Pardoseala",
-      "Electrice",
-    ],
-  },
+ 
 ];
 
 export const bannerConstants = [
