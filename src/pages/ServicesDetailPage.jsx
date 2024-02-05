@@ -13,23 +13,18 @@ import { contact } from "../assets";
 import { Link } from "react-router-dom";
 
 const ServicesDetailPage = () => {
-  const [data, setData] = useState();
   const [selectedServiceID, setSelectedServiceID] = useState("constructii");
-
-  useEffect(() => {
-    const servicesDetailConstants = bannerConstants.find(
-      (item) => item.id === "servicesdetalied"
-    );
-    setData(servicesDetailConstants);
-  }, []);
-
   const handleServiceClick = (id) => {
     setSelectedServiceID(id);
   };
 
   return (
     <div className={`flex flex-col items-center`}>
-      <Banner servicesDetailConstants={data} />
+      <Banner
+        servicesDetailConstants={bannerConstants.find(
+          (item) => item.id === "servicesdetalied"
+        )}
+      />
 
       <div
         className={`flex xxs:flex-col sm:flex-row py-20 xxs:p-1 xs:p-4 ${styles.boxWidth}`}
@@ -62,7 +57,7 @@ const ServicesDetailPage = () => {
 
                   <div className="flex flex-col">
                     <p className="text-text text-roboto text-base mb-6">
-                    Obține o ofertă gratuită personalizată acum!
+                      Obține o ofertă gratuită personalizată acum!
                     </p>
                     <div className="flex items-center justify-center">
                       <Link to="/contact">

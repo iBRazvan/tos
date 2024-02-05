@@ -14,7 +14,6 @@ import Redirect from "../components/redirect/Redirect";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 const ContactPage = () => {
-  const [data, setData] = useState();
   const [contactLeftSideConstants, setContactLeftSideConstants] = useState("");
   const [alignment, setAlignment] = useState("centru");
 
@@ -23,10 +22,6 @@ const ContactPage = () => {
   };
 
   useEffect(() => {
-    const contactConstants = bannerConstants.find(
-      (item) => item.id === "contact"
-    );
-    setData(contactConstants);
 
     const leftSideConstants = footerConstants
       .filter((item) => item.id === "footercol-1" || item.id === "footercol-2")
@@ -38,7 +33,9 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col items-center">
       <Redirect />
-      {/* <Banner contactConstants={data} /> */}
+      <Banner
+        contactConstants={bannerConstants.find((item) => item.id === "contact")}
+      />
       {/* Contact content */}
       <section
         className={`${styles.boxWidth} flex xxs:flex-col sm:flex-row xxs:py-10 sm:py-20 xxs:px-8 sm:px-12`}
@@ -62,10 +59,10 @@ const ContactPage = () => {
 
           <div className="flex flex-col gap-4">
             {/* Contact info's */}
-            {console.log(contactLeftSideConstants)}
+
             {contactLeftSideConstants &&
-              contactLeftSideConstants.map((item) => (
-                <div className="flex flex-col mb-4">
+              contactLeftSideConstants.map((item, i) => (
+                <div key={i} className="flex flex-col mb-4">
                   <h2 className="text-secondary text-2xl font-bebas mb-4">
                     {item.title}
                   </h2>
@@ -127,8 +124,8 @@ const ContactPage = () => {
       </section>
       {/* MAP */}
       <div>
-        <ToggleButtonGroup
-          color="primary.main"
+        {/* <ToggleButtonGroup
+          color="primary"
           value={alignment}
           exclusive
           onChange={handleChange}
@@ -136,7 +133,7 @@ const ContactPage = () => {
         >
           <ToggleButton value="centru">Centru Social</ToggleButton>
           <ToggleButton value="punct">Punct de lucru</ToggleButton>
-        </ToggleButtonGroup>
+        </ToggleButtonGroup> */}
         <div className="flex justify-center w-full px-12 pb-12">
           <iframe
             title="Office Location"

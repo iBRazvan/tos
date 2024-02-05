@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import Banner from "../components/Banner";
 import AboutTestimonials from "../components/aboutComponents/AboutTestimonials";
@@ -7,20 +7,14 @@ import { Footer, Team } from "../components";
 import { bannerConstants } from "../constants";
 
 const AboutPage = () => {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    const aboutConstants = bannerConstants.find((item) => item.id === 'about');
-    setData(aboutConstants);
-  }, []); 
 
   return (
     <div className="flex flex-col items-center">
-      <Banner aboutConstants={data}/>
-      <AboutTestimonials/>
-      <StatsBanner/>
-      <Team/>
-      <Footer/>
+      <Banner aboutConstants={bannerConstants.find((item) => item.id === "about")} />
+      <AboutTestimonials />
+      <StatsBanner />
+      <Team />
+      <Footer />
     </div>
   );
 };

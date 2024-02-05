@@ -9,7 +9,8 @@ const Banner = ({
   servicesDetailConstants,
   contactConstants,
 }) => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState();
+
 
   useEffect(() => {
     setData(
@@ -23,7 +24,7 @@ const Banner = ({
     );
   }, [
     aboutConstants,
-    servicesConstants,
+    aboutConstants,
     servicesDetailConstants,
     contactConstants,
   ]);
@@ -68,7 +69,7 @@ const Banner = ({
           <p
             className={`font-roboto text-base pt-2 pl-6 text text-white font-[500]`}
           >
-            {data?.path.split(" ").map((word, index, array) => (
+            { data?.path.split(" ").map((word, index, array) => (
               <span
                 key={index}
                 className={index === 0 ? "text-white" : "text-primary"}
