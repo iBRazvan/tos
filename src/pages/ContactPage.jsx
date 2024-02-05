@@ -64,8 +64,8 @@ const ContactPage = () => {
             {/* Contact info's */}
             {console.log(contactLeftSideConstants)}
             {contactLeftSideConstants &&
-              contactLeftSideConstants.map((item) => (
-                <div className="flex flex-col mb-4">
+              contactLeftSideConstants.map((item, i) => (
+                <div key={i} className="flex flex-col mb-4">
                   <h2 className="text-secondary text-2xl font-bebas mb-4">
                     {item.title}
                   </h2>
@@ -127,8 +127,8 @@ const ContactPage = () => {
       </section>
       {/* MAP */}
       <div>
-        <ToggleButtonGroup
-          color="primary.main"
+        {/* <ToggleButtonGroup
+          color="primary"
           value={alignment}
           exclusive
           onChange={handleChange}
@@ -136,7 +136,7 @@ const ContactPage = () => {
         >
           <ToggleButton value="centru">Centru Social</ToggleButton>
           <ToggleButton value="punct">Punct de lucru</ToggleButton>
-        </ToggleButtonGroup>
+        </ToggleButtonGroup> */}
         <div className="flex justify-center w-full px-12 pb-12">
           <iframe
             title="Office Location"
