@@ -98,9 +98,9 @@ const Navbar = () => {
           >
             <div className={`flex flex-row items-center gap-2`}>
               <IoCall className={`text-white w-4 h-4`} />
-              <span className={`flex flex-row items-center gap-2`}>
+              <a href="https://wa.me/40786522415" className={`flex flex-row items-center gap-2`}>
                 Suna la: +40786522415
-              </span>
+              </a>
             </div>
             <div className={`flex flex-row items-center gap-2`}>
               <MdEmail className={`text-white w-4 h-4`} />
