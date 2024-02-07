@@ -4,5 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/toderica/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
-    - export DEPLOYPATH=/home/toderica/public_html/
     - /bin/cp -R images $DEPLOYPATH
