@@ -206,6 +206,7 @@ export const footerConstants = [
       {
         icon: FaPhone,
         text: "+40786522415",
+        to: "https://wa.me/40786522415"
       },
       {
         icon: IoIosMail,
@@ -229,6 +230,7 @@ export const footerConstants = [
       {
         icon: FaPhone,
         text: "+40786522415",
+        to: "https://wa.me/40786522415"
       },
       {
         icon: IoIosMail,

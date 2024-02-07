@@ -81,6 +81,13 @@ const Footer = () => {
                       >
                         {content.text}
                       </a>
+                    ) : content.text === "+40786522415" ? (
+                      <a
+                        href="https://wa.me/40786522415"
+                        className={`text-white text-base font-roboto`}
+                      >
+                        {content.text}
+                      </a>
                     ) : (
                       <p className="text-white text-base font-roboto">
                         <Link to={content.to}>{content.text}</Link>

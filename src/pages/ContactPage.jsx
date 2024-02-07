@@ -68,7 +68,7 @@ const ContactPage = () => {
                   </h2>
                   {item.content.map((content) => (
                     <div key={uuidv4()} className="flex flex-col mb-3">
-                      <div className="flex flex-row items-center">
+                      <div className="flex flex-row items-center gap-3">
                         {<content.icon className="text-primary w-6 h-6" />}
                         {console.log(content, "icon")}
                         <p className="text-text text-base font-roboto">
