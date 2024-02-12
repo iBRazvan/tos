@@ -99,6 +99,10 @@ const Footer = () => {
             ))}
           </div>
         </div>
+        <div>
+          <div className="w-full border-b-2 border-text"></div>
+          <p className="font-roboto text-white text-base pt-4">©2024. Toderica Solutions by ITechBytes. All Rights Reserved</p>
+        </div>
       </div>
     </section>
   );
