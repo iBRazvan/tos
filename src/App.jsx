@@ -10,7 +10,7 @@ export const App = () => {
     <div className="root">
       <div className="bg-white overflow-hidden">
         <div className={` ${styles.flexCenter}`}>
-          <Navbar />
+          <Navbar/>
         </div>
         <Outlet />
       </div>
