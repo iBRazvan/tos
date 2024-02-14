@@ -2,6 +2,7 @@ import React from "react";
 import styles, { layout } from "../../style.js";
 
 import { stats1, stats2, tm1 } from "../../assets";
+import { RxAvatar } from "react-icons/rx";
 import { ImQuotesLeft } from "react-icons/im";
 import { Link } from "react-router-dom";
 
@@ -45,7 +46,8 @@ const AboutTestimonials = () => {
           </div>
           <div className="flex flex-row items-center">
             <div className="flex justify-center rounded-full xxs:w-[150px] xxs:h-[150px] ss:w-[302px] ss:h-[302px] md:w-[102px] md:h-[102px] border-2 border-primary">
-              <img src={tm1} className="border-primary rounded-full" />
+              {/* <img src={tm1} className="border-primary rounded-full" /> */}
+              <RxAvatar className="flex justify-center w-[80%] h-full"/>
             </div>
 
             <div className="pl-6">

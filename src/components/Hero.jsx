@@ -56,7 +56,7 @@ const Hero = () => {
             <div
               className={`xxs:text-[42px] xs:text-[50px] ss:text-[60px] sm:text-[90px] md:text-[100px] font-[600] mb-4 font-bebas max-w-4xl`}
             >
-              servicii de constructii, renovare si proiectare
+             <h1>servicii de constructii, renovare si proiectare</h1>
             </div>
             <div className={`flex mr-20 max-w-4xl`}>
               <p

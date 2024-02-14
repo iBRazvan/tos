@@ -14,6 +14,7 @@ import {
   TestimonialsBanner,
 } from "../components";
 import HomeBanner from "../components/HomeBanner";
+import CertificationBanner from "../components/aboutComponents/CertificationBanner";
 
 const HomePage = () => {
 
@@ -33,6 +34,7 @@ const HomePage = () => {
       <ServicesBanner />
       <div className={`bg-white ${styles.flexCenter} ${styles.flexCol} `}>
         <ServicesComponent />
+        <CertificationBanner/>
         <Projects/>
         <Team />
         <HomeBanner />
