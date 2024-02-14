@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import { bgph1, bgph2 } from "../assets";
+import { Reveal } from "../utils/Reveal";
 import styles from "../style";
 
 const Hero = () => {
   const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
   const backgroundImages = [bgph1, bgph2];
-
-  const scrollControls = useAnimation();
 
   useEffect(() => {
     const changeBackgroundImage = () => {
@@ -39,24 +37,30 @@ const Hero = () => {
       <div className={`${styles.opacity} bg-black`} style={{ zIndex: 0 }}></div>
       {/*  Hero content */}
       <div className={`${styles.boxWidth} relative`}>
-        <motion.div
+        <div
           className={`absolute top-1/2 left-8 transform -translate-y-1/2 z-10 text-white`}
-          animate={scrollControls}
-        >
+   
+          > 
+           <Reveal>
           <div className={`flex flex-col w-fit mr-10`}>
+        
             <h1
               className={`text-4xl md:text-4xl font-bold mb-4 text-primary font-bebas`}
-            >
+              >
               Bun venit la{" "}
+
               <span className={`text-white border-t-2 border-l-2 pl-2`}>
                 TODERICA
               </span>{" "}
               <span className="text-primary">SOLUTIONS</span>
             </h1>
+           
             <div
               className={`xxs:text-[42px] xs:text-[50px] ss:text-[60px] sm:text-[90px] md:text-[100px] font-[600] mb-4 font-bebas max-w-4xl`}
-            >
+            ><Reveal>
+
              <h1>servicii de constructii, renovare si proiectare</h1>
+            </Reveal>
             </div>
             <div className={`flex mr-20 max-w-4xl`}>
               <p
@@ -66,10 +70,12 @@ const Hero = () => {
               </p>
             </div>
           </div>
+          </Reveal>
           <Link to="/about">
             <button className={`${styles.btn}  mt-12`}>Mai multe ➨</button>
           </Link>
-        </motion.div>
+        </div>
+        
       </div>
     </section>
   );

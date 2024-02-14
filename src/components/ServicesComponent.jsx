@@ -3,6 +3,7 @@ import styles, { layout } from "../style";
 import { servicesConstants } from "../constants";
 import Card from "./card/Card";
 import { Link } from "react-router-dom";
+import { DepthCard } from "../utils/DepthCard";
 
 const ServicesComponent = () => {
   return (
@@ -14,7 +15,9 @@ const ServicesComponent = () => {
       >
         <div className={`${styles.gridCols} gap-10`}>
           {servicesConstants.map((service) => (
-            <Card key={service.id} service={service} cardType="service" />
+            <DepthCard key={service.id}>
+              <Card service={service} cardType="service" />
+            </DepthCard>
           ))}
         </div>
       </div>

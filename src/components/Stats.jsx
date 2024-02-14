@@ -5,75 +5,83 @@ import { stats1, stats2 } from "../assets";
 import { FaClipboardCheck } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Reveal } from "../utils/Reveal";
 
 const Stats = () => {
   return (
     <section
       className={`${layout.sectionTwoCols} ${styles.statsSection} xxs:px-2 mobile:px-6`}
     >
-      <motion.div className={`${styles.boxWidth}${styles.colContainer} `}>
-        <motion.div />
+      <div className={`${styles.boxWidth}${styles.colContainer} `}>
         <p className="border-t-4 border-l-4 -ml-6 pb-6  w-[110px] border-primary">
           {"   "}{" "}
         </p>
-        <h3
-          className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
-        >
-          Implicam pasiune si experienta in fiecare aspect al afacerii noastre,
-          pentru a livra rezultate de exceptie
-        </h3>
-        <h4 className={`text-lg font-roboto text-primary font-semibold mb-4`}>
-          Construim solutii impreuna
-        </h4>
-        <p className={`${styles.paragraph}`}>
-          Suntem o echipă dedicată, pasionată de excelență și inovație. Ne-am
-          angajat să oferim soluții personalizate și de înaltă calitate,
-          adaptate nevoilor fiecărui client. Cu o experiență vastă și o abordare
-          proactivă, transformăm viziunile în realitate. Ne mândrim cu
-          rezultatele noastre și suntem mereu în căutarea modurilor de a crește
-          și de a aduce valoare adăugată în fiecare proiect. Transparenta,
-          comunicarea deschisă și relațiile de încredere stau la baza
-          colaborării noastre cu clienții și partenerii. Alege să lucrezi cu noi
-          și vei descoperi o experiență profesională excepțională, susținută de
-          angajamentul nostru de a livra rezultate remarcabile
-        </p>
-        <div
-          className={`${styles.cellQuery} flex flex-row justify-between py-10`}
-        >
-          <div
-            className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}
+        <Reveal>
+          <h3
+            className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
           >
-            <FaClipboardCheck className="text-primary text-5xl" />
-            <div className="flex flex-col text-center">
-              <span
-                className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
-              >
-                1725
-              </span>
-              <p className={`text-lg font-roboto text-text font-semibold`}>
-                Proiecte Complete
-              </p>
+            Implicam pasiune si experienta in fiecare aspect al afacerii
+            noastre, pentru a livra rezultate de exceptie
+          </h3>
+        </Reveal>
+        <Reveal>
+          <h4 className={`text-lg font-roboto text-primary font-semibold mb-4`}>
+            Construim solutii impreuna
+          </h4>
+        </Reveal>
+        <Reveal>
+          <p className={`${styles.paragraph}`}>
+            Suntem o echipă dedicată, pasionată de excelență și inovație. Ne-am
+            angajat să oferim soluții personalizate și de înaltă calitate,
+            adaptate nevoilor fiecărui client. Cu o experiență vastă și o
+            abordare proactivă, transformăm viziunile în realitate. Ne mândrim
+            cu rezultatele noastre și suntem mereu în căutarea modurilor de a
+            crește și de a aduce valoare adăugată în fiecare proiect.
+            Transparenta, comunicarea deschisă și relațiile de încredere stau la
+            baza colaborării noastre cu clienții și partenerii. Alege să lucrezi
+            cu noi și vei descoperi o experiență profesională excepțională,
+            susținută de angajamentul nostru de a livra rezultate remarcabile
+          </p>
+        </Reveal>
+        <Reveal>
+          <div
+            className={`${styles.cellQuery} flex flex-row justify-between py-10`}
+          >
+            <div
+              className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}
+            >
+              <FaClipboardCheck className="text-primary text-5xl" />
+              <div className="flex flex-col text-center">
+                <span
+                  className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
+                >
+                  1725
+                </span>
+                <p className={`text-lg font-roboto text-text font-semibold`}>
+                  Proiecte Complete
+                </p>
+              </div>
+            </div>
+            <div
+              className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}
+            >
+              <FaUserCheck className="text-primary text-6xl" />
+              <div className="flex flex-col text-center">
+                <span
+                  className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
+                >
+                  2.500K
+                </span>
+                <p className={`text-lg font-roboto text-text font-semibold`}>
+                  Clienti Fericiti
+                </p>
+              </div>
             </div>
           </div>
-          <div
-            className={`flex xxs:flex-col sm:flex-row items-center min-w-[200px] gap-5`}
-          >
-            <FaUserCheck className="text-primary text-6xl" />
-            <div className="flex flex-col text-center">
-              <span
-                className={`text-5xl font-bebas text-secondary font-semibold leading-[1.2em]`}
-              >
-                2.500K
-              </span>
-              <p className={`text-lg font-roboto text-text font-semibold`}>
-                Clienti Fericiti
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+        </Reveal>
+      </div>
       {/* Images div */}
-      <motion.div className={`${styles.colContainer} `}>
+      <div className={`${styles.colContainer} `}>
         <div className={`relative flex h-fit`}>
           <img src={stats1} alt="poza" className="w-auto h-auto" />
           <div
@@ -94,7 +102,7 @@ const Stats = () => {
             </button>
           </Link>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

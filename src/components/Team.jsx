@@ -3,6 +3,7 @@ import styles, { layout } from "../style";
 import { teamConstants } from "../constants";
 import TeamCard from "./card/TeamCard";
 import { Link } from "react-router-dom";
+import { DepthTeamCard } from "../utils/DepthTeamCard";
 
 const Team = () => {
   return (
@@ -33,7 +34,10 @@ const Team = () => {
             className={`grid  grid-cols-1 ss:grid-cols-2 md:grid-cols-4 gap-10 p-14`}
           >
             {teamConstants.map((team) => (
-              <TeamCard key={team.id} team={team} />
+              <DepthTeamCard key={team.id}> 
+
+              <TeamCard team={team} />
+              </DepthTeamCard>
             ))}
           </div>
         </div>
