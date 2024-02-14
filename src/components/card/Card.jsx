@@ -51,7 +51,7 @@ const Card = ({ service, cardType, project }) => {
          
         </div>
       <div className={` ${cardType === "project" && "ml-5"}`}>
-        <h4 className={`${cardTitle} ${cardType === "team" ? "text-primary" : "text-black"}`}>{title}</h4>
+        <h1 className={`${cardTitle} ${cardType === "team" ? "text-primary" : "text-black"}`}>{title}</h1>
         <p className={`${cardContent} font-roboto`}>{content} </p>
       </div>
       </div>

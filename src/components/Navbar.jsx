@@ -199,7 +199,7 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`relative font-bebas text-[18px] font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute group cursor-pointer ${
+                className={`relative font-bebas text-[18px] font-medium leading-[1.2rem] uppercase after::content-[' '] after::bg-pink-500 after::h-[3px] aflter:w-[100%] after::absolute group cursor-pointer z-50 ${
                   activeLink === nav.title ? "text-primary" : "text-white"
                 } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                 onClick={(e) => handleNavLinkClick(e, nav)}
